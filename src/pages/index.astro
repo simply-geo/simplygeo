@@ -1,0 +1,112 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const topics = [
+  { id:'geo', icon:'🌐', label:'GEO Grundlagen', sub:'Was ist Generative Engine Optimization und warum klassisches SEO nicht mehr reicht.', color:'#00c2ff', articles:3 },
+  { id:'aeo', icon:'🎯', label:'AEO & Answer Engines', sub:'Optimierung für Featured Snippets, Voice Search und direkte KI-Antworten.', color:'#7b5ea7', articles:3 },
+  { id:'llm', icon:'🤖', label:'LLM & KI-Suchmaschinen', sub:'ChatGPT Search, Perplexity und Google AI Overviews verstehen und nutzen.', color:'#00e5a0', articles:3 },
+  { id:'schema', icon:'🏗️', label:'Strukturierte Daten', sub:'Schema Markup und maschinenlesbare Signale für KI-Antwortmaschinen.', color:'#ff8c42', articles:3 },
+  { id:'content', icon:'✍️', label:'Content & E-E-A-T', sub:'Vertrauen, Autorität und zitierfähige Inhalte als Grundlage für GEO-Erfolg.', color:'#ff4f8b', articles:3 },
+  { id:'tools', icon:'🛠️', label:'Tools & Messung', sub:'GEO-Erfolge sichtbar machen, messen und kontinuierlich verbessern.', color:'#ffd23f', articles:3 },
+];
+---
+<Base title="Sichtbar in der KI-Ära">
+  <Header />
+  <section class="hero">
+    <div class="hero-left">
+      <span class="eyebrow">Wissen zur KI-Suche · DACH-Markt</span>
+      <h1 class="hero-title">GEO, AEO und<br><em>KI-Suche</em> — einfach erklärt</h1>
+      <p class="hero-desc">Generative Engine Optimization für den deutschsprachigen Markt. Strukturiert, praxisnah und kostenlos — von einem Practitioner für Practitioner.</p>
+      <div class="hero-cta">
+        <a href="#topics" class="btn-primary">Themen entdecken →</a>
+        <a href="/downloads/geo-checkliste-2025.pdf" class="btn-secondary" download>⬇ Checkliste laden</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      {topics.map(t => (
+        <a href={`#${t.id}`} class="hero-topic" style={`--tc:${t.color}`}>
+          <div class="ht-top"><span class="ht-icon">{t.icon}</span><span class="ht-count">{t.articles} Artikel</span></div>
+          <div class="ht-name">{t.label}</div>
+          <div class="ht-bar"><div class="ht-fill"></div></div>
+        </a>
+      ))}
+    </div>
+  </section>
+  <section class="topics-section" id="topics">
+    <div class="topics-header">
+      <h2 class="topics-title">Alle Themenbereiche</h2>
+      <p class="topics-sub">Wähle einen Bereich und arbeite dich Schritt für Schritt durch.</p>
+    </div>
+    <div class="topics-grid">
+      {topics.map(t => (
+        <article class="topic-card" id={t.id} style={`--tc:${t.color}`}>
+          <span class="tc-icon">{t.icon}</span>
+          <h3 class="tc-title">{t.label}</h3>
+          <p class="tc-desc">{t.sub}</p>
+          <a href={`/blog?topic=${t.id}`} class="tc-link">Artikel ansehen →</a>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="dl-section">
+    <div class="dl-inner">
+      <div class="dl-icon">📋</div>
+      <div class="dl-body">
+        <h2 class="dl-title">GEO-Checkliste 2025 — kostenlos</h2>
+        <p class="dl-desc">36 Checkpunkte in 6 Bereichen. Direkt anwendbar für deine Website.</p>
+      </div>
+      <a href="/downloads/geo-checkliste-2025.pdf" class="btn-primary" download>⬇ Jetzt herunterladen</a>
+    </div>
+  </section>
+  <Footer />
+</Base>
+<style>
+.hero { border-bottom:1px solid var(--border); position:relative; overflow:hidden; padding:40px 24px 32px; }
+@media(min-width:768px){ .hero{ display:grid; grid-template-columns:1fr 1fr; min-height:340px; padding:0; } }
+.hero-left { position:relative; z-index:1; }
+@media(min-width:768px){ .hero-left{ padding:48px 40px; border-right:1px solid var(--border); } }
+.eyebrow{ font-size:0.67rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; display:block; }
+.hero-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(1.7rem,3.5vw,2.3rem); font-weight:700; letter-spacing:-0.03em; line-height:1.15; color:var(--text); margin-bottom:14px; }
+.hero-title em{ font-style:normal; background:linear-gradient(135deg,var(--accent),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.hero-desc{ font-size:0.88rem; color:var(--muted); line-height:1.68; max-width:480px; margin-bottom:24px; }
+.hero-cta{ display:flex; gap:10px; flex-wrap:wrap; }
+.hero-right{ display:none; }
+@media(min-width:768px){ .hero-right{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); align-self:stretch; } }
+.hero-topic{ background:var(--bg); padding:18px 16px; display:flex; flex-direction:column; gap:5px; transition:background 0.15s; position:relative; overflow:hidden; text-decoration:none; }
+.hero-topic::before{ content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--tc); opacity:0.5; transition:opacity 0.2s; }
+.hero-topic:hover{ background:var(--surface); }
+.hero-topic:hover::before{ opacity:1; }
+.ht-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:2px; }
+.ht-icon{ font-size:1rem; }
+.ht-count{ font-size:0.6rem; color:var(--muted); }
+.ht-name{ font-family:'Space Grotesk',sans-serif; font-size:0.75rem; font-weight:600; color:var(--text); line-height:1.3; }
+.ht-bar{ height:2px; background:var(--border2); border-radius:1px; margin-top:6px; }
+.ht-fill{ height:100%; width:0%; background:var(--tc); border-radius:1px; }
+.btn-primary{ display:inline-flex; align-items:center; gap:6px; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; padding:10px 20px; background:var(--accent); color:var(--bg); border-radius:var(--radius-sm); transition:opacity 0.2s,transform 0.15s; }
+.btn-primary:hover{ opacity:0.88; transform:translateY(-1px); }
+.btn-secondary{ display:inline-flex; align-items:center; gap:6px; font-size:0.82rem; color:var(--muted); padding:10px 16px; border:1px solid var(--border2); border-radius:var(--radius-sm); transition:color 0.15s,border-color 0.15s; }
+.btn-secondary:hover{ color:var(--text); border-color:var(--muted2); }
+.topics-section{ padding:48px 24px; position:relative; z-index:1; }
+.topics-header{ margin-bottom:28px; }
+.topics-title{ font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:700; color:var(--text); margin-bottom:6px; }
+.topics-sub{ font-size:0.85rem; color:var(--muted); }
+.topics-grid{ display:grid; grid-template-columns:1fr; gap:10px; }
+@media(min-width:640px){ .topics-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(min-width:1024px){ .topics-grid{ grid-template-columns:repeat(3,1fr); } }
+.topic-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px; position:relative; overflow:hidden; transition:border-color 0.2s,background 0.2s; }
+.topic-card::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--tc); }
+.topic-card:hover{ border-color:var(--border2); background:var(--surface2); }
+.tc-icon{ font-size:1.4rem; margin-bottom:10px; display:block; }
+.tc-title{ font-family:'Space Grotesk',sans-serif; font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:6px; }
+.tc-desc{ font-size:0.78rem; color:var(--muted); line-height:1.55; margin-bottom:14px; }
+.tc-link{ font-size:0.75rem; color:var(--tc); font-weight:600; transition:opacity 0.15s; }
+.tc-link:hover{ opacity:0.75; }
+.dl-section{ padding:0 24px 48px; position:relative; z-index:1; }
+.dl-inner{ background:linear-gradient(135deg,rgba(0,194,255,0.07),rgba(123,94,167,0.07)); border:1px solid rgba(0,194,255,0.2); border-radius:var(--radius); padding:24px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.dl-icon{ font-size:2rem; flex-shrink:0; }
+.dl-body{ flex:1; min-width:200px; }
+.dl-title{ font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:4px; }
+.dl-desc{ font-size:0.8rem; color:var(--muted); }
+</style>

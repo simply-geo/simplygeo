@@ -1,0 +1,53 @@
+---
+const nav = [
+  { label: 'Themen', href: '/#topics' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
+  { label: 'Kontakt', href: '/kontakt' },
+];
+const currentPath = Astro.url.pathname;
+---
+<header class="header">
+  <a href="/" class="logo">Simply<span>GEO</span></a>
+  <nav class="nav" aria-label="Hauptnavigation">
+    {nav.map(n => (
+      <a href={n.href} class={`nav-link${currentPath === n.href ? ' active' : ''}`}>{n.label}</a>
+    ))}
+  </nav>
+  <a href="/downloads/geo-checkliste-2025.pdf" class="dl-btn" download>
+    ⬇ GEO-Checkliste
+  </a>
+</header>
+
+<style>
+.header {
+  position: sticky; top: 0; z-index: 200;
+  height: 52px; display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  padding: 0 24px;
+  background: rgba(7,13,26,0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem; font-weight: 700;
+  letter-spacing: -0.02em; white-space: nowrap;
+}
+.logo span { color: var(--accent); }
+.nav { display: none; align-items: center; gap: 4px; }
+@media (min-width: 768px) { .nav { display: flex; } }
+.nav-link {
+  font-size: 0.82rem; color: var(--muted);
+  padding: 5px 10px; border-radius: var(--radius-sm);
+  transition: color 0.15s, background 0.15s;
+}
+.nav-link:hover, .nav-link.active { color: var(--text); background: var(--surface2); }
+.dl-btn {
+  font-size: 0.72rem; font-weight: 600; color: var(--accent);
+  background: var(--accent-dim); border: 1px solid rgba(0,194,255,0.18);
+  border-radius: 20px; padding: 5px 12px; white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s;
+}
+.dl-btn:hover { background: rgba(0,194,255,0.14); border-color: rgba(0,194,255,0.35); }
+</style>

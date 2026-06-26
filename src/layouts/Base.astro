@@ -1,0 +1,48 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+const { title, description = 'GEO, AEO und KI-Suche für den DACH-Markt — praxisnah und strukturiert erklärt.', ogImage } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | SimplyGEO</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={`${title} | SimplyGEO`} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SimplyGEO",
+      "url": "https://simplygeo.de",
+      "description": "GEO, AEO und KI-Suche für den DACH-Markt",
+      "inLanguage": "de-DE"
+    })}
+  </script>
+
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <div class="glow g1" aria-hidden="true"></div>
+  <div class="glow g2" aria-hidden="true"></div>
+
+  <slot />
+</body>
+</html>

@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base title="About" description="Wer steckt hinter SimplyGEO? Yassine — Online Marketing Manager, GEO-Spezialist und Freelancer im DACH-Markt.">
+  <Header />
+  <main class="about-main">
+    <div class="about-inner">
+      <span class="eyebrow">Über SimplyGEO</span>
+      <h1 class="about-title">Hallo, ich bin Yassine</h1>
+      <div class="about-avatar">Y</div>
+      <div class="prose">
+        <p>Ich bin Online Marketing Manager mit Spezialisierung auf SEO, SEA und Generative Engine Optimization (GEO) — und ich arbeite seit Jahren im DACH-Markt, sowohl in Festanstellung als auch als Freelancer.</p>
+        <p>SimplyGEO ist mein Ort um Wissen zu teilen, das ich in echten Projekten gesammelt habe. Keine Theorie von der Seitenlinie — sondern Praxis aus GEO-Audits, Website-Relaunches und täglicher Arbeit mit KI-Suchsystemen.</p>
+        <h2>Was dich hier erwartet</h2>
+        <p>Praxisnahes, strukturiertes Wissen zu GEO, AEO und KI-gestützter Suche — speziell für den deutschsprachigen Markt aufbereitet. Weil es davon noch viel zu wenig gibt.</p>
+        <h2>Zusammenarbeit</h2>
+        <p>Du brauchst einen GEO-Audit, einen Website-Relaunch oder strategische Beratung zur KI-Sichtbarkeit? Dann schreib mir gerne.</p>
+        <p><a href="/kontakt">→ Zum Kontaktformular</a></p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>
+<style>
+.about-main{ position:relative; z-index:1; padding:40px 24px 60px; }
+.about-inner{ max-width:680px; margin:0 auto; }
+.eyebrow{ font-size:0.67rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+.about-title{ font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; letter-spacing:-0.02em; color:var(--text); margin-bottom:24px; }
+.about-avatar{ width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--purple)); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:1.8rem; font-weight:700; color:var(--bg); margin-bottom:28px; }
+</style>
