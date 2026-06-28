@@ -32,7 +32,7 @@ const latestPosts = allPosts
     </div>
     <div class="hero-right">
       {topics.map(t => (
-        <a href={`#${t.id}`} class="hero-topic" style={`--tc:${t.color}`}>
+        <a href={`/themen/${t.id}`} class="hero-topic" style={`--tc:${t.color}`}>
           <div class="ht-top"><span class="ht-icon">{t.icon}</span><span class="ht-count">{t.articles} Artikel</span></div>
           <div class="ht-name">{t.label}</div>
           <div class="ht-bar"><div class="ht-fill"></div></div>
@@ -52,7 +52,7 @@ const latestPosts = allPosts
           <span class="tc-icon">{t.icon}</span>
           <h3 class="tc-title">{t.label}</h3>
           <p class="tc-desc">{t.sub}</p>
-          <a href={`/blog`} class="tc-link">Artikel ansehen →</a>
+          <a href={`/themen/${t.id}`} class="tc-link">Artikel ansehen →</a>
         </article>
       ))}
     </div>
