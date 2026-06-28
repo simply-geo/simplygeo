@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base title="Datenschutz — SimplyGEO" description="Datenschutzerklärung für SimplyGEO (simplygeo.de). Keine Cookies, keine Tracking-Tools, statische Website.">
+  <Header />
+  <main class="legal-main">
+    <div class="legal-inner">
+      <span class="eyebrow">Rechtliches</span>
+      <h1 class="legal-title">Datenschutzerklärung</h1>
+
+      <div class="prose">
+        <h2>1. Überblick</h2>
+        <p>SimplyGEO (simplygeo.de) ist eine statische Website ohne Tracking-Tools, ohne Cookies und ohne externe Analyse-Dienste. Es werden keine personenbezogenen Daten erhoben oder gespeichert, die über technisch notwendige Serverprotokolle hinausgehen.</p>
+
+        <h2>2. Verantwortlicher</h2>
+        <p>
+          Yassine Oulada<br />
+          [PLATZHALTER: Adresse]<br />
+          E-Mail: <a href="mailto:enissay9@outlook.de">enissay9@outlook.de</a>
+        </p>
+
+        <h2>3. Hosting und Server-Logs</h2>
+        <p>Diese Website wird über <strong>Vercel</strong> gehostet (Vercel Inc., 340 Pine Street, Suite 900, San Francisco, CA 94104, USA). Beim Aufruf der Website werden automatisch Informationen in sogenannten Server-Log-Dateien gespeichert, die dein Browser übermittelt. Dies sind: IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, verwendeter Browser und Betriebssystem.</p>
+        <p>Diese Daten werden ausschließlich zur Sicherstellung des Betriebs und zur Fehleranalyse genutzt. Eine Zusammenführung mit anderen Datenquellen findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website).</p>
+        <p>Vercel's Datenschutzerklärung: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">vercel.com/legal/privacy-policy</a></p>
+
+        <h2>4. Cookies</h2>
+        <p>Diese Website verwendet <strong>keine Cookies</strong>. Es werden weder eigene noch Drittanbieter-Cookies gesetzt.</p>
+
+        <h2>5. Kontaktaufnahme</h2>
+        <p>Wenn du per E-Mail Kontakt aufnimmst, werden die übermittelten Daten (Name, E-Mail-Adresse, Nachrichteninhalt) ausschließlich zur Bearbeitung deiner Anfrage gespeichert und verwendet. Diese Daten werden nicht ohne deine Einwilligung an Dritte weitergegeben. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+        <h2>6. Externe Links</h2>
+        <p>Diese Website enthält Links zu externen Diensten wie LinkedIn. Beim Anklicken solcher Links verlässt du SimplyGEO. Für deren Datenschutzpraktiken sind die jeweiligen Anbieter verantwortlich.</p>
+
+        <h2>7. Deine Rechte</h2>
+        <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit. Du kannst der Verarbeitung deiner Daten jederzeit widersprechen. Zur Ausübung dieser Rechte wende dich an: <a href="mailto:enissay9@outlook.de">enissay9@outlook.de</a></p>
+        <p>Du hast zudem das Recht, dich bei einer Aufsichtsbehörde zu beschweren.</p>
+
+        <h2>8. Aktualität</h2>
+        <p>Diese Datenschutzerklärung ist aktuell gültig. Durch die Weiterentwicklung der Website kann eine Anpassung notwendig werden.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>
+<style>
+.legal-main{ position:relative; z-index:1; padding:40px 24px 60px; }
+.legal-inner{ max-width:720px; margin:0 auto; }
+.eyebrow{ font-size:0.67rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
+.legal-title{ font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; letter-spacing:-0.02em; color:var(--text); margin-bottom:32px; }
+</style>
