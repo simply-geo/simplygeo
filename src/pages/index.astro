@@ -22,22 +22,62 @@ const latestPosts = allPosts
   <Header />
   <section class="hero">
     <div class="hero-left">
-      <span class="eyebrow">Wissen zur KI-Suche · DACH-Markt</span>
-      <h1 class="hero-title">GEO, AEO und<br><em>KI-Ära</em> — einfach erklärt</h1>
-      <p class="hero-desc">Generative Engine Optimization für den deutschsprachigen Markt. Strukturiert, praxisnah und kostenlos — von einem Practitioner für Practitioner.</p>
+      <div class="hero-audience">
+        <span class="audience-tag">SEO & Marketing</span>
+        <span class="audience-tag">B2B Unternehmen</span>
+        <span class="audience-tag">DACH-Markt</span>
+      </div>
+      <h1 class="hero-title">Wirst du von ChatGPT &amp; Perplexity <em>zitiert</em> — oder übergangen?</h1>
+      <p class="hero-desc">KI-Suchsysteme entscheiden, welche Websites in ihren Antworten erscheinen. Hier lernst du, wie GEO funktioniert — und wie du einer der zitierten Quellen im DACH-Markt wirst.</p>
+      <ul class="hero-values">
+        <li><span class="hv-check">✓</span> 8 Praxis-Artikel speziell für den deutschsprachigen Markt</li>
+        <li><span class="hv-check">✓</span> Umsetzbare Strategien — kein Buzzword-Bingo</li>
+        <li><span class="hv-check">✓</span> Von einem Practitioner, der GEO täglich anwendet</li>
+      </ul>
       <div class="hero-cta">
-        <a href="#topics" class="btn-primary">Themen entdecken →</a>
+        <a href="#topics" class="btn-primary">Jetzt GEO lernen →</a>
         <a href="/downloads/geo-checkliste-2025.pdf" class="btn-secondary" download>⬇ Checkliste laden</a>
       </div>
     </div>
     <div class="hero-right">
-      {topics.map(t => (
-        <a href={`/themen/${t.id}`} class="hero-topic" style={`--tc:${t.color}`}>
-          <div class="ht-top"><span class="ht-icon">{t.icon}</span><span class="ht-count">{t.articles} Artikel</span></div>
-          <div class="ht-name">{t.label}</div>
-          <div class="ht-bar"><div class="ht-fill"></div></div>
-        </a>
-      ))}
+      <!-- Mock AI Citation Visual -->
+      <div class="mock-ai">
+        <div class="mock-ai-header">
+          <div class="mock-ai-dot"></div>
+          <span class="mock-ai-label">KI-Antwort — Perplexity AI</span>
+        </div>
+        <div class="mock-ai-query">"Was ist Generative Engine Optimization?"</div>
+        <div class="mock-ai-answer">
+          <p>Generative Engine Optimization (GEO) ist die Praxis, Inhalte so zu optimieren, dass sie von KI-Suchsystemen als vertrauenswürdige Quellen zitiert werden. Im Unterschied zu klassischem SEO geht es nicht um Rankings, sondern um <strong>Zitierbarkeit in KI-Antworten</strong>.</p>
+        </div>
+        <div class="mock-ai-sources">
+          <div class="mock-ai-sources-label">Quellen</div>
+          <div class="mock-sources-list">
+            <div class="mock-source active">
+              <div class="ms-num">1</div>
+              <div class="ms-info">
+                <div class="ms-domain">simplygeo.de</div>
+                <div class="ms-title">Was ist GEO? Generative Engine Optimization einfach erklärt</div>
+              </div>
+            </div>
+            <div class="mock-source">
+              <div class="ms-num">2</div>
+              <div class="ms-info">
+                <div class="ms-domain">example-blog.de</div>
+                <div class="ms-title">GEO für Anfänger</div>
+              </div>
+            </div>
+            <div class="mock-source">
+              <div class="ms-num">3</div>
+              <div class="ms-info">
+                <div class="ms-domain">marketingsite.de</div>
+                <div class="ms-title">Suchmaschinenoptimierung 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mock-ai-cta">Das ist GEO. <a href="/themen/geo">So erreichst du das →</a></div>
+      </div>
     </div>
   </section>
 
@@ -114,27 +154,90 @@ const latestPosts = allPosts
   <Footer />
 </Base>
 <style>
-.hero { border-bottom:1px solid var(--border); position:relative; overflow:hidden; padding:40px 24px 32px; }
-@media(min-width:768px){ .hero{ display:grid; grid-template-columns:1fr 1fr; min-height:340px; padding:0; } }
-.hero-left { position:relative; z-index:1; }
-@media(min-width:768px){ .hero-left{ padding:48px 40px; border-right:1px solid var(--border); } }
-.eyebrow{ font-size:0.67rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; display:block; }
-.hero-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(1.7rem,3.5vw,2.3rem); font-weight:700; letter-spacing:-0.03em; line-height:1.15; color:var(--text); margin-bottom:14px; }
+.hero { border-bottom:1px solid var(--border); position:relative; overflow:hidden; padding:40px 24px 40px; }
+@media(min-width:768px){ .hero{ display:grid; grid-template-columns:1fr 1fr; min-height:420px; padding:0; } }
+.hero-left { position:relative; z-index:1; display:flex; flex-direction:column; justify-content:center; }
+@media(min-width:768px){ .hero-left{ padding:52px 44px; border-right:1px solid var(--border); } }
+
+/* Audience tags */
+.hero-audience{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; }
+.audience-tag{
+  font-size:0.62rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--accent); background:rgba(0,194,255,0.1);
+  border:1px solid rgba(0,194,255,0.25); padding:3px 10px; border-radius:20px;
+}
+
+/* Headline */
+.hero-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(1.6rem,3.2vw,2.2rem); font-weight:700; letter-spacing:-0.03em; line-height:1.18; color:var(--text); margin-bottom:14px; }
 .hero-title em{ font-style:normal; background:linear-gradient(135deg,var(--accent),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.hero-desc{ font-size:0.88rem; color:var(--muted); line-height:1.68; max-width:480px; margin-bottom:24px; }
+
+/* Description */
+.hero-desc{ font-size:0.88rem; color:var(--muted); line-height:1.7; max-width:480px; margin-bottom:18px; }
+
+/* Value list */
+.hero-values{ list-style:none; margin-bottom:24px; display:flex; flex-direction:column; gap:7px; }
+.hero-values li{ font-size:0.82rem; color:var(--muted); display:flex; align-items:flex-start; gap:8px; line-height:1.45; }
+.hv-check{ color:var(--accent); font-weight:700; flex-shrink:0; }
+
 .hero-cta{ display:flex; gap:10px; flex-wrap:wrap; }
+
+/* Right side — Mock AI Visual */
 .hero-right{ display:none; }
-@media(min-width:768px){ .hero-right{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); align-self:stretch; } }
-.hero-topic{ background:var(--bg); padding:18px 16px; display:flex; flex-direction:column; gap:5px; transition:background 0.15s; position:relative; overflow:hidden; text-decoration:none; }
-.hero-topic::before{ content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--tc); opacity:0.5; transition:opacity 0.2s; }
-.hero-topic:hover{ background:var(--surface); }
-.hero-topic:hover::before{ opacity:1; }
-.ht-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:2px; }
-.ht-icon{ font-size:1rem; }
-.ht-count{ font-size:0.6rem; color:var(--muted); }
-.ht-name{ font-family:'Space Grotesk',sans-serif; font-size:0.75rem; font-weight:600; color:var(--text); line-height:1.3; }
-.ht-bar{ height:2px; background:var(--border2); border-radius:1px; margin-top:6px; }
-.ht-fill{ height:100%; width:0%; background:var(--tc); border-radius:1px; }
+@media(min-width:768px){ .hero-right{ display:flex; align-items:center; justify-content:center; padding:40px 36px; background:var(--surface); } }
+
+.mock-ai{
+  width:100%; max-width:420px;
+  background:var(--bg); border:1px solid var(--border);
+  border-radius:var(--radius); overflow:hidden;
+  font-size:0.78rem;
+}
+.mock-ai-header{
+  display:flex; align-items:center; gap:8px;
+  padding:10px 14px; border-bottom:1px solid var(--border);
+  background:var(--surface);
+}
+.mock-ai-dot{ width:8px; height:8px; border-radius:50%; background:#00e5a0; flex-shrink:0; box-shadow:0 0 6px rgba(0,229,160,0.5); }
+.mock-ai-label{ font-size:0.68rem; font-weight:600; color:var(--muted); letter-spacing:0.04em; }
+.mock-ai-query{
+  padding:12px 14px 10px;
+  font-size:0.8rem; font-weight:600; color:var(--text);
+  border-bottom:1px solid var(--border);
+  background:rgba(0,194,255,0.04);
+}
+.mock-ai-answer{
+  padding:14px;
+  border-bottom:1px solid var(--border);
+}
+.mock-ai-answer p{ font-size:0.78rem; color:var(--muted); line-height:1.65; margin:0; }
+.mock-ai-answer strong{ color:var(--text); }
+.mock-ai-sources{ padding:12px 14px; border-bottom:1px solid var(--border); }
+.mock-ai-sources-label{ font-size:0.6rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted2); margin-bottom:8px; }
+.mock-sources-list{ display:flex; flex-direction:column; gap:6px; }
+.mock-source{
+  display:flex; align-items:flex-start; gap:8px;
+  padding:7px 9px; border-radius:var(--radius-sm);
+  border:1px solid transparent;
+  transition:background 0.15s;
+}
+.mock-source.active{
+  background:rgba(0,194,255,0.07);
+  border-color:rgba(0,194,255,0.2);
+}
+.ms-num{
+  width:18px; height:18px; border-radius:4px; flex-shrink:0;
+  background:var(--border); display:flex; align-items:center; justify-content:center;
+  font-size:0.62rem; font-weight:700; color:var(--muted);
+}
+.mock-source.active .ms-num{ background:rgba(0,194,255,0.2); color:var(--accent); }
+.ms-domain{ font-size:0.68rem; font-weight:700; color:var(--muted2); }
+.mock-source.active .ms-domain{ color:var(--accent); }
+.ms-title{ font-size:0.68rem; color:var(--muted); line-height:1.3; }
+.mock-ai-cta{
+  padding:10px 14px;
+  font-size:0.72rem; color:var(--muted);
+  background:var(--surface);
+}
+.mock-ai-cta a{ color:var(--accent); font-weight:600; }
 .btn-primary{ display:inline-flex; align-items:center; gap:6px; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; padding:10px 20px; background:var(--accent); color:var(--bg); border-radius:var(--radius-sm); transition:opacity 0.2s,transform 0.15s; }
 .btn-primary:hover{ opacity:0.88; transform:translateY(-1px); }
 .btn-secondary{ display:inline-flex; align-items:center; gap:6px; font-size:0.82rem; color:var(--muted); padding:10px 16px; border:1px solid var(--border2); border-radius:var(--radius-sm); transition:color 0.15s,border-color 0.15s; }
