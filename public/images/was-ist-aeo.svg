@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <radialGradient id="glow1" cx="30%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#7b5ea7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#7b5ea7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#00c2ff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#00c2ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#070d1a"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Grid -->
+  <g stroke="#1a2d4a" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="90" x2="1200" y2="90"/><line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/><line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="150" y1="0" x2="150" y2="630"/><line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/><line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/><line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <!-- Speech bubble / answer box -->
+  <rect x="820" y="120" width="300" height="90" rx="12" fill="#111f35" stroke="#7b5ea7" stroke-width="1.5" stroke-opacity="0.6"/>
+  <polygon points="880,210 920,210 900,240" fill="#111f35" stroke="#7b5ea7" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="970" y="158" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#6b84a3">Direkte Antwort:</text>
+  <text x="970" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#e8f0fe">AEO optimiert für</text>
+  <text x="970" y="198" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#7b5ea7">Answer Engines</text>
+
+  <!-- Decorative circles -->
+  <circle cx="970" cy="370" r="100" fill="none" stroke="#7b5ea7" stroke-width="1" stroke-dasharray="8 5" opacity="0.2"/>
+  <circle cx="970" cy="370" r="60" fill="none" stroke="#7b5ea7" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.15"/>
+  <circle cx="970" cy="370" r="20" fill="#7b5ea7" fill-opacity="0.2" stroke="#7b5ea7" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Nodes around circle -->
+  <g fill="#7b5ea7" opacity="0.9">
+    <circle cx="970" cy="270" r="5"/>
+    <circle cx="1060" cy="320" r="4"/>
+    <circle cx="1060" cy="420" r="5"/>
+    <circle cx="970" cy="470" r="4"/>
+    <circle cx="880" cy="420" r="5"/>
+    <circle cx="880" cy="320" r="4"/>
+  </g>
+  <g stroke="#7b5ea7" stroke-width="1" opacity="0.2" fill="none">
+    <line x1="970" y1="270" x2="1060" y2="320"/>
+    <line x1="1060" y1="320" x2="1060" y2="420"/>
+    <line x1="1060" y1="420" x2="970" y2="470"/>
+    <line x1="970" y1="470" x2="880" y2="420"/>
+    <line x1="880" y1="420" x2="880" y2="320"/>
+    <line x1="880" y1="320" x2="970" y2="270"/>
+  </g>
+
+  <!-- Category chip -->
+  <rect x="80" y="80" width="210" height="32" rx="16" fill="#7b5ea7" fill-opacity="0.15" stroke="#7b5ea7" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="185" y="101" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#7b5ea7">AEO &amp; Answer Engines</text>
+
+  <!-- Title -->
+  <text x="80" y="210" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#e8f0fe">Was ist AEO?</text>
+  <text x="80" y="278" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="600" fill="#7b5ea7">Answer Engine Optimization</text>
+  <text x="80" y="330" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="600" fill="#6b84a3">verständlich erklärt</text>
+
+  <text x="80" y="400" font-family="Inter, sans-serif" font-size="19" fill="#6b84a3">Featured Snippets, Voice Search und direkte KI-Antworten.</text>
+
+  <line x1="80" y1="435" x2="500" y2="435" stroke="#1a2d4a" stroke-width="1"/>
+  <text x="80" y="465" font-family="Inter, sans-serif" font-size="15" fill="#6b84a3">Einsteiger · 7 Min Lesezeit · 24. Januar 2025</text>
+
+  <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#6b84a3">Simply<tspan fill="#00c2ff">GEO</tspan></text>
+</svg>

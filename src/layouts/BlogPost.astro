@@ -9,9 +9,12 @@ export interface Props {
   pubDate: Date;
   updatedDate?: Date;
   author?: string;
+  authorRole?: string;
   category?: string;
+  categoryColor?: string;
   readingTime?: string;
   level?: string;
+  heroImage?: string;
 }
 
 const {
@@ -19,10 +22,13 @@ const {
   description,
   pubDate,
   updatedDate,
-  author = 'Yassine',
+  author = 'Yassine Oulada',
+  authorRole = 'GEO & SEO Spezialist',
   category = 'GEO',
+  categoryColor = '#00c2ff',
   readingTime,
   level,
+  heroImage,
 } = Astro.props;
 
 const dateFormatted = new Intl.DateTimeFormat('de-DE', {
@@ -35,18 +41,20 @@ const updatedFormatted = updatedDate ? new Intl.DateTimeFormat('de-DE', {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
-<Base title={title} description={description}>
+<Base title={title} description={description} ogImage={heroImage}>
   <script type="application/ld+json" slot="head">
     {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": title,
       "description": description,
+      "image": heroImage ? new URL(heroImage, Astro.site).toString() : undefined,
       "datePublished": pubDate.toISOString(),
       "dateModified": (updatedDate || pubDate).toISOString(),
       "author": {
         "@type": "Person",
-        "name": author,
+        "name": "Yassine Oulada",
+        "jobTitle": authorRole,
         "url": "https://simplygeo.de/about"
       },
       "publisher": {
@@ -73,9 +81,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <span>{title}</span>
       </nav>
 
+      <!-- Hero Image -->
+      {heroImage && (
+        <img src={heroImage} alt={title} class="hero-image" loading="eager" />
+      )}
+
       <!-- Meta -->
       <div class="article-meta">
-        {category && <span class="meta-chip accent">{category}</span>}
+        {category && (
+          <span class="meta-chip" style={`color: ${categoryColor}; border-color: ${categoryColor}33; background: ${categoryColor}18;`}>
+            {category}
+          </span>
+        )}
         {level && <span class="meta-chip">{level}</span>}
         {readingTime && <span class="meta-chip">⏱ {readingTime}</span>}
       </div>
@@ -86,11 +103,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
       <!-- Author row -->
       <div class="author-row">
-        <div class="author-avatar">{author[0]}</div>
+        <div class="author-avatar">YA</div>
         <div class="author-meta">
           <span class="author-name">{author}</span>
           <span class="author-date">
-            {dateFormatted}
+            {authorRole} · {dateFormatted}
             {updatedFormatted && <span class="updated"> · Aktualisiert: {updatedFormatted}</span>}
           </span>
         </div>
@@ -101,6 +118,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <!-- Content -->
       <div class="prose">
         <slot />
+      </div>
+
+      <!-- Über den Autor -->
+      <div class="author-box">
+        <div class="author-box-avatar">YA</div>
+        <div class="author-box-content">
+          <div class="author-box-name">Yassine Oulada</div>
+          <div class="author-box-role">GEO & SEO Spezialist · Online Marketing Manager · Freelancer</div>
+          <p class="author-box-bio">
+            Yassine Oulada ist Online Marketing Manager bei PixelProduction und Freelancer im DACH-Markt.
+            Er spezialisiert sich auf Generative Engine Optimization (GEO), SEO und Website-Relaunches
+            für B2B-Unternehmen. Auf SimplyGEO teilt er praxisnahes Wissen zur KI-Suche — ohne Buzzwords,
+            mit echten Ergebnissen.
+          </p>
+          <a href="/about" class="author-box-link">Mehr über Yassine →</a>
+        </div>
       </div>
 
       <!-- Back link -->
@@ -129,14 +162,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 .breadcrumb a:hover { color: var(--accent); }
 .breadcrumb span { color: var(--muted2); }
 
+.hero-image {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 28px;
+  aspect-ratio: 1200/630;
+  object-fit: cover;
+}
+
 .article-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
 .meta-chip {
   font-size: 0.65rem; font-weight: 600;
   padding: 3px 9px; border-radius: 20px;
-  border: 1px solid var(--border2); color: var(--muted);
+  border: 1px solid var(--border); color: var(--muted);
   text-transform: uppercase; letter-spacing: 0.06em;
 }
-.meta-chip.accent { color: var(--accent); border-color: rgba(0,194,255,0.3); background: var(--accent-dim); }
 
 .article-title {
   font-family: 'Space Grotesk', sans-serif;
@@ -159,7 +200,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   background: linear-gradient(135deg, var(--accent), var(--purple));
   display: flex; align-items: center; justify-content: center;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.85rem; font-weight: 700; color: var(--bg);
+  font-size: 0.8rem; font-weight: 700; color: #070d1a;
   flex-shrink: 0;
 }
 .author-name { font-size: 0.82rem; font-weight: 600; color: var(--text); display: block; }
@@ -168,7 +209,38 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 .article-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 32px; }
 
-.article-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); }
+/* Über den Autor Box */
+.author-box {
+  display: flex; gap: 20px; align-items: flex-start;
+  margin-top: 48px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.author-box-avatar {
+  width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem; font-weight: 700; color: #070d1a;
+}
+.author-box-content { flex: 1; }
+.author-box-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem; font-weight: 700; color: var(--text);
+  margin-bottom: 2px;
+}
+.author-box-role { font-size: 0.75rem; color: var(--accent); margin-bottom: 10px; }
+.author-box-bio { font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin-bottom: 12px; }
+.author-box-link { font-size: 0.8rem; color: var(--accent); font-weight: 600; transition: opacity 0.15s; }
+.author-box-link:hover { opacity: 0.8; }
+
+@media (max-width: 480px) {
+  .author-box { flex-direction: column; }
+}
+
+.article-footer { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
 .back-link { font-size: 0.82rem; color: var(--muted); transition: color 0.15s; }
 .back-link:hover { color: var(--accent); }
 </style>
