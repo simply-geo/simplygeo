@@ -150,7 +150,7 @@ Alle Ergebnisse werden mit Screenshot und Datum festgehalten. Das ist wichtig, u
 
 Eine vollständige Checkliste mit allen Prüfpunkten gibt es als Download:
 
-→ [GEO-Checkliste 2025 herunterladen](/downloads/geo-checkliste-2025.pdf)
+→ [GEO-Checkliste herunterladen](/downloads/geo-checkliste.pdf)
 
 ## Fazit
 

@@ -1,21 +1,37 @@
 ---
 const nav = [
-  { label: 'Themen', href: '/#topics' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '/about' },
+  { label: 'Themen', href: '/#topics', match: '/themen' },
+  { label: 'Blog', href: '/blog', match: '/blog' },
+  { label: 'About', href: '/about', match: '/about' },
 ];
 const currentPath = Astro.url.pathname;
+const isActive = (item: typeof nav[0]) =>
+  currentPath === item.href || currentPath.startsWith(item.match);
 ---
 <header class="header">
   <a href="/" class="logo">Simply<span>GEO</span></a>
+
   <nav class="nav" aria-label="Hauptnavigation">
     {nav.map(n => (
-      <a href={n.href} class={`nav-link${currentPath === n.href ? ' active' : ''}`}>{n.label}</a>
+      <a href={n.href} class={`nav-link${isActive(n) ? ' active' : ''}`}>{n.label}</a>
     ))}
   </nav>
-  <a href="/downloads/geo-checkliste-2025.pdf" class="dl-btn" download>
+
+  <a href="/downloads/geo-checkliste.pdf" class="dl-btn" download>
     ⬇ GEO-Checkliste
   </a>
+
+  <!-- Mobile menu (CSS-only) -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true" />
+  <label for="menu-toggle" class="burger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    {nav.map(n => (
+      <a href={n.href} class={`mobile-link${isActive(n) ? ' active' : ''}`}>{n.label}</a>
+    ))}
+    <a href="/downloads/geo-checkliste.pdf" class="mobile-link mobile-dl" download>⬇ GEO-Checkliste laden</a>
+  </nav>
 </header>
 
 <style>
@@ -43,10 +59,52 @@ const currentPath = Astro.url.pathname;
 }
 .nav-link:hover, .nav-link.active { color: var(--text); background: var(--surface2); }
 .dl-btn {
+  display: none;
   font-size: 0.72rem; font-weight: 600; color: var(--accent);
   background: var(--accent-dim); border: 1px solid rgba(0,194,255,0.18);
   border-radius: 20px; padding: 5px 12px; white-space: nowrap;
   transition: background 0.2s, border-color 0.2s;
 }
+@media (min-width: 768px) { .dl-btn { display: inline-block; } }
 .dl-btn:hover { background: rgba(0,194,255,0.14); border-color: rgba(0,194,255,0.35); }
+
+/* ── Mobile menu ── */
+.menu-toggle { display: none; }
+.burger {
+  display: flex; flex-direction: column; justify-content: center; gap: 4px;
+  width: 36px; height: 36px; padding: 8px;
+  cursor: pointer; border-radius: var(--radius-sm);
+  transition: background 0.15s;
+}
+.burger:hover { background: var(--surface2); }
+.burger span {
+  display: block; height: 2px; width: 100%;
+  background: var(--text); border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+@media (min-width: 768px) { .burger { display: none; } }
+
+.menu-toggle:checked ~ .burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-toggle:checked ~ .burger span:nth-child(2) { opacity: 0; }
+.menu-toggle:checked ~ .burger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.mobile-nav {
+  display: none;
+  position: absolute; top: 52px; left: 0; right: 0;
+  flex-direction: column;
+  background: rgba(7,13,26,0.98);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 16px 16px;
+}
+.menu-toggle:checked ~ .mobile-nav { display: flex; }
+@media (min-width: 768px) { .mobile-nav { display: none !important; } }
+
+.mobile-link {
+  font-size: 0.95rem; font-weight: 500; color: var(--muted);
+  padding: 12px 8px; border-bottom: 1px solid var(--border);
+  transition: color 0.15s;
+}
+.mobile-link:hover, .mobile-link.active { color: var(--text); }
+.mobile-dl { color: var(--accent); border-bottom: none; font-weight: 600; }
 </style>

@@ -1,7 +1,12 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const authorPhotoPath = '/images/yassine-oulada.jpg';
+const hasAuthorPhoto = fs.existsSync(path.join(process.cwd(), 'public', authorPhotoPath));
 
 const stats = [
   { value: '724%', label: 'Impressions-Wachstum', desc: 'in 6 Monaten für einen B2B-Kunden' },
@@ -12,6 +17,21 @@ const stats = [
 const skills = ['GEO', 'AEO', 'SEO', 'SEA', 'MODX', 'WordPress', 'GA4', 'GSC', 'Matomo', 'Schema Markup', 'Content-Strategie'];
 ---
 <Base title="Über Yassine Oulada — SimplyGEO" description="Yassine Oulada ist Online Marketing Manager und GEO-Spezialist im DACH-Markt. Hier erfährst du mehr über SimplyGEO.">
+  <script type="application/ld+json" slot="head">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yassine Oulada",
+      "jobTitle": "GEO & SEO Spezialist · Online Marketing Manager",
+      "description": "Online Marketing Manager bei PixelProduction und Freelancer im DACH-Markt, spezialisiert auf Generative Engine Optimization (GEO), SEO und Website-Relaunches für B2B-Unternehmen.",
+      "url": "https://simplygeo.de/about",
+      "image": hasAuthorPhoto ? `https://simplygeo.de${authorPhotoPath}` : undefined,
+      "worksFor": { "@type": "Organization", "name": "PixelProduction" },
+      "knowsAbout": ["Generative Engine Optimization", "Answer Engine Optimization", "SEO", "SEA", "Schema Markup", "Content-Strategie"],
+      "sameAs": ["https://www.linkedin.com/in/yassine-o-726988196/"],
+      "mainEntityOfPage": "https://simplygeo.de/about"
+    })}
+  </script>
   <Header />
   <main class="about-main">
     <div class="about-inner">
@@ -19,7 +39,10 @@ const skills = ['GEO', 'AEO', 'SEO', 'SEA', 'MODX', 'WordPress', 'GA4', 'GSC', '
       <span class="eyebrow">Über SimplyGEO</span>
 
       <div class="about-hero">
-        <div class="about-avatar">YA</div>
+        {hasAuthorPhoto
+          ? <img src={authorPhotoPath} alt="Yassine Oulada" class="about-avatar about-photo" width="80" height="80" />
+          : <div class="about-avatar">YA</div>
+        }
         <div class="about-intro">
           <h1 class="about-title">Yassine Oulada</h1>
           <p class="about-role">GEO & SEO Spezialist · Online Marketing Manager · Freelancer</p>
@@ -100,6 +123,7 @@ const skills = ['GEO', 'AEO', 'SEO', 'SEA', 'MODX', 'WordPress', 'GA4', 'GSC', '
   display:flex; align-items:center; justify-content:center;
   font-family:'Space Grotesk',sans-serif; font-size:1.6rem; font-weight:700; color:#070d1a;
 }
+.about-photo{ object-fit:cover; background:none; border:2px solid var(--border2); }
 .about-title{ font-family:'Space Grotesk',sans-serif; font-size:1.8rem; font-weight:700; letter-spacing:-0.02em; color:var(--text); margin-bottom:4px; }
 .about-role{ font-size:0.85rem; color:var(--accent); }
 
