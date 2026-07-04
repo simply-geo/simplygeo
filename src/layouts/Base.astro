@@ -38,16 +38,14 @@ const ogImageURL = new URL(ogImagePath, Astro.site);
   <meta name="twitter:image" content={ogImageURL} />
 
   <!-- Schema: WebSite -->
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "SimplyGEO",
-      "url": "https://simplygeo.de",
-      "description": "GEO, AEO und KI-Suche für den DACH-Markt",
-      "inLanguage": "de-DE"
-    })}
-  </script>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SimplyGEO",
+    "url": "https://simplygeo.de",
+    "description": "GEO, AEO und KI-Suche für den DACH-Markt",
+    "inLanguage": "de-DE"
+  })} />
 
   <slot name="head" />
 

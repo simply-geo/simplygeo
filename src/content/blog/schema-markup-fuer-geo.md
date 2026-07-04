@@ -2,6 +2,7 @@
 title: "Schema Markup für GEO: Welche strukturierten Daten KI-Systeme bevorzugen"
 description: "Schema Markup ist das direkteste Signal, das du KI-Suchsystemen geben kannst. Welche Typen wichtig sind, wie du sie implementierst und warum maschinenlesbare Daten GEO entscheidend beeinflussen."
 pubDate: 2025-02-28
+updatedDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "Strukturierte Daten"
@@ -12,21 +13,25 @@ slug: "schema-markup-fuer-geo"
 heroImage: "/images/schema-markup.svg"
 ---
 
-## Was ist Schema Markup — und warum ist es für GEO entscheidend?
+In fast jedem Audit dasselbe Bild: eine gepflegte Website, ordentlicher Content, und im Quellcode herrscht Funkstille. Kein Article-Schema, kein Autor, nichts, was einer Maschine sagt, womit sie es zu tun hat.
 
-**Schema Markup** (auch: strukturierte Daten) ist maschinenlesbarer Code, den du in deine Website einbaust, um Suchmaschinen und KI-Systemen explizit zu sagen, was dein Inhalt bedeutet — nicht nur, was er sagt.
+Dabei ist Schema Markup die vielleicht dankbarste GEO-Maßnahme überhaupt: einmal sauber aufgesetzt, wirkt es dauerhaft, kostet nichts und erfordert keine Redaktion. Ein Nachmittag Arbeit, wenn man weiß, was man tut. Dieser Artikel sorgt dafür, dass du es weißt.
 
-Während ein Mensch lesen kann, dass "Yassine Oulada" eine Person ist, die einen Artikel über GEO geschrieben hat, muss eine Maschine das aus dem Kontext erschließen. Schema Markup nimmt diesen Umweg ab: `"@type": "Person"`, `"name": "Yassine Oulada"` — eindeutig, maschinenlesbar, zuverlässig.
+## Worum es geht
 
-Für GEO ist Schema Markup aus einem einfachen Grund wichtig: **KI-Systeme verarbeiten strukturierte Daten priorisiert**, weil sie direkter und zuverlässiger sind als Fließtext. Wer Schema Markup korrekt implementiert hat, liefert KI-Suchsystemen genau das, was sie brauchen — ohne dass sie es aus dem Text extrahieren müssen.
+**Schema Markup** (strukturierte Daten) ist maschinenlesbarer Code nach dem Standard von schema.org, der Suchmaschinen und KI-Systemen explizit mitteilt, was ein Inhalt *bedeutet*, nicht nur, was er *sagt*.
 
-## Die wichtigsten Schema-Typen für GEO
+Ein Mensch erkennt aus dem Kontext, dass "Yassine Oulada" der Autor dieses Artikels ist. Eine Maschine muss das erschließen, und Erschließen heißt: Sie kann sich irren. Schema Markup macht aus der Vermutung eine Angabe: `"@type": "Person", "name": "Yassine Oulada"`. Eindeutig, verlässlich, sofort verwertbar.
 
-Nicht alle Schema-Typen sind gleich relevant. Hier sind die sechs, die ich in jedem GEO-Audit als Priorität behandle:
+Für GEO ist das zentral, weil KI-Systeme strukturierte Daten bevorzugt verarbeiten. Alles, was sie nicht mühsam aus Fließtext extrahieren müssen, ist ein Geschenk. Und Systeme belohnen Geschenke mit Sichtbarkeit.
 
-### 1. Article / BlogPosting
+## Die sechs Typen, die zählen
 
-Der grundlegendste Schema-Typ für Content-Seiten. Er gibt KI-Systemen wichtige Kontextinformationen:
+schema.org kennt hunderte Typen. Für Blogs und B2B-Websites brauchst du sechs.
+
+### Article / BlogPosting
+
+Die Basis für jede Content-Seite. Ohne dieses Schema fehlen einer Maschine so grundlegende Dinge wie das Publikationsdatum, und Aktualität ist ein Auswahlkriterium.
 
 ```json
 {
@@ -34,18 +39,14 @@ Der grundlegendste Schema-Typ für Content-Seiten. Er gibt KI-Systemen wichtige 
   "@type": "BlogPosting",
   "headline": "Schema Markup für GEO",
   "datePublished": "2025-02-28",
-  "author": {
-    "@type": "Person",
-    "name": "Yassine Oulada"
-  }
+  "dateModified": "2026-07-04",
+  "author": { "@type": "Person", "name": "Yassine Oulada" }
 }
 ```
 
-**Warum wichtig:** Ohne Article-Schema weiß ein KI-System nicht, wann ein Artikel veröffentlicht wurde — und bevorzugt möglicherweise neuere, schlechter recherchierte Quellen, nur weil deren Datum erkennbar ist.
+### Person
 
-### 2. Person
-
-Das Person-Schema verknüpft Inhalte mit einer konkreten Autorenidentität. Es ist der direkte Weg, E-E-A-T (Expertise, Authoritativeness, Trustworthiness) maschinenlesbar zu machen:
+Mein Favorit, weil hier E-E-A-T maschinenlesbar wird. Das unterschätzte Feld ist `sameAs`: Es verknüpft die Autorenidentität mit externen Profilen, sodass KI-Systeme Autoritätssignale aus mehreren Quellen zusammenführen können.
 
 ```json
 {
@@ -57,11 +58,11 @@ Das Person-Schema verknüpft Inhalte mit einer konkreten Autorenidentität. Es i
 }
 ```
 
-Das `sameAs`-Feld ist besonders wertvoll: Es verknüpft die Autorenidentität auf deiner Website mit externen Profilen — LinkedIn, XING, andere Plattformen. KI-Systeme können so Informationen aus mehreren Quellen zusammenführen und die Autorität der Person besser einschätzen.
+Ein Autor, der nur auf der eigenen Website existiert, ist ein schwaches Signal. Ein Autor mit konsistentem LinkedIn-Profil, Erwähnungen und `sameAs`-Verknüpfung ist ein starkes.
 
-### 3. FAQPage
+### FAQPage
 
-FAQPage ist eines der direktesten GEO-Signale überhaupt. Es liefert KI-Systemen exakte Frage-Antwort-Paare — in einem Format, das direkt in Antworten übernommen werden kann:
+Das direkteste GEO-Signal im ganzen Katalog: fertige Frage-Antwort-Paare, die ein System eins zu eins übernehmen kann.
 
 ```json
 {
@@ -77,82 +78,32 @@ FAQPage ist eines der direktesten GEO-Signale überhaupt. Es liefert KI-Systemen
 }
 ```
 
-**Praxis-Tipp:** FAQPage-Markup lohnt sich besonders für Seiten, die W-Fragen beantworten. Die Antwort im Schema sollte identisch mit dem Text auf der Seite sein — KI-Systeme können Diskrepanzen erkennen.
+Wichtig: Die Antwort im Schema muss identisch mit dem sichtbaren Text auf der Seite sein. Diskrepanzen zwischen Markup und Inhalt gelten als Manipulation, dazu gleich mehr.
 
-### 4. HowTo
+### HowTo, Organization, BreadcrumbList
 
-HowTo-Schema strukturiert Anleitungen in nummerierte Schritte — ideal für "Wie"-Anfragen:
+Die restlichen drei in Kurzform: **HowTo** strukturiert Anleitungen in nummerierte Schritte, die AI Overviews und Perplexity gern direkt übernehmen. **Organization** gehört auf die Startseite und gibt Unternehmenskontext. **BreadcrumbList** hilft Maschinen, die Seitenhierarchie zu verstehen, also welche Inhalte thematisch zusammengehören.
 
-```json
-{
-  "@type": "HowTo",
-  "name": "So führst du einen GEO-Audit durch",
-  "step": [
-    {"@type": "HowToStep", "name": "Technische Basis prüfen", "text": "..."},
-    {"@type": "HowToStep", "name": "Content analysieren", "text": "..."}
-  ]
-}
-```
+## Implementierung: nimm JSON-LD, fertig
 
-Google AI Overviews und Perplexity extrahieren HowTo-Schritte häufig direkt in ihre Antworten.
+Es gibt drei Formate für strukturierte Daten, und die Entscheidung ist einfach: **JSON-LD**. Es wird von Google explizit bevorzugt, lebt als eigener `<script type="application/ld+json">`-Block getrennt vom HTML und lässt sich dadurch pflegen, ohne das Layout anzufassen. Microdata und RDFa verweben sich mit dem HTML und werden bei jedem Redesign zur Stolperfalle. Ich habe keinen einzigen Fall erlebt, in dem sie die bessere Wahl gewesen wären.
 
-### 5. Organization
+## Die fünf Fehler, die ich in Audits finde
 
-Organization-Schema auf der Homepage gibt KI-Systemen fundamentale Kontextinformationen über das Unternehmen oder die Website:
+Nach etlichen geprüften Websites hat sich eine stabile Top 5 herausgebildet:
 
-```json
-{
-  "@type": "Organization",
-  "name": "SimplyGEO",
-  "url": "https://simplygeo.de",
-  "description": "GEO, AEO und KI-Suche für den DACH-Markt",
-  "sameAs": ["https://www.linkedin.com/company/..."]
-}
-```
+1. **Kein Person-Schema.** Der häufigste Fehler. Der Content hat einen Autor, der Code weiß nichts davon. E-E-A-T verpufft.
+2. **Falsches oder fehlendes Datum.** `datePublished` fehlt oder wird bei jeder Kleinständerung überschrieben. Beides schadet: Ohne Datum keine Aktualitätsbewertung, mit ständig "frischem" Datum kein Vertrauen.
+3. **Schema widerspricht dem Seiteninhalt.** Markup mit Angaben, die nirgends auf der Seite stehen, wird von Google als Spam gewertet. Im schlimmsten Fall gibt es eine manuelle Maßnahme.
+4. **Kein `sameAs`.** Die Autorenidentität bleibt eine Insel. Gerade dieses Feld kostet zwei Minuten und bringt überproportional viel.
+5. **Schema nur auf der Startseite.** Strukturierte Daten wirken pro Seite. Eine ausgezeichnete Startseite hilft dem Blogartikel nicht.
 
-### 6. BreadcrumbList
+## Prüfen, bevor es live geht
 
-Breadcrumbs helfen KI-Systemen, die Hierarchie einer Website zu verstehen — und signalisieren, welche Seiten zu welchem Themenbereich gehören.
+Zwei Tools, beide kostenlos: Der [Schema Markup Validator](https://validator.schema.org/) prüft Syntax und Pflichtfelder, der Google Rich Results Test zeigt zusätzlich, ob das Markup für Rich Results qualifiziert. Ich validiere jeden Seitentyp einmal komplett, danach nur noch bei Änderungen.
 
-## Implementierung: JSON-LD vs. Microdata vs. RDFa
+## Mein Rat
 
-Es gibt drei Wege, Schema Markup zu implementieren. Die Empfehlung ist eindeutig: **JSON-LD**.
+Fang nicht mit allen sechs Typen gleichzeitig an. Die Reihenfolge, die sich bei mir bewährt hat: erst `Article` plus `Person` auf allen Beiträgen, das ist der größte Hebel. Dann `Organization` auf die Startseite. `FAQPage` und der Rest kommen, sobald die passenden Inhalte existieren.
 
-| Format | Empfehlung | Begründung |
-|---|---|---|
-| **JSON-LD** | ✅ Empfohlen | Wird von Google bevorzugt, einfach zu warten, kein Eingriff in HTML |
-| **Microdata** | ⚠️ Vermeiden | Verschachtelt in HTML, schwer wartbar |
-| **RDFa** | ⚠️ Vermeiden | Komplex, selten notwendig |
-
-JSON-LD wird als `<script type="application/ld+json">` im `<head>` oder am Ende des `<body>` eingebunden. Es beeinflusst das visuelle Layout der Seite nicht.
-
-## Die häufigsten Fehler im GEO-Audit
-
-In meinen GEO-Audits sehe ich dieselben Fehler immer wieder:
-
-**1. Kein Author-Schema:** Der häufigste Fehler. Ohne Person-Schema kann kein KI-System Autorschaft zuordnen — E-E-A-T bleibt ungenutzt.
-
-**2. Falsche `datePublished`:** Das Datum wird nicht gesetzt oder mit dem Änderungsdatum verwechselt. KI-Systeme bevorzugen aktuelle Inhalte — ein korrektes Publikationsdatum ist relevant.
-
-**3. Schema ohne passenden Seiteninhalt:** Schema Markup, das Informationen enthält, die nicht auf der Seite stehen, wird von Google und KI-Systemen als Spam gewertet und kann zu Abstrafungen führen.
-
-**4. Fehlende `sameAs`-Verknüpfungen:** Ohne externe Verknüpfungen bleibt die Autorenidentität isoliert — KI-Systeme können keine weiteren Autoritätssignale zusammenführen.
-
-**5. Nur Homepage hat Schema:** Schema Markup muss auf jeder relevanten Seite individuell implementiert sein — nicht nur auf der Homepage.
-
-## Validierung: So prüfst du dein Schema Markup
-
-Bevor du Schema Markup live stellst, solltest du es validieren. Das wichtigste Tool:
-
-- **[Schema Markup Validator](https://validator.schema.org/)** — das offizielle Validierungstool von schema.org. Gibt an, ob das Markup syntaktisch korrekt ist und ob alle Pflichtfelder vorhanden sind.
-- **Google Rich Results Test** — prüft zusätzlich, ob dein Markup für Google Rich Results qualifiziert.
-
-## Fazit
-
-Schema Markup ist kein optionales Extra — es ist das direkteste Signal, das du KI-Systemen über deinen Content geben kannst. Wer strukturierte Daten korrekt implementiert, gibt Suchmaschinen und KI-Systemen einen klaren, maschinenlesbaren Kontext: wer du bist, was dein Content bedeutet, und warum er vertrauenswürdig ist.
-
-Der Aufwand ist überschaubar. Der Effekt auf GEO ist messbar.
-
-**Weiterführende Artikel:**
-- [Was ist GEO? Generative Engine Optimization einfach erklärt](/blog/was-ist-geo)
-- [Mein GEO-Audit Prozess: So analysiere ich Websites für KI-Sichtbarkeit](/blog/geo-audit-prozess)
+Und wenn du wissen willst, wie Schema Markup in den größeren Prüfkontext passt: Im [GEO-Audit-Prozess](/blog/geo-audit-prozess) ist es Phase 3 von 5.

@@ -2,6 +2,7 @@
 title: "LLM-Suchmaschinen im Vergleich: ChatGPT, Perplexity und Google AI Overviews"
 description: "ChatGPT Search, Perplexity AI und Google AI Overviews dominieren die neue KI-Suche. Wie funktionieren sie, wie crawlen sie, und wie zitieren sie Quellen? Ein praxisnaher Vergleich."
 pubDate: 2025-02-21
+updatedDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "LLM & KI-Suchmaschinen"
@@ -12,91 +13,62 @@ slug: "llm-suchmaschinen-ueberblick"
 heroImage: "/images/llm-suchmaschinen.svg"
 ---
 
-## Was sind LLM-Suchmaschinen?
+Ich stelle denselben Satz von Testfragen regelmäßig drei Systemen: ChatGPT Search, Perplexity und Google AI Overviews. Gleiche Fragen, gleicher Tag, drei teils sehr unterschiedliche Antworten mit unterschiedlichen Quellen.
 
-**LLM-Suchmaschinen** sind KI-gestützte Systeme, die Nutzeranfragen nicht mit einer Liste von Links beantworten, sondern eine synthetisierte Antwort generieren — basierend auf Informationen, die aus verschiedenen Webquellen zusammengestellt werden.
+Diese Unterschiede sind der Grund, warum "für KI optimieren" als Pauschalaussage wenig taugt. Die drei Systeme crawlen unterschiedlich, zitieren unterschiedlich und erreichen unterschiedliche Nutzer. Wer GEO ernsthaft betreibt, sollte ihre Eigenheiten kennen. Hier ist mein Überblick aus der Testpraxis.
 
-Das Kürzel LLM steht für *Large Language Model*: Sprachmodelle, die auf riesigen Textmengen trainiert wurden und in der Lage sind, natürlichsprachige Antworten zu formulieren. In Kombination mit Web-Retrieval entstehen daraus Suchsysteme, die fundamentell anders funktionieren als Google Classic.
+## Kurz vorweg: Was eine LLM-Suchmaschine ist
 
-Für GEO bedeutet das: Wer sichtbar sein will, muss verstehen, wie diese Systeme Inhalte finden, bewerten und zitieren.
+**LLM-Suchmaschinen** beantworten Anfragen nicht mit einer Linkliste, sondern mit einer generierten Antwort, die aus mehreren Webquellen zusammengesetzt wird. Ein Large Language Model (LLM) übernimmt das Formulieren, ein Retrieval-System liefert die Quellen. Für Website-Betreiber zählt am Ende eine Frage: Komme ich in diesen Quellen vor?
 
-## Die drei wichtigsten Systeme im Überblick
+## Perplexity: das transparenteste System
 
-### ChatGPT Search (OpenAI)
+Ich fange bewusst nicht mit dem größten, sondern mit dem lehrreichsten System an. Perplexity zeigt Quellen als nummerierte Referenzen direkt in der Antwort, prominenter als jedes andere System. Wenn du wissen willst, ob dein Content zitierfähig ist, siehst du es hier zuerst.
 
-ChatGPT Search ist die Suchintegration von OpenAI, seit Ende 2024 für alle Plus-Nutzer und zunehmend auch im Free-Tier verfügbar. Das System nutzt einen eigenen Web-Crawler namens **GPTBot**, der Websites besucht und Inhalte für die Suchfunktion indexiert.
+Technisch crawlt Perplexity mit dem eigenen **PerplexityBot** und greift ergänzend auf Bing-Daten zurück. Die Antworten entstehen in Echtzeit, Folgefragen sind möglich. Aus meinen Tests: Perplexity belohnt faktenreiche, klar strukturierte Inhalte und wertet erkennbare Domain-Autorität mit. Es zitiert häufiger und granularer als ChatGPT.
 
-**Wie es funktioniert:**
-1. Nutzer stellt eine Frage im Chat
-2. Das System entscheidet, ob eine Websuche notwendig ist
-3. GPTBot crawlt aktuelle Quellen in Echtzeit oder nutzt einen gecachten Index
-4. Das LLM synthetisiert eine Antwort und verlinkt Quellen
+Die Nutzerbasis im DACH-Raum ist kleiner als bei den anderen beiden, wächst aber, vor allem unter Professionals. Mein Rat: Nutze Perplexity als Diagnose-Instrument, selbst wenn deine Zielgruppe woanders sucht.
 
-**Was das für GEO bedeutet:** ChatGPT bevorzugt Seiten, die in robots.txt ausdrücklich für GPTBot freigegeben sind. Autorschaft und klare Struktur erhöhen die Wahrscheinlichkeit, zitiert zu werden.
+## ChatGPT Search: die größte Reichweite im Chat
 
-### Perplexity AI
+ChatGPT hat im DACH-Raum eine enorme Nutzerbasis, und die integrierte Websuche ist für viele der Standardweg zu aktuellen Informationen geworden. Das System entscheidet selbst, wann es das Web befragt, crawlt mit **GPTBot** und verlinkt Quellen in der Antwort, allerdings zurückhaltender als Perplexity.
 
-Perplexity ist aktuell die meistgenutzte dedizierte KI-Suchmaschine — besonders unter Tech-affinen Nutzern. Das Modell wurde speziell für die Suche optimiert und zeigt Quellen besonders prominent an, was es für GEO besonders interessant macht.
+Zwei Dinge sind für GEO entscheidend. Erstens die banale Voraussetzung: GPTBot muss in der robots.txt erlaubt sein, sonst findet nichts statt. Zweitens: ChatGPT bevorzugt in meinen Tests Quellen mit klarer Autorschaft und direkt extrahierbaren Aussagen. Vage Marketing-Texte werden paraphrasiert, ohne die Quelle zu nennen. Konkrete, belegte Aussagen werden verlinkt.
 
-**Wie es funktioniert:**
-1. Perplexity crawlt mit eigenem Bot (**PerplexityBot**) und nutzt zusätzlich Bing-Daten
-2. Anfragen werden in Echtzeit mit aktuellen Quellen beantwortet
-3. Quellen werden als nummerierte Referenzen direkt in der Antwort verlinkt
-4. Nutzer können Folgefragen stellen (Conversational Search)
+## Google AI Overviews: der Riese im Bestandssystem
 
-**Was das für GEO bedeutet:** Perplexity zitiert häufiger und sichtbarer als andere Systeme. Direkter, faktenbasierter Content mit klarer Struktur wird bevorzugt. Perplexity wertet auch Domain-Autorität aus.
+AI Overviews (früher SGE) erscheinen direkt über den organischen Google-Ergebnissen, generiert von einem Gemini-Modell auf Basis des normalen Google-Index. Es gibt keinen separaten Crawler, den man freischalten müsste: Wer bei Google indexiert ist, ist grundsätzlich im Rennen.
 
-### Google AI Overviews
+Das macht AI Overviews zum wichtigsten System für den DACH-Markt, denn Googles Marktanteil liegt hier weiterhin über 90 %. Die Quellenauswahl folgt erkennbar E-E-A-T-Logik plus Extraktionsfreundlichkeit: Wer gut rankt UND direkt antwortet, hat die besten Karten. Gut ranken allein reicht nicht, das sehe ich in Tests ständig.
 
-Google AI Overviews (früher: Search Generative Experience / SGE) ist die KI-Antwortfunktion direkt in den Google-Suchergebnissen. Sie erscheint oberhalb der organischen Ergebnisse und wird für immer mehr Suchanfragen ausgespielt — besonders für W-Fragen und Vergleichsanfragen.
-
-**Wie es funktioniert:**
-1. Google crawlt bereits mit Googlebot — AI Overviews nutzt denselben Index
-2. Ein separates KI-Modell (basierend auf Gemini) generiert die Zusammenfassung
-3. Quellen werden als Cards rechts neben der Antwort angezeigt
-4. Die Auswahl basiert auf Relevanz, E-E-A-T und Strukturierbarkeit des Contents
-
-**Was das für GEO bedeutet:** Wer gut in klassischem SEO aufgestellt ist, hat eine gute Ausgangsbasis — aber AI Overviews bevorteilen zusätzlich direkten, klar strukturierten Content und Schema Markup.
-
-## Direkter Vergleich der drei Systeme
+## Die drei im direkten Vergleich
 
 | Kriterium | ChatGPT Search | Perplexity AI | Google AI Overviews |
 |---|---|---|---|
-| **Crawler** | GPTBot | PerplexityBot + Bing | Googlebot |
-| **Zitierformat** | Links in Antwort | Nummerierte Referenzen | Cards neben Antwort |
-| **Zitierfrequenz** | Mittel | Hoch | Mittel–Hoch |
-| **Echtzeit-Daten** | Ja (mit Websuche) | Ja | Ja |
-| **DACH-Nutzung** | Sehr hoch | Mittel, wachsend | Sehr hoch |
-| **Conversational** | Ja | Ja | Eingeschränkt |
+| **Crawler** | GPTBot | PerplexityBot + Bing | Googlebot (Bestand) |
+| **Zitierweise** | Links, eher sparsam | Nummerierte Referenzen, prominent | Quellen-Cards neben Antwort |
+| **Echtzeit** | Ja, bei Bedarf | Ja, immer | Ja |
+| **Reichweite DACH** | Sehr hoch | Wachsend | Sehr hoch |
+| **Bester Einsatz für dich** | Reichweite | Diagnose | Muss ohnehin |
 
-## Gemeinsame Muster — was alle drei bevorzugen
+## Was alle drei belohnen
 
-Trotz der Unterschiede gibt es klare Gemeinsamkeiten in dem, was alle drei Systeme bei der Quellauswahl bevorzugen:
+So unterschiedlich die Systeme sind, ihre Vorlieben überschneiden sich deutlich. Fünf Muster ziehen sich durch alle meine Tests:
 
-**1. Direktheit:** Die wichtigste Aussage steht in den ersten zwei Sätzen eines Abschnitts, nicht am Ende.
+1. **Direktheit.** Die Kernaussage steht am Abschnittsanfang, nicht am Ende.
+2. **Faktendichte.** Zahlen, Daten, benennbare Quellen schlagen Allgemeinplätze.
+3. **Autorschaft.** Erkennbare Autoren mit Profil und Schema-Auszeichnung.
+4. **Technische Zugänglichkeit.** Offene robots.txt, schnelle Ladezeiten, sauberes HTML.
+5. **Struktur.** Überschriften mit Aussagekraft, Tabellen, Listen, FAQ-Blöcke.
 
-**2. Faktendichte:** Konkrete Zahlen, Daten und benennbare Aussagen werden bevorzugt gegenüber allgemeinen Formulierungen.
+Anders gesagt: Es gibt keine drei Strategien für drei Systeme. Es gibt eine Strategie, die bei allen dreien wirkt. Die Grundlagen dafür stehen im Einstiegsartikel [Was ist GEO?](/blog/was-ist-geo).
 
-**3. Autorschaft:** Klare Autorenprofile mit Name, Rolle und Expertise erhöhen die Vertrauenswürdigkeit messbar.
+## Meine Priorisierung für den DACH-Markt
 
-**4. Technische Zugänglichkeit:** Schnelle Ladezeiten, korrekte robots.txt-Konfiguration (alle Bots erlaubt) und sauberes HTML sind Grundvoraussetzungen.
+Wenn Ressourcen knapp sind, in dieser Reihenfolge:
 
-**5. Strukturierter Content:** Überschriften, Listen, Tabellen und FAQ-Sektionen erleichtern die Extraktion.
+1. **Google AI Overviews**, weil praktisch jede Zielgruppe hier sucht
+2. **ChatGPT Search**, wegen der schieren Nutzerzahl
+3. **Perplexity**, als Test- und Frühwarnsystem
 
-## Welches System hat Priorität für DACH?
-
-Für den deutschsprachigen Markt ergibt sich eine klare Priorisierung:
-
-1. **Google AI Overviews** — wegen Googles Marktdominanz im DACH-Raum (>90 % Marktanteil) und der direkten Integration in die reguläre Suche
-2. **ChatGPT Search** — wegen der sehr hohen ChatGPT-Nutzung in der DACH-Region
-3. **Perplexity** — wächst schnell, besonders unter Professionals und Tech-Affineren
-
-Die gute Nachricht: Wer für eines dieser Systeme optimiert, optimiert automatisch für alle drei — da die Grundprinzipien gleich sind.
-
-## Fazit
-
-LLM-Suchmaschinen sind keine monolithische Kategorie, sondern unterschiedliche Systeme mit eigenen Crawlern, Zitierlogiken und Nutzerprofilen. Wer GEO betreibt, muss diese Unterschiede kennen — und seinen Content so aufbauen, dass er für alle drei Systeme extrahierbar, vertrauenswürdig und direkt verwertbar ist.
-
-**Weiterführende Artikel:**
-- [Was ist GEO? Generative Engine Optimization einfach erklärt](/blog/was-ist-geo)
-- [Mein GEO-Audit Prozess: So analysiere ich Websites für KI-Sichtbarkeit](/blog/geo-audit-prozess)
+Und ein letzter Tipp aus der Praxis: Leg dir eine feste Testroutine zu. Zehn, zwanzig Fragen, einmal im Monat, Ergebnisse dokumentieren. Die Systeme ändern sich schnell, und wer regelmäßig misst, erkennt Verschiebungen, bevor die Konkurrenz sie bemerkt. Wie so eine Routine in einen kompletten Prüfprozess passt, steht im [GEO-Audit-Artikel](/blog/geo-audit-prozess).

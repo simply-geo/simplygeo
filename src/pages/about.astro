@@ -17,21 +17,19 @@ const stats = [
 const skills = ['GEO', 'AEO', 'SEO', 'SEA', 'MODX', 'WordPress', 'GA4', 'GSC', 'Matomo', 'Schema Markup', 'Content-Strategie'];
 ---
 <Base title="Über Yassine Oulada — SimplyGEO" description="Yassine Oulada ist Online Marketing Manager und GEO-Spezialist im DACH-Markt. Hier erfährst du mehr über SimplyGEO.">
-  <script type="application/ld+json" slot="head">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Yassine Oulada",
-      "jobTitle": "GEO & SEO Spezialist · Online Marketing Manager",
-      "description": "Online Marketing Manager bei PixelProduction und Freelancer im DACH-Markt, spezialisiert auf Generative Engine Optimization (GEO), SEO und Website-Relaunches für B2B-Unternehmen.",
-      "url": "https://simplygeo.de/about",
-      "image": hasAuthorPhoto ? `https://simplygeo.de${authorPhotoPath}` : undefined,
-      "worksFor": { "@type": "Organization", "name": "PixelProduction" },
-      "knowsAbout": ["Generative Engine Optimization", "Answer Engine Optimization", "SEO", "SEA", "Schema Markup", "Content-Strategie"],
-      "sameAs": ["https://www.linkedin.com/in/yassine-o-726988196/"],
-      "mainEntityOfPage": "https://simplygeo.de/about"
-    })}
-  </script>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yassine Oulada",
+    "jobTitle": "GEO & SEO Spezialist · Online Marketing Manager",
+    "description": "Online Marketing Manager bei PixelProduction und Freelancer im DACH-Markt, spezialisiert auf Generative Engine Optimization (GEO), SEO und Website-Relaunches für B2B-Unternehmen.",
+    "url": "https://simplygeo.de/about",
+    "image": hasAuthorPhoto ? `https://simplygeo.de${authorPhotoPath}` : undefined,
+    "worksFor": { "@type": "Organization", "name": "PixelProduction" },
+    "knowsAbout": ["Generative Engine Optimization", "Answer Engine Optimization", "SEO", "SEA", "Schema Markup", "Content-Strategie"],
+    "sameAs": ["https://www.linkedin.com/in/yassine-o-726988196/"],
+    "mainEntityOfPage": "https://simplygeo.de/about"
+  })} />
   <Header />
   <main class="about-main">
     <div class="about-inner">

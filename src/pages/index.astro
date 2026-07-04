@@ -52,8 +52,8 @@ const faqs = [
 ];
 ---
 <Base title="Sichtbar in der KI-Ära — SimplyGEO" description="GEO, AEO und KI-Suche einfach erklärt. Praxisnahes Wissen für den DACH-Markt von Yassine Oulada.">
-  <script type="application/ld+json" slot="head">
-    {JSON.stringify({
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "SimplyGEO",
@@ -67,10 +67,8 @@ const faqs = [
         "url": "https://simplygeo.de/about",
         "sameAs": ["https://www.linkedin.com/in/yassine-o-726988196/"]
       }
-    })}
-  </script>
-  <script type="application/ld+json" slot="head">
-    {JSON.stringify({
+    })} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": faqs.map(f => ({
@@ -78,8 +76,8 @@ const faqs = [
         "name": f.q,
         "acceptedAnswer": { "@type": "Answer", "text": f.a }
       }))
-    })}
-  </script>
+    })} />
+  </Fragment>
 
   <Header />
   <section class="hero">
