@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base title="Seite nicht gefunden" description="Diese Seite existiert nicht — aber unsere GEO-Artikel schon.">
+  <Header />
+  <main class="nf-main">
+    <div class="nf-inner">
+      <div class="nf-code">404</div>
+      <h1 class="nf-title">Diese Seite wird nicht mal von KI-Systemen gefunden.</h1>
+      <p class="nf-desc">Die angeforderte Seite existiert nicht (mehr). Vielleicht hilft dir einer dieser Wege weiter:</p>
+      <div class="nf-links">
+        <a href="/" class="btn-primary">Zur Startseite →</a>
+        <a href="/blog" class="btn-secondary">Alle Artikel ansehen</a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>
+<style>
+.nf-main{ position:relative; z-index:1; padding:80px 24px; min-height:50vh; display:flex; align-items:center; justify-content:center; }
+.nf-inner{ max-width:520px; text-align:center; }
+.nf-code{
+  font-family:'Space Grotesk',sans-serif; font-size:5rem; font-weight:700;
+  background:linear-gradient(135deg,var(--accent),var(--purple));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  line-height:1; margin-bottom:16px;
+}
+.nf-title{ font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--text); margin-bottom:10px; }
+.nf-desc{ font-size:0.88rem; color:var(--muted); line-height:1.65; margin-bottom:24px; }
+.nf-links{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.btn-primary{ display:inline-flex; align-items:center; gap:6px; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; padding:10px 20px; background:var(--accent); color:var(--bg); border-radius:var(--radius-sm); transition:opacity 0.2s; }
+.btn-primary:hover{ opacity:0.88; }
+.btn-secondary{ display:inline-flex; align-items:center; gap:6px; font-size:0.82rem; color:var(--muted); padding:10px 16px; border:1px solid var(--border2); border-radius:var(--radius-sm); transition:color 0.15s,border-color 0.15s; }
+.btn-secondary:hover{ color:var(--text); border-color:var(--muted2); }
+</style>
