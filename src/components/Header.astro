@@ -8,12 +8,13 @@ const currentPath = Astro.url.pathname;
 const isActive = (item: typeof nav[0]) =>
   currentPath === item.href || currentPath.startsWith(item.match);
 ---
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
 <header class="header">
-  <a href="/" class="logo">Simply<span>GEO</span></a>
+  <a href="/" class="logo" aria-label="SimplyGEO Startseite">Simply<span>GEO</span></a>
 
   <nav class="nav" aria-label="Hauptnavigation">
     {nav.map(n => (
-      <a href={n.href} class={`nav-link${isActive(n) ? ' active' : ''}`}>{n.label}</a>
+      <a href={n.href} class={`nav-link${isActive(n) ? ' active' : ''}`} aria-current={isActive(n) ? 'page' : undefined}>{n.label}</a>
     ))}
   </nav>
 

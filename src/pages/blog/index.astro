@@ -9,11 +9,19 @@ const sorted = posts.sort((a,b) => new Date(b.frontmatter.pubDate).getTime() - n
 ---
 <Base title="Blog — SimplyGEO" description="Alle Artikel zu GEO, AEO und KI-Suche für den DACH-Markt von Yassine Oulada.">
   <Header />
-  <main class="blog-index">
+  <main id="main" class="blog-index">
     <div class="bi-header">
       <span class="eyebrow">Alle Artikel</span>
       <h1 class="bi-title">Blog</h1>
       <p class="bi-desc">Praxisnahes Wissen zu GEO, AEO und KI-gestützter Suche — für den DACH-Markt.</p>
+      <div class="topic-chips">
+        <a href="/themen/geo" class="topic-chip" style="--tc:#00c2ff">GEO Grundlagen</a>
+        <a href="/themen/aeo" class="topic-chip" style="--tc:#7b5ea7">AEO</a>
+        <a href="/themen/llm" class="topic-chip" style="--tc:#00e5a0">LLM & KI-Suche</a>
+        <a href="/themen/schema" class="topic-chip" style="--tc:#ff8c42">Strukturierte Daten</a>
+        <a href="/themen/content" class="topic-chip" style="--tc:#ff4f8b">Content & E-E-A-T</a>
+        <a href="/themen/tools" class="topic-chip" style="--tc:#ffd23f">Tools & Messung</a>
+      </div>
     </div>
     <div class="posts-grid">
       {sorted.map((post: any) => (
@@ -55,7 +63,19 @@ const sorted = posts.sort((a,b) => new Date(b.frontmatter.pubDate).getTime() - n
 .blog-index{ position:relative; z-index:1; padding:40px 24px 60px; max-width:960px; margin:0 auto; }
 .eyebrow{ font-size:0.67rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:block; }
 .bi-title{ font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; letter-spacing:-0.02em; color:var(--text); margin-bottom:8px; }
-.bi-desc{ font-size:0.88rem; color:var(--muted); margin-bottom:36px; }
+.bi-desc{ font-size:0.88rem; color:var(--muted); margin-bottom:18px; }
+.topic-chips{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:36px; }
+.topic-chip{
+  font-size:0.72rem; font-weight:600; color:var(--tc);
+  padding:5px 12px; border-radius:20px;
+  background:color-mix(in srgb, var(--tc) 9%, transparent);
+  border:1px solid color-mix(in srgb, var(--tc) 22%, transparent);
+  transition:background 0.15s, border-color 0.15s;
+}
+.topic-chip:hover{
+  background:color-mix(in srgb, var(--tc) 16%, transparent);
+  border-color:color-mix(in srgb, var(--tc) 40%, transparent);
+}
 .posts-grid{ display:grid; gap:12px; }
 @media(min-width:640px){ .posts-grid{ grid-template-columns:repeat(2,1fr); } }
 .post-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; transition:border-color 0.15s,background 0.15s,transform 0.15s; }

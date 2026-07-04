@@ -96,7 +96,9 @@ const showToc = headings.length >= 4;
 
   <Header />
 
-  <main class="blog-main">
+  <div class="read-progress" aria-hidden="true"></div>
+
+  <main id="main" class="blog-main">
     <article class="blog-article">
 
       <!-- Breadcrumb -->
@@ -214,6 +216,21 @@ const showToc = headings.length >= 4;
 </Base>
 
 <style>
+/* Lesefortschritt — reines CSS, wird in nicht unterstützenden Browsern ausgeblendet */
+.read-progress {
+  position: fixed; top: 52px; left: 0; right: 0; height: 2px;
+  z-index: 250;
+  background: linear-gradient(90deg, var(--accent), var(--purple));
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  animation: read-grow linear;
+  animation-timeline: scroll();
+}
+@keyframes read-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@supports not (animation-timeline: scroll()) {
+  .read-progress { display: none; }
+}
+
 .blog-main {
   position: relative; z-index: 1;
   padding: 32px 20px 60px;

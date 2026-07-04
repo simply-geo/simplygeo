@@ -80,6 +80,7 @@ const faqs = [
   </Fragment>
 
   <Header />
+  <main id="main">
   <section class="hero">
     <div class="hero-left">
       <div class="hero-audience">
@@ -149,6 +150,7 @@ const faqs = [
 
   <section class="topics-section" id="topics">
     <div class="topics-header">
+      <span class="eyebrow">Wissensbereiche</span>
       <h2 class="topics-title">Alle Themenbereiche</h2>
       <p class="topics-sub">Wähle einen Bereich und arbeite dich Schritt für Schritt durch.</p>
     </div>
@@ -170,7 +172,10 @@ const faqs = [
   <!-- Neueste Artikel -->
   <section class="latest-section">
     <div class="latest-header">
-      <h2 class="latest-title">Neueste Artikel</h2>
+      <div>
+        <span class="eyebrow">Blog</span>
+        <h2 class="latest-title">Neueste Artikel</h2>
+      </div>
       <a href="/blog" class="latest-all">Alle Artikel →</a>
     </div>
     <div class="latest-grid">
@@ -212,6 +217,7 @@ const faqs = [
 
   <!-- FAQ -->
   <section class="faq-section">
+    <span class="eyebrow">FAQ</span>
     <h2 class="faq-title">Häufige Fragen zu GEO</h2>
     <div class="faq-list">
       {faqs.map(f => (
@@ -233,6 +239,7 @@ const faqs = [
       <a href="/downloads/geo-checkliste.pdf" class="btn-primary" download>⬇ Jetzt herunterladen</a>
     </div>
   </section>
+  </main>
   <Footer />
 </Base>
 <style>
@@ -336,11 +343,7 @@ const faqs = [
 .ss-link{ font-size:0.82rem; color:var(--text); font-weight:500; transition:color 0.15s; }
 .ss-link:hover{ color:var(--accent); }
 
-.btn-primary{ display:inline-flex; align-items:center; gap:6px; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; padding:10px 20px; background:var(--accent); color:var(--bg); border-radius:var(--radius-sm); transition:opacity 0.2s,transform 0.15s; }
-.btn-primary:hover{ opacity:0.88; transform:translateY(-1px); }
-.btn-secondary{ display:inline-flex; align-items:center; gap:6px; font-size:0.82rem; color:var(--muted); padding:10px 16px; border:1px solid var(--border2); border-radius:var(--radius-sm); transition:color 0.15s,border-color 0.15s; }
-.btn-secondary:hover{ color:var(--text); border-color:var(--muted2); }
-.topics-section{ padding:48px 24px; position:relative; z-index:1; }
+.topics-section{ padding:56px 24px; position:relative; z-index:1; max-width:1100px; margin:0 auto; }
 .topics-header{ margin-bottom:28px; }
 .topics-title{ font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:700; color:var(--text); margin-bottom:6px; }
 .topics-sub{ font-size:0.85rem; color:var(--muted); }
@@ -350,8 +353,14 @@ const faqs = [
 .topic-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px; position:relative; overflow:hidden; transition:border-color 0.2s,background 0.2s; }
 .topic-card::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--tc); }
 .topic-card:hover{ border-color:var(--border2); background:var(--surface2); }
-.tc-icon{ display:block; width:26px; height:26px; margin-bottom:12px; color:var(--tc); }
-.tc-icon :global(svg){ width:100%; height:100%; }
+.tc-icon{
+  display:flex; align-items:center; justify-content:center;
+  width:42px; height:42px; margin-bottom:14px;
+  color:var(--tc); border-radius:10px;
+  background:color-mix(in srgb, var(--tc) 10%, transparent);
+  border:1px solid color-mix(in srgb, var(--tc) 22%, transparent);
+}
+.tc-icon :global(svg){ width:22px; height:22px; }
 .tc-title{ font-family:'Space Grotesk',sans-serif; font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:6px; }
 .tc-desc{ font-size:0.78rem; color:var(--muted); line-height:1.55; margin-bottom:14px; }
 .tc-footer{ display:flex; justify-content:space-between; align-items:center; gap:8px; }

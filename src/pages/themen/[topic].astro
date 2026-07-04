@@ -35,11 +35,18 @@ const topicPosts = allPosts
 ---
 <Base title={`${label} — SimplyGEO`} description={description}>
   <Header />
-  <main class="hub-main">
+  <main id="main" class="hub-main">
 
     <!-- Hero -->
     <div class="hub-hero" style={`--tc: ${color}`}>
       <div class="hub-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Start</a>
+          <span>›</span>
+          <a href="/#topics">Themen</a>
+          <span>›</span>
+          <span>{label}</span>
+        </nav>
         <span class="hub-icon" set:html={iconSvg} />
         <div class="hub-eyebrow">Themenbereich</div>
         <h1 class="hub-title">{label}</h1>
@@ -112,6 +119,13 @@ const topicPosts = allPosts
   position: relative; overflow: hidden;
 }
 .hub-hero-inner { max-width: 800px; margin: 0 auto; padding-bottom: 40px; }
+.breadcrumb {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.72rem; color: var(--muted);
+  margin-bottom: 24px;
+}
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { color: var(--muted2); }
 .hub-icon { display: block; width: 40px; height: 40px; margin-bottom: 14px; color: var(--tc); }
 .hub-icon :global(svg) { width: 100%; height: 100%; }
 .hub-eyebrow {

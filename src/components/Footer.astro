@@ -1,44 +1,113 @@
 ---
 const year = new Date().getFullYear();
+
+const themen = [
+  { label: 'GEO Grundlagen', href: '/themen/geo' },
+  { label: 'AEO & Answer Engines', href: '/themen/aeo' },
+  { label: 'LLM & KI-Suchmaschinen', href: '/themen/llm' },
+  { label: 'Strukturierte Daten', href: '/themen/schema' },
+  { label: 'Content & E-E-A-T', href: '/themen/content' },
+  { label: 'Tools & Messung', href: '/themen/tools' },
+];
 ---
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-brand">
-      <span class="footer-logo">Simply<span>GEO</span></span>
-      <p class="footer-desc">GEO, AEO und KI-Suche für den DACH-Markt — praxisnah erklärt.</p>
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <span class="footer-logo">Simply<span>GEO</span></span>
+        <p class="footer-desc">GEO, AEO und KI-Suche für den DACH-Markt — praxisnah erklärt von Yassine Oulada.</p>
+        <a href="https://www.linkedin.com/in/yassine-o-726988196/" target="_blank" rel="noopener noreferrer" class="footer-social">
+          LinkedIn ↗
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="Themenbereiche">
+        <div class="footer-col-title">Themen</div>
+        {themen.map(t => (
+          <a href={t.href}>{t.label}</a>
+        ))}
+      </nav>
+
+      <nav class="footer-col" aria-label="Inhalte">
+        <div class="footer-col-title">Inhalte</div>
+        <a href="/blog">Alle Artikel</a>
+        <a href="/blog/was-ist-geo">Einstieg: Was ist GEO?</a>
+        <a href="/about">Über Yassine</a>
+        <a href="/downloads/geo-checkliste.pdf" download>GEO-Checkliste (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Rechtliches">
+        <div class="footer-col-title">Rechtliches</div>
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+      </nav>
+
     </div>
-    <nav class="footer-nav" aria-label="Footer Navigation">
-      <a href="/blog">Blog</a>
-      <a href="/about">About</a>
-      <a href="/impressum">Impressum</a>
-      <a href="/datenschutz">Datenschutz</a>
-    </nav>
-    <p class="footer-copy">© {year} SimplyGEO · simplygeo.de</p>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© {year} SimplyGEO · simplygeo.de</p>
+      <p class="footer-note">Keine Cookies, kein Tracking — versprochen.</p>
+    </div>
   </div>
 </footer>
 
 <style>
 .footer {
   border-top: 1px solid var(--border);
-  padding: 32px 24px;
+  padding: 48px 24px 28px;
   position: relative; z-index: 1;
+  background: rgba(14,24,41,0.4);
 }
-.footer-inner {
-  max-width: 900px; margin: 0 auto;
-  display: flex; flex-direction: column; gap: 16px;
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 36px;
 }
+@media (min-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .footer-grid { grid-template-columns: 2fr 1.2fr 1.2fr 0.8fr; gap: 40px; } }
+
 .footer-logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1rem; font-weight: 700;
+  font-size: 1.1rem; font-weight: 700;
 }
 .footer-logo span { color: var(--accent); }
-.footer-desc { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
-.footer-nav { display: flex; flex-wrap: wrap; gap: 4px; }
-.footer-nav a {
-  font-size: 0.75rem; color: var(--muted);
-  padding: 3px 8px; border-radius: 6px;
-  transition: color 0.15s, background 0.15s;
+.footer-desc {
+  font-size: 0.8rem; color: var(--muted);
+  line-height: 1.6; margin-top: 10px; margin-bottom: 14px;
+  max-width: 280px;
 }
-.footer-nav a:hover { color: var(--text); background: var(--surface2); }
-.footer-copy { font-size: 0.7rem; color: var(--muted2); }
+.footer-social {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 600; color: var(--accent);
+  padding: 5px 12px;
+  border: 1px solid rgba(0,194,255,0.25); border-radius: 20px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.footer-social:hover { background: var(--accent-dim); border-color: rgba(0,194,255,0.45); }
+
+.footer-col { display: flex; flex-direction: column; gap: 8px; }
+.footer-col-title {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted2); margin-bottom: 4px;
+}
+.footer-col a {
+  font-size: 0.8rem; color: var(--muted);
+  transition: color 0.15s;
+  width: fit-content;
+}
+.footer-col a:hover { color: var(--text); }
+
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.footer-copy { font-size: 0.72rem; color: var(--muted2); }
+.footer-note { font-size: 0.72rem; color: var(--muted2); }
 </style>

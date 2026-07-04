@@ -67,6 +67,60 @@ body {
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; }
 
+/* Anker landen nicht unter dem Sticky-Header */
+[id] { scroll-margin-top: 76px; }
+
+::selection { background: rgba(0,194,255,0.28); color: var(--text); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+h1, h2, h3 { text-wrap: balance; }
+
+/* Skip-Link für Tastaturnutzer */
+.skip-link {
+  position: absolute; left: -9999px; top: 8px; z-index: 999;
+  background: var(--accent); color: var(--bg);
+  padding: 8px 16px; border-radius: var(--radius-sm);
+  font-size: 0.82rem; font-weight: 600;
+}
+.skip-link:focus { left: 8px; }
+
+/* ── BUTTONS (global) ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem; font-weight: 600;
+  padding: 10px 20px;
+  background: var(--accent); color: var(--bg);
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  opacity: 0.92; transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,194,255,0.25);
+}
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.82rem; color: var(--muted);
+  padding: 10px 16px;
+  border: 1px solid var(--border2); border-radius: var(--radius-sm);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.btn-secondary:hover { color: var(--text); border-color: var(--muted2); background: var(--surface); }
+
+/* ── EYEBROW (global) ── */
+.eyebrow {
+  display: block;
+  font-size: 0.67rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
 /* ── PROSE ── */
 .prose { max-width: 680px; font-size: 0.95rem; color: var(--text); line-height: 1.78; }
 .prose h1,.prose h2,.prose h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin: 2em 0 0.75em; line-height: 1.2; }
