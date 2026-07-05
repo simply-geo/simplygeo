@@ -6,7 +6,7 @@ updatedDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "Strukturierte Daten"
-categoryColor: "#ff8c42"
+categoryColor: "#b9871c"
 level: "Einsteiger"
 readingTime: "10 Min"
 slug: "schema-markup-fuer-geo"

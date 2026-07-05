@@ -13,12 +13,12 @@ const icons: Record<string, string> = {
 };
 
 const topics = [
-  { id:'geo', label:'GEO Grundlagen', cat:'GEO Grundlagen', sub:'Was ist Generative Engine Optimization und warum klassisches SEO nicht mehr reicht.', color:'#00c2ff' },
-  { id:'aeo', label:'AEO & Answer Engines', cat:'AEO & Answer Engines', sub:'Optimierung für Featured Snippets, Voice Search und direkte KI-Antworten.', color:'#7b5ea7' },
-  { id:'llm', label:'LLM & KI-Suchmaschinen', cat:'LLM & KI-Suchmaschinen', sub:'ChatGPT Search, Perplexity und Google AI Overviews verstehen und nutzen.', color:'#00e5a0' },
-  { id:'schema', label:'Strukturierte Daten', cat:'Strukturierte Daten', sub:'Schema Markup und maschinenlesbare Signale für KI-Antwortmaschinen.', color:'#ff8c42' },
-  { id:'content', label:'Content & E-E-A-T', cat:'Content & E-E-A-T', sub:'Vertrauen, Autorität und zitierfähige Inhalte als Grundlage für GEO-Erfolg.', color:'#ff4f8b' },
-  { id:'tools', label:'Tools & Messung', cat:'Tools & Messung', sub:'GEO-Erfolge sichtbar machen, messen und kontinuierlich verbessern.', color:'#ffd23f' },
+  { id:'geo', label:'GEO Grundlagen', cat:'GEO Grundlagen', sub:'Was ist Generative Engine Optimization und warum klassisches SEO nicht mehr reicht.', color:'#e2552a' },
+  { id:'aeo', label:'AEO & Answer Engines', cat:'AEO & Answer Engines', sub:'Optimierung für Featured Snippets, Voice Search und direkte KI-Antworten.', color:'#1e3d59' },
+  { id:'llm', label:'LLM & KI-Suchmaschinen', cat:'LLM & KI-Suchmaschinen', sub:'ChatGPT Search, Perplexity und Google AI Overviews verstehen und nutzen.', color:'#2e6e8f' },
+  { id:'schema', label:'Strukturierte Daten', cat:'Strukturierte Daten', sub:'Schema Markup und maschinenlesbare Signale für KI-Antwortmaschinen.', color:'#b9871c' },
+  { id:'content', label:'Content & E-E-A-T', cat:'Content & E-E-A-T', sub:'Vertrauen, Autorität und zitierfähige Inhalte als Grundlage für GEO-Erfolg.', color:'#a63d2f' },
+  { id:'tools', label:'Tools & Messung', cat:'Tools & Messung', sub:'GEO-Erfolge sichtbar machen, messen und kontinuierlich verbessern.', color:'#5c7186' },
 ];
 
 const postModules = import.meta.glob('../content/blog/*.md', { eager: true });
@@ -243,55 +243,59 @@ const faqs = [
   <Footer />
 </Base>
 <style>
-.hero { border-bottom:1px solid var(--border); position:relative; overflow:hidden; padding:40px 24px 40px; }
+.hero { background:var(--navy); position:relative; overflow:hidden; padding:40px 24px 40px; }
 @media(min-width:768px){ .hero{ display:grid; grid-template-columns:1fr 1fr; min-height:420px; padding:0; } }
 .hero-left { position:relative; z-index:1; display:flex; flex-direction:column; justify-content:center; }
-@media(min-width:768px){ .hero-left{ padding:52px 44px; border-right:1px solid var(--border); } }
+@media(min-width:768px){ .hero-left{ padding:52px 44px; } }
 
 /* Audience tags */
 .hero-audience{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; }
 .audience-tag{
-  font-size:0.62rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
-  color:var(--accent); background:rgba(0,194,255,0.1);
-  border:1px solid rgba(0,194,255,0.25); padding:3px 10px; border-radius:20px;
+  font-size:0.62rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--mango); background:rgba(255,193,59,0.12);
+  border:1px solid rgba(255,193,59,0.35); padding:3px 10px; border-radius:20px;
 }
 
 /* Headline */
-.hero-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(1.6rem,3.2vw,2.2rem); font-weight:700; letter-spacing:-0.03em; line-height:1.18; color:var(--text); margin-bottom:14px; }
-.hero-title em{ font-style:normal; background:linear-gradient(135deg,var(--accent),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.hero-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(1.6rem,3.2vw,2.2rem); font-weight:700; letter-spacing:-0.03em; line-height:1.18; color:var(--on-navy-text); margin-bottom:14px; }
+.hero-title em{ font-style:normal; background:linear-gradient(135deg,var(--accent),var(--mango)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 
 /* Description */
-.hero-desc{ font-size:0.88rem; color:var(--muted); line-height:1.7; max-width:480px; margin-bottom:18px; }
+.hero-desc{ font-size:0.88rem; color:var(--on-navy-muted); line-height:1.7; max-width:480px; margin-bottom:18px; }
 
 /* Value list */
 .hero-values{ list-style:none; margin-bottom:24px; display:flex; flex-direction:column; gap:7px; }
-.hero-values li{ font-size:0.82rem; color:var(--muted); display:flex; align-items:flex-start; gap:8px; line-height:1.45; }
-.hv-check{ color:var(--accent); font-weight:700; flex-shrink:0; }
+.hero-values li{ font-size:0.82rem; color:var(--on-navy-muted); display:flex; align-items:flex-start; gap:8px; line-height:1.45; }
+.hv-check{ color:var(--mango); font-weight:700; flex-shrink:0; }
 
 .hero-cta{ display:flex; gap:10px; flex-wrap:wrap; }
+/* Sekundär-Button auf Navy: helle Variante */
+.hero .btn-secondary{ color:var(--on-navy-text); border-color:var(--on-navy-muted); }
+.hero .btn-secondary:hover{ background:var(--almond); color:var(--navy); border-color:var(--almond); }
 
-/* Right side — Mock AI Visual */
+/* Right side — Mock AI Visual (helle Paper-Karte auf Navy) */
 .hero-right{ display:none; }
-@media(min-width:768px){ .hero-right{ display:flex; align-items:center; justify-content:center; padding:40px 36px; background:var(--surface); } }
+@media(min-width:768px){ .hero-right{ display:flex; align-items:center; justify-content:center; padding:40px 36px; background:var(--navy-deep); } }
 
 .mock-ai{
   width:100%; max-width:420px;
-  background:var(--bg); border:1px solid var(--border);
+  background:var(--paper); border:1px solid var(--border2);
   border-radius:var(--radius); overflow:hidden;
   font-size:0.78rem;
+  box-shadow:0 12px 40px rgba(0,0,0,0.25);
 }
 .mock-ai-header{
   display:flex; align-items:center; gap:8px;
   padding:10px 14px; border-bottom:1px solid var(--border);
   background:var(--surface);
 }
-.mock-ai-dot{ width:8px; height:8px; border-radius:50%; background:#00e5a0; flex-shrink:0; box-shadow:0 0 6px rgba(0,229,160,0.5); }
+.mock-ai-dot{ width:8px; height:8px; border-radius:50%; background:var(--mango); flex-shrink:0; box-shadow:0 0 6px rgba(255,193,59,0.6); }
 .mock-ai-label{ font-size:0.68rem; font-weight:600; color:var(--muted); letter-spacing:0.04em; }
 .mock-ai-query{
   padding:12px 14px 10px;
   font-size:0.8rem; font-weight:600; color:var(--text);
   border-bottom:1px solid var(--border);
-  background:rgba(0,194,255,0.04);
+  background:rgba(226,85,42,0.04);
 }
 .mock-ai-answer{
   padding:14px;
@@ -309,15 +313,15 @@ const faqs = [
   transition:background 0.15s;
 }
 .mock-source.active{
-  background:rgba(0,194,255,0.07);
-  border-color:rgba(0,194,255,0.2);
+  background:rgba(226,85,42,0.07);
+  border-color:rgba(226,85,42,0.2);
 }
 .ms-num{
   width:18px; height:18px; border-radius:4px; flex-shrink:0;
   background:var(--border); display:flex; align-items:center; justify-content:center;
   font-size:0.62rem; font-weight:700; color:var(--muted);
 }
-.mock-source.active .ms-num{ background:rgba(0,194,255,0.2); color:var(--accent); }
+.mock-source.active .ms-num{ background:rgba(226,85,42,0.2); color:var(--accent); }
 .ms-domain{ font-size:0.68rem; font-weight:700; color:var(--muted2); }
 .mock-source.active .ms-domain{ color:var(--accent); }
 .ms-title{ font-size:0.68rem; color:var(--muted); line-height:1.3; }
@@ -333,7 +337,7 @@ const faqs = [
   display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;
   padding:12px 24px;
   border-bottom:1px solid var(--border);
-  background:rgba(0,194,255,0.03);
+  background:rgba(226,85,42,0.03);
   position:relative; z-index:1;
 }
 .ss-label{
@@ -389,7 +393,7 @@ const faqs = [
 .lc-desc{ font-size:0.77rem; color:var(--muted); line-height:1.5; margin-bottom:12px; flex:1; }
 .lc-footer{ display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; }
 .lc-author{ display:flex; align-items:center; gap:6px; }
-.lc-avatar{ width:22px; height:22px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--purple)); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:0.55rem; font-weight:700; color:#070d1a; flex-shrink:0; }
+.lc-avatar{ width:22px; height:22px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--purple)); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:0.55rem; font-weight:700; color:#1e3d59; flex-shrink:0; }
 .lc-author span{ font-size:0.7rem; color:var(--muted); font-weight:500; }
 .lc-date{ font-size:0.67rem; color:var(--muted2); }
 .latest-more{ margin-top:20px; display:flex; justify-content:center; }
@@ -422,7 +426,7 @@ const faqs = [
 }
 
 .dl-section{ padding:0 24px 48px; position:relative; z-index:1; }
-.dl-inner{ background:linear-gradient(135deg,rgba(0,194,255,0.07),rgba(123,94,167,0.07)); border:1px solid rgba(0,194,255,0.2); border-radius:var(--radius); padding:24px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.dl-inner{ background:linear-gradient(135deg,rgba(226,85,42,0.07),rgba(255,193,59,0.07)); border:1px solid rgba(226,85,42,0.2); border-radius:var(--radius); padding:24px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
 .dl-icon{ font-size:2rem; flex-shrink:0; }
 .dl-body{ flex:1; min-width:200px; }
 .dl-title{ font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:4px; }

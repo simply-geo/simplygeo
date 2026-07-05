@@ -6,7 +6,7 @@ updatedDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "Content & E-E-A-T"
-categoryColor: "#ff4f8b"
+categoryColor: "#a63d2f"
 level: "Einsteiger"
 readingTime: "8 Min"
 slug: "content-eeat-fuer-geo"

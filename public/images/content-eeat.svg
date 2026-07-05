@@ -1,19 +1,19 @@
 <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
   <defs>
     <radialGradient id="glow1" cx="30%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#ff4f8b" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#ff4f8b" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ff6e40" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ff6e40" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow2" cx="80%" cy="65%" r="40%">
-      <stop offset="0%" stop-color="#7b5ea7" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#7b5ea7" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffc13b" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ffc13b" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="#070d1a"/>
+  <rect width="1200" height="630" fill="#1e3d59"/>
   <rect width="1200" height="630" fill="url(#glow1)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
   <!-- Grid -->
-  <g stroke="#1a2d4a" stroke-width="1" opacity="0.5">
+  <g stroke="#2e5170" stroke-width="1" opacity="0.5">
     <line x1="0" y1="90" x2="1200" y2="90"/><line x1="0" y1="180" x2="1200" y2="180"/>
     <line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="360" x2="1200" y2="360"/>
     <line x1="0" y1="450" x2="1200" y2="450"/><line x1="0" y1="540" x2="1200" y2="540"/>
@@ -25,33 +25,33 @@
   <!-- E-E-A-T pillars -->
   <g>
     <!-- Experience -->
-    <rect x="826" y="160" width="64" height="300" rx="8" fill="#ff4f8b" fill-opacity="0.1" stroke="#ff4f8b" stroke-width="1" stroke-opacity="0.4"/>
-    <text x="858" y="480" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ff4f8b" transform="rotate(-90 858 480)">Experience</text>
-    <rect x="826" y="300" width="64" height="160" rx="8" fill="#ff4f8b" fill-opacity="0.25"/>
+    <rect x="826" y="160" width="64" height="300" rx="8" fill="#ff6e40" fill-opacity="0.1" stroke="#ff6e40" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="858" y="480" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ff6e40" transform="rotate(-90 858 480)">Experience</text>
+    <rect x="826" y="300" width="64" height="160" rx="8" fill="#ff6e40" fill-opacity="0.25"/>
     <!-- Expertise -->
-    <rect x="906" y="160" width="64" height="300" rx="8" fill="#ff4f8b" fill-opacity="0.1" stroke="#ff4f8b" stroke-width="1" stroke-opacity="0.4"/>
-    <text x="938" y="480" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ff4f8b" transform="rotate(-90 938 480)">Expertise</text>
-    <rect x="906" y="240" width="64" height="220" rx="8" fill="#ff4f8b" fill-opacity="0.25"/>
+    <rect x="906" y="160" width="64" height="300" rx="8" fill="#ff6e40" fill-opacity="0.1" stroke="#ff6e40" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="938" y="480" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ff6e40" transform="rotate(-90 938 480)">Expertise</text>
+    <rect x="906" y="240" width="64" height="220" rx="8" fill="#ff6e40" fill-opacity="0.25"/>
     <!-- Authoritativeness -->
-    <rect x="986" y="160" width="64" height="300" rx="8" fill="#ff4f8b" fill-opacity="0.1" stroke="#ff4f8b" stroke-width="1" stroke-opacity="0.4"/>
-    <text x="1018" y="490" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="10" font-weight="700" fill="#ff4f8b" transform="rotate(-90 1018 490)">Authoritativeness</text>
-    <rect x="986" y="200" width="64" height="260" rx="8" fill="#ff4f8b" fill-opacity="0.25"/>
+    <rect x="986" y="160" width="64" height="300" rx="8" fill="#ff6e40" fill-opacity="0.1" stroke="#ff6e40" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="1018" y="490" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="10" font-weight="700" fill="#ff6e40" transform="rotate(-90 1018 490)">Authoritativeness</text>
+    <rect x="986" y="200" width="64" height="260" rx="8" fill="#ff6e40" fill-opacity="0.25"/>
     <!-- Trust -->
-    <rect x="1066" y="160" width="64" height="300" rx="8" fill="#ff4f8b" fill-opacity="0.1" stroke="#ff4f8b" stroke-width="1" stroke-opacity="0.4"/>
-    <text x="1098" y="480" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ff4f8b" transform="rotate(-90 1098 480)">Trust</text>
-    <rect x="1066" y="160" width="64" height="300" rx="8" fill="#ff4f8b" fill-opacity="0.35"/>
+    <rect x="1066" y="160" width="64" height="300" rx="8" fill="#ff6e40" fill-opacity="0.1" stroke="#ff6e40" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="1098" y="480" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ff6e40" transform="rotate(-90 1098 480)">Trust</text>
+    <rect x="1066" y="160" width="64" height="300" rx="8" fill="#ff6e40" fill-opacity="0.35"/>
   </g>
   <!-- Top glow on highest bar -->
-  <circle cx="1098" cy="165" r="16" fill="#ff4f8b" fill-opacity="0.25"/>
+  <circle cx="1098" cy="165" r="16" fill="#ff6e40" fill-opacity="0.25"/>
   <!-- Category chip -->
-  <rect x="80" y="80" width="185" height="32" rx="16" fill="#ff4f8b" fill-opacity="0.12" stroke="#ff4f8b" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="172" y="101" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#ff4f8b">Content &amp; E-E-A-T</text>
+  <rect x="80" y="80" width="185" height="32" rx="16" fill="#ff6e40" fill-opacity="0.12" stroke="#ff6e40" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="172" y="101" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#ff6e40">Content &amp; E-E-A-T</text>
   <!-- Title -->
-  <text x="80" y="205" font-family="Space Grotesk, sans-serif" font-size="52" font-weight="700" fill="#e8f0fe">Content &amp; E-E-A-T</text>
-  <text x="80" y="264" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#ff4f8b">Zitierfähige Inhalte schreiben</text>
-  <text x="80" y="312" font-family="Space Grotesk, sans-serif" font-size="28" font-weight="600" fill="#6b84a3">für KI-Systeme</text>
-  <text x="80" y="380" font-family="Inter, sans-serif" font-size="18" fill="#6b84a3">Vertrauen und Autorität als Grundlage für GEO-Erfolg.</text>
-  <line x1="80" y1="415" x2="480" y2="415" stroke="#1a2d4a" stroke-width="1"/>
-  <text x="80" y="445" font-family="Inter, sans-serif" font-size="15" fill="#6b84a3">Einsteiger · 8 Min Lesezeit · 7. März 2025</text>
-  <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#6b84a3">Simply<tspan fill="#00c2ff">GEO</tspan></text>
+  <text x="80" y="205" font-family="Space Grotesk, sans-serif" font-size="52" font-weight="700" fill="#f5f0e1">Content &amp; E-E-A-T</text>
+  <text x="80" y="264" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#ff6e40">Zitierfähige Inhalte schreiben</text>
+  <text x="80" y="312" font-family="Space Grotesk, sans-serif" font-size="28" font-weight="600" fill="#a9bccb">für KI-Systeme</text>
+  <text x="80" y="380" font-family="Inter, sans-serif" font-size="18" fill="#a9bccb">Vertrauen und Autorität als Grundlage für GEO-Erfolg.</text>
+  <line x1="80" y1="415" x2="480" y2="415" stroke="#2e5170" stroke-width="1"/>
+  <text x="80" y="445" font-family="Inter, sans-serif" font-size="15" fill="#a9bccb">Einsteiger · 8 Min Lesezeit · 7. März 2025</text>
+  <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#a9bccb">Simply<tspan fill="#ff6e40">GEO</tspan></text>
 </svg>

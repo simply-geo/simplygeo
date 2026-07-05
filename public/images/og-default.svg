@@ -1,18 +1,18 @@
 <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
   <defs>
     <radialGradient id="glow1" cx="30%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="#00c2ff" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#00c2ff" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ff6e40" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ff6e40" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow2" cx="78%" cy="70%" r="45%">
-      <stop offset="0%" stop-color="#7b5ea7" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#7b5ea7" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffc13b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffc13b" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="#070d1a"/>
+  <rect width="1200" height="630" fill="#1e3d59"/>
   <rect width="1200" height="630" fill="url(#glow1)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
-  <g stroke="#1a2d4a" stroke-width="1" opacity="0.5">
+  <g stroke="#2e5170" stroke-width="1" opacity="0.5">
     <line x1="0" y1="105" x2="1200" y2="105"/><line x1="0" y1="210" x2="1200" y2="210"/>
     <line x1="0" y1="315" x2="1200" y2="315"/><line x1="0" y1="420" x2="1200" y2="420"/>
     <line x1="0" y1="525" x2="1200" y2="525"/>
@@ -20,29 +20,29 @@
     <line x1="600" y1="0" x2="600" y2="630"/><line x1="800" y1="0" x2="800" y2="630"/>
     <line x1="1000" y1="0" x2="1000" y2="630"/>
   </g>
-  <g stroke="#00c2ff" stroke-width="1.5" opacity="0.3">
+  <g stroke="#ff6e40" stroke-width="1.5" opacity="0.3">
     <line x1="880" y1="180" x2="990" y2="260"/>
     <line x1="990" y1="260" x2="1080" y2="200"/>
     <line x1="990" y1="260" x2="1040" y2="380"/>
     <line x1="880" y1="180" x2="920" y2="340"/>
     <line x1="920" y1="340" x2="1040" y2="380"/>
   </g>
-  <g fill="#00c2ff">
+  <g fill="#ff6e40">
     <circle cx="880" cy="180" r="6"/>
     <circle cx="990" cy="260" r="9"/>
     <circle cx="1080" cy="200" r="5"/>
     <circle cx="1040" cy="380" r="7"/>
     <circle cx="920" cy="340" r="5"/>
   </g>
-  <g fill="#00c2ff" opacity="0.25">
+  <g fill="#ff6e40" opacity="0.25">
     <circle cx="990" cy="260" r="26"/>
     <circle cx="880" cy="180" r="18"/>
   </g>
-  <circle cx="990" cy="260" r="90" fill="none" stroke="#00c2ff" stroke-width="1" stroke-dasharray="6 5" opacity="0.18"/>
+  <circle cx="990" cy="260" r="90" fill="none" stroke="#ff6e40" stroke-width="1" stroke-dasharray="6 5" opacity="0.18"/>
 
-  <text x="90" y="270" font-family="Space Grotesk, sans-serif" font-size="84" font-weight="700" fill="#e8f0fe">Simply<tspan fill="#00c2ff">GEO</tspan></text>
-  <text x="90" y="340" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#6b84a3">Sichtbar in der KI-Suche</text>
-  <text x="90" y="420" font-family="Inter, sans-serif" font-size="22" fill="#6b84a3">GEO · AEO · KI-Suchmaschinen — praxisnah erklärt</text>
-  <line x1="90" y1="455" x2="560" y2="455" stroke="#1a2d4a" stroke-width="1"/>
-  <text x="90" y="490" font-family="Inter, sans-serif" font-size="18" fill="#5e7899">simplygeo.de · DACH-Markt</text>
+  <text x="90" y="270" font-family="Space Grotesk, sans-serif" font-size="84" font-weight="700" fill="#f5f0e1">Simply<tspan fill="#ff6e40">GEO</tspan></text>
+  <text x="90" y="340" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#a9bccb">Sichtbar in der KI-Suche</text>
+  <text x="90" y="420" font-family="Inter, sans-serif" font-size="22" fill="#a9bccb">GEO · AEO · KI-Suchmaschinen — praxisnah erklärt</text>
+  <line x1="90" y1="455" x2="560" y2="455" stroke="#2e5170" stroke-width="1"/>
+  <text x="90" y="490" font-family="Inter, sans-serif" font-size="18" fill="#8fa6b8">simplygeo.de · DACH-Markt</text>
 </svg>

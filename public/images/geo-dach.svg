@@ -1,20 +1,20 @@
 <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
   <defs>
     <radialGradient id="glow1" cx="30%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#00e5a0" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#00e5a0" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffc13b" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffc13b" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow2" cx="80%" cy="65%" r="40%">
-      <stop offset="0%" stop-color="#00c2ff" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#00c2ff" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ff6e40" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ff6e40" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="#070d1a"/>
+  <rect width="1200" height="630" fill="#1e3d59"/>
   <rect width="1200" height="630" fill="url(#glow1)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
 
   <!-- Grid -->
-  <g stroke="#1a2d4a" stroke-width="1" opacity="0.5">
+  <g stroke="#2e5170" stroke-width="1" opacity="0.5">
     <line x1="0" y1="90" x2="1200" y2="90"/><line x1="0" y1="180" x2="1200" y2="180"/>
     <line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="360" x2="1200" y2="360"/>
     <line x1="0" y1="450" x2="1200" y2="450"/><line x1="0" y1="540" x2="1200" y2="540"/>
@@ -25,31 +25,31 @@
   </g>
 
   <!-- Map-like abstract DACH region -->
-  <g opacity="0.25" fill="none" stroke="#00e5a0" stroke-width="1.5">
+  <g opacity="0.25" fill="none" stroke="#ffc13b" stroke-width="1.5">
     <polygon points="870,140 940,120 1050,150 1100,200 1080,290 1010,340 920,320 860,260 830,190"/>
     <polygon points="870,140 900,130 960,145 990,110 1050,150" opacity="0.5"/>
   </g>
 
   <!-- Country labels -->
-  <text x="920" y="210" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#00e5a0" opacity="0.7">DE</text>
-  <text x="1000" y="180" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#00e5a0" opacity="0.5">AT</text>
-  <text x="960" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#00e5a0" opacity="0.5">CH</text>
+  <text x="920" y="210" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#ffc13b" opacity="0.7">DE</text>
+  <text x="1000" y="180" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffc13b" opacity="0.5">AT</text>
+  <text x="960" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffc13b" opacity="0.5">CH</text>
 
   <!-- Data points on map -->
-  <g fill="#00e5a0">
+  <g fill="#ffc13b">
     <circle cx="910" cy="220" r="7"/>
     <circle cx="980" cy="190" r="5"/>
     <circle cx="1040" cy="240" r="6"/>
     <circle cx="950" cy="290" r="4"/>
     <circle cx="1060" cy="170" r="4"/>
   </g>
-  <g fill="#00e5a0" opacity="0.15">
+  <g fill="#ffc13b" opacity="0.15">
     <circle cx="910" cy="220" r="22"/>
     <circle cx="1040" cy="240" r="18"/>
     <circle cx="980" cy="190" r="14"/>
   </g>
   <!-- Connection lines on map -->
-  <g stroke="#00e5a0" stroke-width="1" opacity="0.2">
+  <g stroke="#ffc13b" stroke-width="1" opacity="0.2">
     <line x1="910" y1="220" x2="980" y2="190"/>
     <line x1="980" y1="190" x2="1040" y2="240"/>
     <line x1="910" y1="220" x2="950" y2="290"/>
@@ -58,20 +58,20 @@
   </g>
 
   <!-- Decorative ring -->
-  <circle cx="960" cy="220" r="140" fill="none" stroke="#00e5a0" stroke-width="1" stroke-dasharray="6 6" opacity="0.1"/>
+  <circle cx="960" cy="220" r="140" fill="none" stroke="#ffc13b" stroke-width="1" stroke-dasharray="6 6" opacity="0.1"/>
 
   <!-- Category chip -->
-  <rect x="80" y="80" width="180" height="32" rx="16" fill="#00e5a0" fill-opacity="0.12" stroke="#00e5a0" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="170" y="101" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#00e5a0">GEO Grundlagen</text>
+  <rect x="80" y="80" width="180" height="32" rx="16" fill="#ffc13b" fill-opacity="0.12" stroke="#ffc13b" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="170" y="101" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#ffc13b">GEO Grundlagen</text>
 
   <!-- Title -->
-  <text x="80" y="210" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#e8f0fe">GEO im DACH-Markt</text>
-  <text x="80" y="272" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#00e5a0">Besonderheiten und Chancen</text>
+  <text x="80" y="210" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#f5f0e1">GEO im DACH-Markt</text>
+  <text x="80" y="272" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#ffc13b">Besonderheiten und Chancen</text>
 
-  <text x="80" y="350" font-family="Inter, sans-serif" font-size="19" fill="#6b84a3">Eine ehrliche Bestandsaufnahme aus der Praxis.</text>
+  <text x="80" y="350" font-family="Inter, sans-serif" font-size="19" fill="#a9bccb">Eine ehrliche Bestandsaufnahme aus der Praxis.</text>
 
-  <line x1="80" y1="390" x2="500" y2="390" stroke="#1a2d4a" stroke-width="1"/>
-  <text x="80" y="420" font-family="Inter, sans-serif" font-size="15" fill="#6b84a3">Fortgeschritten · 12 Min Lesezeit · 3. Februar 2025</text>
+  <line x1="80" y1="390" x2="500" y2="390" stroke="#2e5170" stroke-width="1"/>
+  <text x="80" y="420" font-family="Inter, sans-serif" font-size="15" fill="#a9bccb">Fortgeschritten · 12 Min Lesezeit · 3. Februar 2025</text>
 
-  <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#6b84a3">Simply<tspan fill="#00c2ff">GEO</tspan></text>
+  <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#a9bccb">Simply<tspan fill="#ff6e40">GEO</tspan></text>
 </svg>

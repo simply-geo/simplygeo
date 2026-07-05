@@ -6,7 +6,7 @@ updatedDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "GEO Grundlagen"
-categoryColor: "#00c2ff"
+categoryColor: "#e2552a"
 level: "Fortgeschritten"
 readingTime: "12 Min"
 slug: "geo-dach"

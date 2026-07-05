@@ -6,7 +6,7 @@ updatedDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "Tools & Messung"
-categoryColor: "#ffd23f"
+categoryColor: "#5c7186"
 level: "Fortgeschritten"
 readingTime: "18 Min"
 slug: "geo-audit-prozess"

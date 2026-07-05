@@ -1,19 +1,19 @@
 <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
   <defs>
     <radialGradient id="glow1" cx="30%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#00e5a0" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#00e5a0" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#6fb1d8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#6fb1d8" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow2" cx="80%" cy="65%" r="40%">
-      <stop offset="0%" stop-color="#00c2ff" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#00c2ff" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ff6e40" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ff6e40" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="#070d1a"/>
+  <rect width="1200" height="630" fill="#1e3d59"/>
   <rect width="1200" height="630" fill="url(#glow1)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
   <!-- Grid -->
-  <g stroke="#1a2d4a" stroke-width="1" opacity="0.5">
+  <g stroke="#2e5170" stroke-width="1" opacity="0.5">
     <line x1="0" y1="90" x2="1200" y2="90"/><line x1="0" y1="180" x2="1200" y2="180"/>
     <line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="360" x2="1200" y2="360"/>
     <line x1="0" y1="450" x2="1200" y2="450"/><line x1="0" y1="540" x2="1200" y2="540"/>
@@ -24,35 +24,35 @@
   </g>
   <!-- Three AI system icons -->
   <!-- ChatGPT -->
-  <circle cx="870" cy="200" r="44" fill="#111f35" stroke="#00e5a0" stroke-width="1.5" opacity="0.7"/>
-  <text x="870" y="196" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#00e5a0">ChatGPT</text>
-  <text x="870" y="212" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6b84a3">Search</text>
+  <circle cx="870" cy="200" r="44" fill="#16304a" stroke="#6fb1d8" stroke-width="1.5" opacity="0.7"/>
+  <text x="870" y="196" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#6fb1d8">ChatGPT</text>
+  <text x="870" y="212" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a9bccb">Search</text>
   <!-- Perplexity -->
-  <circle cx="1000" cy="310" r="44" fill="#111f35" stroke="#00e5a0" stroke-width="1.5" opacity="0.7"/>
-  <text x="1000" y="306" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#00e5a0">Perplexity</text>
-  <text x="1000" y="322" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6b84a3">AI</text>
+  <circle cx="1000" cy="310" r="44" fill="#16304a" stroke="#6fb1d8" stroke-width="1.5" opacity="0.7"/>
+  <text x="1000" y="306" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#6fb1d8">Perplexity</text>
+  <text x="1000" y="322" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a9bccb">AI</text>
   <!-- Google AI -->
-  <circle cx="870" cy="420" r="44" fill="#111f35" stroke="#00e5a0" stroke-width="1.5" opacity="0.7"/>
-  <text x="870" y="416" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#00e5a0">Google AI</text>
-  <text x="870" y="432" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6b84a3">Overviews</text>
+  <circle cx="870" cy="420" r="44" fill="#16304a" stroke="#6fb1d8" stroke-width="1.5" opacity="0.7"/>
+  <text x="870" y="416" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#6fb1d8">Google AI</text>
+  <text x="870" y="432" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#a9bccb">Overviews</text>
   <!-- Connection lines -->
-  <g stroke="#00e5a0" stroke-width="1.5" opacity="0.2">
+  <g stroke="#6fb1d8" stroke-width="1.5" opacity="0.2">
     <line x1="870" y1="244" x2="960" y2="270"/>
     <line x1="870" y1="376" x2="960" y2="350"/>
     <line x1="870" y1="200" x2="870" y2="376"/>
   </g>
   <!-- Glow pulses -->
-  <circle cx="870" cy="200" r="60" fill="none" stroke="#00e5a0" stroke-width="1" stroke-dasharray="4 8" opacity="0.12"/>
-  <circle cx="1000" cy="310" r="65" fill="none" stroke="#00e5a0" stroke-width="1" stroke-dasharray="4 8" opacity="0.12"/>
+  <circle cx="870" cy="200" r="60" fill="none" stroke="#6fb1d8" stroke-width="1" stroke-dasharray="4 8" opacity="0.12"/>
+  <circle cx="1000" cy="310" r="65" fill="none" stroke="#6fb1d8" stroke-width="1" stroke-dasharray="4 8" opacity="0.12"/>
   <!-- Category chip -->
-  <rect x="80" y="80" width="220" height="32" rx="16" fill="#00e5a0" fill-opacity="0.12" stroke="#00e5a0" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="190" y="101" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#00e5a0">LLM &amp; KI-Suchmaschinen</text>
+  <rect x="80" y="80" width="220" height="32" rx="16" fill="#6fb1d8" fill-opacity="0.12" stroke="#6fb1d8" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="190" y="101" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#6fb1d8">LLM &amp; KI-Suchmaschinen</text>
   <!-- Title -->
-  <text x="80" y="205" font-family="Space Grotesk, sans-serif" font-size="50" font-weight="700" fill="#e8f0fe">LLM &amp; KI-Suchmaschinen</text>
-  <text x="80" y="265" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#00e5a0">ChatGPT, Perplexity &amp; Co.</text>
-  <text x="80" y="313" font-family="Space Grotesk, sans-serif" font-size="28" font-weight="600" fill="#6b84a3">im Vergleich</text>
-  <text x="80" y="380" font-family="Inter, sans-serif" font-size="18" fill="#6b84a3">Wie KI-Suchsysteme crawlen, zitieren und antworten.</text>
-  <line x1="80" y1="415" x2="480" y2="415" stroke="#1a2d4a" stroke-width="1"/>
-  <text x="80" y="445" font-family="Inter, sans-serif" font-size="15" fill="#6b84a3">Einsteiger · 9 Min Lesezeit · 21. Februar 2025</text>
-  <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#6b84a3">Simply<tspan fill="#00c2ff">GEO</tspan></text>
+  <text x="80" y="205" font-family="Space Grotesk, sans-serif" font-size="50" font-weight="700" fill="#f5f0e1">LLM &amp; KI-Suchmaschinen</text>
+  <text x="80" y="265" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#6fb1d8">ChatGPT, Perplexity &amp; Co.</text>
+  <text x="80" y="313" font-family="Space Grotesk, sans-serif" font-size="28" font-weight="600" fill="#a9bccb">im Vergleich</text>
+  <text x="80" y="380" font-family="Inter, sans-serif" font-size="18" fill="#a9bccb">Wie KI-Suchsysteme crawlen, zitieren und antworten.</text>
+  <line x1="80" y1="415" x2="480" y2="415" stroke="#2e5170" stroke-width="1"/>
+  <text x="80" y="445" font-family="Inter, sans-serif" font-size="15" fill="#a9bccb">Einsteiger · 9 Min Lesezeit · 21. Februar 2025</text>
+  <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#a9bccb">Simply<tspan fill="#ff6e40">GEO</tspan></text>
 </svg>

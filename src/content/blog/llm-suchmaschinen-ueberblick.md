@@ -6,7 +6,7 @@ updatedDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "LLM & KI-Suchmaschinen"
-categoryColor: "#00e5a0"
+categoryColor: "#2e6e8f"
 level: "Einsteiger"
 readingTime: "9 Min"
 slug: "llm-suchmaschinen-ueberblick"
