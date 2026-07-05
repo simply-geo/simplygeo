@@ -1,8 +1,7 @@
 ---
 title: "Was ist GEO? Generative Engine Optimization einfach erklärt"
 description: "GEO steht für Generative Engine Optimization — die Optimierung für KI-gestützte Suchsysteme wie ChatGPT Search, Perplexity und Google AI Overviews. Hier erfährst du alles was du wissen musst."
-pubDate: 2025-01-10
-updatedDate: 2026-07-04
+pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "GEO Grundlagen"

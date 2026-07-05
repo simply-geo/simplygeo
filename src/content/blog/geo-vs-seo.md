@@ -1,8 +1,7 @@
 ---
 title: "GEO vs. klassisches SEO: Was ist der Unterschied?"
 description: "GEO und SEO verfolgen ähnliche Ziele, aber unterschiedliche Wege. Hier erfährst du wo sie sich überschneiden, wo sie sich unterscheiden — und warum du beides brauchst."
-pubDate: 2025-01-17
-updatedDate: 2026-07-04
+pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "GEO Grundlagen"

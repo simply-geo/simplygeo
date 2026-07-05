@@ -1,8 +1,7 @@
 ---
 title: "GEO im DACH-Markt: Besonderheiten und Chancen"
 description: "Der deutschsprachige Markt bietet einzigartige Chancen für GEO — aber auch spezifische Herausforderungen. Eine ehrliche Bestandsaufnahme aus der Praxis."
-pubDate: 2025-02-03
-updatedDate: 2026-07-04
+pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "GEO Grundlagen"

@@ -1,8 +1,7 @@
 ---
 title: "LLM-Suchmaschinen im Vergleich: ChatGPT, Perplexity und Google AI Overviews"
 description: "ChatGPT Search, Perplexity AI und Google AI Overviews dominieren die neue KI-Suche. Wie funktionieren sie, wie crawlen sie, und wie zitieren sie Quellen? Ein praxisnaher Vergleich."
-pubDate: 2025-02-21
-updatedDate: 2026-07-04
+pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "LLM & KI-Suchmaschinen"

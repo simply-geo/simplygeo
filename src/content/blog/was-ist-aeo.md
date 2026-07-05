@@ -1,8 +1,7 @@
 ---
 title: "Was ist AEO? Answer Engine Optimization verständlich erklärt"
 description: "AEO — Answer Engine Optimization — zielt darauf ab, in direkten Antworten von Suchmaschinen und KI-Systemen zu erscheinen. Alles zu Featured Snippets, Voice Search und mehr."
-pubDate: 2025-01-24
-updatedDate: 2026-07-04
+pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "AEO & Answer Engines"

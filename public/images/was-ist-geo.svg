@@ -79,7 +79,7 @@
   <line x1="80" y1="445" x2="500" y2="445" stroke="#2e5170" stroke-width="1"/>
 
   <!-- Meta info -->
-  <text x="80" y="475" font-family="Inter, sans-serif" font-size="15" fill="#a9bccb">Einsteiger · 8 Min Lesezeit · 10. Januar 2025</text>
+  <text x="80" y="475" font-family="Inter, sans-serif" font-size="15" fill="#a9bccb">Einsteiger · 8 Min Lesezeit · 4. Juli 2026</text>
 
   <!-- SimplyGEO Logo -->
   <text x="1120" y="600" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#a9bccb">Simply<tspan fill="#ff6e40">GEO</tspan></text>

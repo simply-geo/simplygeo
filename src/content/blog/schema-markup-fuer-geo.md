@@ -1,8 +1,7 @@
 ---
 title: "Schema Markup für GEO: Welche strukturierten Daten KI-Systeme bevorzugen"
 description: "Schema Markup ist das direkteste Signal, das du KI-Suchsystemen geben kannst. Welche Typen wichtig sind, wie du sie implementierst und warum maschinenlesbare Daten GEO entscheidend beeinflussen."
-pubDate: 2025-02-28
-updatedDate: 2026-07-04
+pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "Strukturierte Daten"
@@ -38,8 +37,7 @@ Die Basis für jede Content-Seite. Ohne dieses Schema fehlen einer Maschine so g
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Schema Markup für GEO",
-  "datePublished": "2025-02-28",
-  "dateModified": "2026-07-04",
+  "datePublished": "2026-07-04",
   "author": { "@type": "Person", "name": "Yassine Oulada" }
 }
 ```
