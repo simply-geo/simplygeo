@@ -7,13 +7,13 @@ const postModules = import.meta.glob('../../content/blog/*.md', { eager: true })
 const posts = Object.values(postModules) as any[];
 const sorted = posts.sort((a,b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
 ---
-<Base title="Blog — SimplyGEO" description="Alle Artikel zu GEO, AEO und KI-Suche für den DACH-Markt von Yassine Oulada.">
+<Base title="Blog" description="Alle Artikel zu GEO, AEO und KI-Suche für den DACH-Markt von Yassine Oulada.">
   <Header />
   <main id="main" class="blog-index">
     <div class="bi-header">
       <span class="eyebrow">Alle Artikel</span>
       <h1 class="bi-title">Blog</h1>
-      <p class="bi-desc">Praxisnahes Wissen zu GEO, AEO und KI-gestützter Suche — für den DACH-Markt.</p>
+      <p class="bi-desc">Praxisnahes Wissen zu GEO, AEO und KI-gestützter Suche für den DACH-Markt.</p>
       <div class="topic-chips">
         <a href="/themen/geo" class="topic-chip" style="--tc:#e2552a">GEO Grundlagen</a>
         <a href="/themen/aeo" class="topic-chip" style="--tc:#1e3d59">AEO</a>

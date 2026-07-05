@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
   ogImage?: string;
 }
-const { title, description = 'GEO, AEO und KI-Suche für den DACH-Markt — praxisnah und strukturiert erklärt.', ogImage } = Astro.props;
+const { title, description = 'GEO, AEO und KI-Suche für den DACH-Markt: praxisnah und strukturiert erklärt.', ogImage } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // OG-Images müssen absolute URLs sein; SVGs werden von Social-Plattformen

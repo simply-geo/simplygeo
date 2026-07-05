@@ -85,7 +85,7 @@
   <text x="80" y="260" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="600" fill="#ffc13b">So analysiere ich Websites</text>
   <text x="80" y="305" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="600" fill="#a9bccb">für KI-Sichtbarkeit</text>
 
-  <text x="80" y="375" font-family="Inter, sans-serif" font-size="18" fill="#a9bccb">5 Phasen — von der technischen Basis bis zum KI-Test.</text>
+  <text x="80" y="375" font-family="Inter, sans-serif" font-size="18" fill="#a9bccb">5 Phasen: von der technischen Basis bis zum KI-Test.</text>
 
   <line x1="80" y1="410" x2="480" y2="410" stroke="#2e5170" stroke-width="1"/>
   <text x="80" y="440" font-family="Inter, sans-serif" font-size="15" fill="#a9bccb">Fortgeschritten · 18 Min Lesezeit · 4. Juli 2026</text>

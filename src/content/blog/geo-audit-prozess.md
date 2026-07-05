@@ -1,6 +1,6 @@
 ---
 title: "Mein GEO-Audit Prozess: So analysiere ich Websites für KI-Sichtbarkeit"
-description: "Wie sieht ein professioneller GEO-Audit aus? Ich zeige meinen persönlichen Prozess — von der technischen Basis bis zur KI-Sichtbarkeit — Schritt für Schritt."
+description: "Wie sieht ein professioneller GEO-Audit aus? Ich zeige meinen persönlichen Prozess von der technischen Basis bis zur KI-Sichtbarkeit, Schritt für Schritt."
 pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"

@@ -70,7 +70,7 @@
   <text x="80" y="280" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="600" fill="#ff6e40">Was ist der Unterschied?</text>
 
   <!-- Description -->
-  <text x="80" y="360" font-family="Inter, sans-serif" font-size="20" fill="#a9bccb">Überschneidungen, Unterschiede — und warum du beides brauchst.</text>
+  <text x="80" y="360" font-family="Inter, sans-serif" font-size="20" fill="#a9bccb">Überschneidungen, Unterschiede und warum du beides brauchst.</text>
 
   <line x1="80" y1="400" x2="500" y2="400" stroke="#2e5170" stroke-width="1"/>
   <text x="80" y="430" font-family="Inter, sans-serif" font-size="15" fill="#a9bccb">Einsteiger · 6 Min Lesezeit · 4. Juli 2026</text>

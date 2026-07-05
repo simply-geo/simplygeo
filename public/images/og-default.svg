@@ -42,7 +42,7 @@
 
   <text x="90" y="270" font-family="Space Grotesk, sans-serif" font-size="84" font-weight="700" fill="#f5f0e1">Simply<tspan fill="#ff6e40">GEO</tspan></text>
   <text x="90" y="340" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#a9bccb">Sichtbar in der KI-Suche</text>
-  <text x="90" y="420" font-family="Inter, sans-serif" font-size="22" fill="#a9bccb">GEO · AEO · KI-Suchmaschinen — praxisnah erklärt</text>
+  <text x="90" y="420" font-family="Inter, sans-serif" font-size="22" fill="#a9bccb">GEO · AEO · KI-Suchmaschinen · praxisnah erklärt</text>
   <line x1="90" y1="455" x2="560" y2="455" stroke="#2e5170" stroke-width="1"/>
   <text x="90" y="490" font-family="Inter, sans-serif" font-size="18" fill="#8fa6b8">simplygeo.de · DACH-Markt</text>
 </svg>

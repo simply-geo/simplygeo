@@ -1,6 +1,6 @@
 ---
 title: "Content & E-E-A-T für GEO: Zitierfähige Inhalte schreiben"
-description: "E-E-A-T — Experience, Expertise, Authoritativeness, Trustworthiness — ist das Fundament von GEO. Wie du Inhalte schreibst, die KI-Systeme tatsächlich zitieren wollen."
+description: "E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) ist das Fundament von GEO. Wie du Inhalte schreibst, die KI-Systeme tatsächlich zitieren wollen."
 pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"

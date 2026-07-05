@@ -73,7 +73,7 @@
   <text x="80" y="340" font-family="Space Grotesk, sans-serif" font-size="38" font-weight="600" fill="#a9bccb">einfach erklärt</text>
 
   <!-- Description -->
-  <text x="80" y="410" font-family="Inter, sans-serif" font-size="20" fill="#a9bccb">Wie KI-Suchsysteme funktionieren — und wie du darin sichtbar wirst.</text>
+  <text x="80" y="410" font-family="Inter, sans-serif" font-size="20" fill="#a9bccb">Wie KI-Suchsysteme funktionieren und wie du darin sichtbar wirst.</text>
 
   <!-- Divider -->
   <line x1="80" y1="445" x2="500" y2="445" stroke="#2e5170" stroke-width="1"/>
