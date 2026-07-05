@@ -1,10 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <rect width="128" height="128" rx="28" fill="#1e3d59"/>
-  <g stroke="#ffc13b" stroke-width="5" opacity="0.85">
-    <line x1="46" y1="82" x2="78" y2="44"/>
-    <line x1="46" y1="82" x2="92" y2="88"/>
+  <g fill="none" stroke-linecap="round" transform="translate(16,16) scale(3)">
+    <path d="M26 8 A6 6 0 0 0 20 4 H13.5 A6 6 0 0 0 13.5 16 H17" stroke="#ff6e40" stroke-width="5.5"/>
+    <path d="M6 24 A6 6 0 0 0 12 28 H18.5 A6 6 0 0 0 18.5 16 H15" stroke="#ffc13b" stroke-width="5.5"/>
   </g>
-  <circle cx="78" cy="44" r="13" fill="#ffc13b"/>
-  <circle cx="92" cy="88" r="10" fill="#ffc13b"/>
-  <circle cx="46" cy="82" r="20" fill="#ff6e40"/>
 </svg>
