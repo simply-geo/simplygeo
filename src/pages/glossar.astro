@@ -1,0 +1,386 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Term {
+  id: string;
+  term: string;
+  def: string;
+  link?: { href: string; label: string };
+}
+
+const terms: Term[] = [
+  {
+    id: 'aeo',
+    term: 'AEO (Answer Engine Optimization)',
+    def: 'AEO ist die Optimierung von Inhalten mit dem Ziel, als direkte Antwort ausgespielt zu werden — in Featured Snippets, von Sprachassistenten oder in KI-Antworten. Anders als beim klassischen SEO gibt es hier meist nur eine Antwort statt einer Liste: Entweder du wirst zitiert, oder du kommst nicht vor.',
+    link: { href: '/blog/was-ist-aeo', label: 'Artikel: Was ist AEO?' },
+  },
+  {
+    id: 'ai-overviews',
+    term: 'AI Overviews',
+    def: 'AI Overviews sind die KI-generierten Antwortboxen, die Google oberhalb der organischen Suchergebnisse anzeigt (früher: Search Generative Experience, SGE). Sie werden von einem Gemini-Modell auf Basis des regulären Google-Index erstellt und zitieren Quellen als Cards neben der Antwort. Für den DACH-Markt das wichtigste KI-Antwortsystem.',
+    link: { href: '/blog/llm-suchmaschinen-ueberblick', label: 'Artikel: LLM-Suchmaschinen im Vergleich' },
+  },
+  {
+    id: 'aio',
+    term: 'AIO',
+    def: 'AIO ist ein mehrdeutiges Kürzel: Meist steht es für "AI Optimization", also die Optimierung von Inhalten für KI-Systeme insgesamt — manchmal wird es aber auch als Abkürzung für Googles AI Overviews verwendet. Wer den Begriff nutzt, sollte klarstellen, was gemeint ist. Inhaltlich überschneidet sich AI Optimization weitgehend mit GEO.',
+  },
+  {
+    id: 'ai-referral-traffic',
+    term: 'AI Referral Traffic',
+    def: 'AI Referral Traffic bezeichnet Website-Besucher, die über einen Link in einer KI-Antwort kommen — etwa aus ChatGPT, Perplexity oder AI Overviews. Er ist eine der wenigen direkt messbaren GEO-Kennzahlen und lässt sich in der Webanalyse als eigenes Segment anlegen (erkennbar an Referrern wie chatgpt.com oder perplexity.ai).',
+  },
+  {
+    id: 'answer-engine',
+    term: 'Answer Engine',
+    def: 'Eine Answer Engine ist ein System, das Nutzerfragen mit einer direkten Antwort beantwortet statt mit einer Liste von Links. Dazu zählen Sprachassistenten wie Alexa und Siri, Googles Featured Snippets und AI Overviews sowie KI-Suchmaschinen wie Perplexity. Das Prinzip: eine Antwort gewinnt, alle anderen sind unsichtbar.',
+  },
+  {
+    id: 'backlink',
+    term: 'Backlink',
+    def: 'Ein Backlink ist ein Link von einer fremden Website auf die eigene. Im klassischen SEO seit jeher ein zentrales Ranking-Signal, wirkt er auch für GEO: Externe Verweise stärken die Autorität einer Quelle und erhöhen die Wahrscheinlichkeit, dass KI-Systeme sie als vertrauenswürdig einstufen und zitieren.',
+  },
+  {
+    id: 'brand-mention',
+    term: 'Brand Mention',
+    def: 'Eine Brand Mention ist die namentliche Erwähnung einer Marke, Person oder Website — mit oder ohne Link. Für GEO sind Mentions eine Kernmetrik: Taucht deine Marke in KI-Antworten auf, bist du sichtbar, selbst wenn kein Klick erfolgt. Regelmäßiges Monitoring von Brand Mentions ersetzt hier das klassische Ranking-Tracking.',
+  },
+  {
+    id: 'chatgpt-search',
+    term: 'ChatGPT Search',
+    def: 'ChatGPT Search ist die integrierte Websuche von OpenAIs ChatGPT. Das System entscheidet selbst, wann es das Web befragt, crawlt mit dem eigenen Bot (GPTBot) und verlinkt Quellen in der Antwort. Wegen der enormen Nutzerbasis von ChatGPT gehört es zu den drei wichtigsten Systemen, für die GEO optimiert.',
+    link: { href: '/blog/llm-suchmaschinen-ueberblick', label: 'Artikel: LLM-Suchmaschinen im Vergleich' },
+  },
+  {
+    id: 'core-web-vitals',
+    term: 'Core Web Vitals',
+    def: 'Die Core Web Vitals sind Googles Kennzahlen für die Nutzererfahrung einer Website: Ladegeschwindigkeit (LCP), visuelle Stabilität (CLS) und Reaktionsschnelligkeit (INP). Richtwerte: LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 ms. Langsame Seiten werden von Such- und KI-Crawlern seltener und flacher erfasst.',
+  },
+  {
+    id: 'crawler',
+    term: 'Crawler (Bot)',
+    def: 'Ein Crawler ist ein Programm, das Webseiten automatisiert besucht und ihre Inhalte erfasst. Neben dem klassischen Googlebot sind für GEO vor allem die KI-Crawler relevant: GPTBot (OpenAI), PerplexityBot, ClaudeBot (Anthropic), CCBot (Common Crawl) und GoogleOther. Wer sie in der robots.txt blockiert, existiert für diese Systeme nicht.',
+  },
+  {
+    id: 'e-e-a-t',
+    term: 'E-E-A-T',
+    def: 'E-E-A-T steht für Experience, Expertise, Authoritativeness und Trustworthiness — Erfahrung, Fachwissen, Autorität und Vertrauenswürdigkeit. Das Framework stammt aus Googles Quality Rater Guidelines und beschreibt, woran die Qualität einer Quelle bemessen wird. KI-Systeme bewerten nach denselben Mustern. Entscheidend: E-E-A-T muss im Content sichtbar gemacht werden, Besitzen allein reicht nicht.',
+    link: { href: '/blog/content-eeat-fuer-geo', label: 'Artikel: Content & E-E-A-T für GEO' },
+  },
+  {
+    id: 'entitaet',
+    term: 'Entität',
+    def: 'Eine Entität ist ein eindeutig identifizierbares Ding — eine Person, ein Unternehmen, ein Ort, ein Konzept. Suchmaschinen und KI-Systeme denken zunehmend in Entitäten statt in Keywords: Sie verknüpfen Informationen über dieselbe Entität aus verschiedenen Quellen. Konsistente Angaben (Name, Rolle, Profile) über alle Plattformen hinweg stärken die eigene Entität.',
+  },
+  {
+    id: 'featured-snippet',
+    term: 'Featured Snippet',
+    def: 'Ein Featured Snippet ist die hervorgehobene Antwortbox oberhalb der organischen Google-Ergebnisse, oft "Position 0" genannt. Google zieht dafür meist 40 bis 60 Wörter aus einer Seite, die die Frage am klarsten beantwortet. Formate: Text-Antwort, nummerierte Liste oder Tabelle. Das älteste und am besten dokumentierte Answer-Engine-Format.',
+    link: { href: '/blog/was-ist-aeo', label: 'Artikel: Was ist AEO?' },
+  },
+  {
+    id: 'geo',
+    term: 'GEO (Generative Engine Optimization)',
+    def: 'GEO ist die Praxis, Websites und Inhalte so zu optimieren, dass KI-gestützte Suchsysteme wie ChatGPT Search, Perplexity und Google AI Overviews sie als vertrauenswürdige Quelle erkennen und zitieren. Während SEO auf Rankings zielt, zielt GEO auf Zitierbarkeit in generierten Antworten. Die drei Hebel: Autorität, Struktur, Maschinenlesbarkeit.',
+    link: { href: '/blog/was-ist-geo', label: 'Artikel: Was ist GEO?' },
+  },
+  {
+    id: 'gptbot',
+    term: 'GPTBot',
+    def: 'GPTBot ist der Web-Crawler von OpenAI. Er erfasst Webseiten für ChatGPT Search und die Weiterentwicklung der OpenAI-Modelle. Ob GPTBot eine Website besuchen darf, steuert die robots.txt: Ein "User-agent: GPTBot / Allow: /" öffnet die Tür — viele Websites blockieren ihn noch, oft ohne bewusste Entscheidung.',
+  },
+  {
+    id: 'halluzination',
+    term: 'Halluzination',
+    def: 'Eine Halluzination ist eine faktisch falsche Aussage, die ein Sprachmodell mit voller Überzeugung generiert — etwa erfundene Quellen, Zahlen oder Zitate. Für Website-Betreiber relevant: KI-Systeme können auch Falsches über deine Marke behaupten. Klare, gut strukturierte Primärquellen im eigenen Web-Auftritt sind das beste Gegenmittel.',
+  },
+  {
+    id: 'json-ld',
+    term: 'JSON-LD',
+    def: 'JSON-LD (JavaScript Object Notation for Linked Data) ist das empfohlene Format für strukturierte Daten. Es lebt als eigenständiger Script-Block im HTML, getrennt vom sichtbaren Inhalt, und ist dadurch leicht zu pflegen. Google bevorzugt JSON-LD ausdrücklich gegenüber den Alternativen Microdata und RDFa.',
+    link: { href: '/blog/schema-markup-fuer-geo', label: 'Artikel: Schema Markup für GEO' },
+  },
+  {
+    id: 'knowledge-graph',
+    term: 'Knowledge Graph',
+    def: 'Der Knowledge Graph ist Googles Wissensdatenbank über Entitäten und ihre Beziehungen — sichtbar etwa in den Info-Panels rechts neben den Suchergebnissen. Wer als Entität im Knowledge Graph verankert ist, wird von Such- und KI-Systemen zuverlässiger erkannt und korrekter dargestellt. Strukturierte Daten und konsistente Profile zahlen darauf ein.',
+  },
+  {
+    id: 'llm',
+    term: 'LLM (Large Language Model)',
+    def: 'Ein LLM ist ein auf riesigen Textmengen trainiertes KI-Modell, das natürliche Sprache versteht und generiert — die Technologie hinter ChatGPT, Gemini, Claude und Co. In der KI-Suche übernimmt das LLM das Formulieren der Antwort, während ein Retrieval-System die Quellen liefert.',
+  },
+  {
+    id: 'llm-suchmaschine',
+    term: 'LLM-Suchmaschine',
+    def: 'Eine LLM-Suchmaschine beantwortet Suchanfragen mit einer generierten Antwort statt einer Linkliste: Ein Retrieval-System sammelt Webquellen, ein Sprachmodell fasst sie zusammen und zitiert. Die wichtigsten Vertreter: ChatGPT Search, Perplexity AI, Google AI Overviews und Microsoft Copilot.',
+    link: { href: '/blog/llm-suchmaschinen-ueberblick', label: 'Artikel: LLM-Suchmaschinen im Vergleich' },
+  },
+  {
+    id: 'llmo',
+    term: 'LLMO',
+    def: 'LLMO steht für "Large Language Model Optimization" und ist ein weiteres Synonym für die Optimierung von Inhalten für KI-Systeme. Der Begriff wird weitgehend deckungsgleich mit GEO verwendet. Welches Kürzel sich langfristig durchsetzt, ist offen — die zugrunde liegenden Maßnahmen sind dieselben.',
+  },
+  {
+    id: 'perplexity',
+    term: 'Perplexity AI',
+    def: 'Perplexity ist eine dedizierte KI-Suchmaschine, die Quellen als nummerierte Referenzen direkt in der Antwort zeigt — prominenter als jedes andere System. Sie crawlt mit dem eigenen PerplexityBot und nutzt ergänzend Bing-Daten. Für GEO das wertvollste Diagnose-Instrument: Ob Content zitierfähig ist, zeigt sich hier zuerst.',
+    link: { href: '/blog/llm-suchmaschinen-ueberblick', label: 'Artikel: LLM-Suchmaschinen im Vergleich' },
+  },
+  {
+    id: 'rag',
+    term: 'RAG (Retrieval-Augmented Generation)',
+    def: 'RAG ist die Technik hinter der KI-Suche: Bevor das Sprachmodell antwortet, ruft ein Retrieval-System aktuelle Informationen aus externen Quellen ab (z. B. dem Web) und reicht sie dem Modell als Kontext. So können KI-Systeme aktuelle Fragen beantworten und Quellen zitieren — und genau an diesem Punkt setzt GEO an.',
+  },
+  {
+    id: 'robots-txt',
+    term: 'robots.txt',
+    def: 'Die robots.txt ist eine Textdatei im Stammverzeichnis einer Website, die Crawlern mitteilt, welche Bereiche sie besuchen dürfen. Für GEO die grundlegendste Stellschraube: GPTBot, PerplexityBot, ClaudeBot, CCBot und GoogleOther müssen ausdrücklich erlaubt sein, sonst ist die Website für KI-Systeme unsichtbar.',
+    link: { href: '/blog/geo-audit-prozess', label: 'Artikel: Mein GEO-Audit-Prozess' },
+  },
+  {
+    id: 'schema-markup',
+    term: 'Schema Markup',
+    def: 'Schema Markup (strukturierte Daten) ist maschinenlesbarer Code nach dem Standard von schema.org, der Suchmaschinen und KI-Systemen explizit mitteilt, was ein Inhalt bedeutet — wer der Autor ist, wann publiziert wurde, worum es geht. Die wichtigsten Typen für GEO: Article, Person, Organization, FAQPage, HowTo und BreadcrumbList.',
+    link: { href: '/blog/schema-markup-fuer-geo', label: 'Artikel: Schema Markup für GEO' },
+  },
+  {
+    id: 'seo',
+    term: 'SEO (Search Engine Optimization)',
+    def: 'SEO ist die Optimierung von Websites für klassische Suchmaschinen mit dem Ziel, in den organischen Suchergebnissen möglichst weit oben zu erscheinen. Die Hebel: technische Optimierung, Keyword-Strategie, Backlinks und Content-Qualität. SEO bleibt das Fundament digitaler Sichtbarkeit — GEO baut darauf auf, statt es zu ersetzen.',
+    link: { href: '/blog/geo-vs-seo', label: 'Artikel: GEO vs. klassisches SEO' },
+  },
+  {
+    id: 'serp',
+    term: 'SERP',
+    def: 'SERP steht für "Search Engine Results Page", die Suchergebnisseite einer Suchmaschine. Sie besteht längst nicht mehr nur aus zehn blauen Links: Featured Snippets, AI Overviews, Knowledge Panels, Bilder und lokale Ergebnisse konkurrieren um die Aufmerksamkeit — und verändern, was "Platz 1" überhaupt bedeutet.',
+  },
+  {
+    id: 'sitemap',
+    term: 'Sitemap',
+    def: 'Eine XML-Sitemap ist ein maschinenlesbares Verzeichnis aller Seiten einer Website. Sie hilft Crawlern, Inhalte vollständig und schnell zu entdecken — besonders neue oder selten verlinkte Seiten. Best Practice: automatisch generieren lassen und in der robots.txt referenzieren.',
+  },
+  {
+    id: 'topical-authority',
+    term: 'Topical Authority (Themenautorität)',
+    def: 'Topical Authority beschreibt den Status, für ein Themengebiet als maßgebliche Quelle zu gelten. Sie entsteht durch thematische Tiefe: viele zusammenhängende, intern verlinkte Inhalte zum selben Thema statt einzelner Streuartikel. Such- und KI-Systeme bevorzugen Quellen mit erkennbarer Themenautorität bei der Quellenauswahl deutlich.',
+  },
+  {
+    id: 'voice-search',
+    term: 'Voice Search',
+    def: 'Voice Search ist die Suche per Spracheingabe über Assistenten wie Alexa, Siri oder den Google Assistant. Der prognostizierte Boom blieb aus, aber die Optimierungslogik ist aktueller denn je: natürliche Sprache, W-Fragen und kompakte, vollständige Antworten sind genau die Muster, die heute KI-Suchsysteme belohnen.',
+  },
+  {
+    id: 'zero-click',
+    term: 'Zero-Click-Suche',
+    def: 'Eine Zero-Click-Suche ist eine Suchanfrage, die ohne Klick auf ein Ergebnis endet — weil die Antwort direkt auf der Suchergebnisseite steht, etwa in einem Featured Snippet oder einer AI Overview. Der Anteil dieser Suchen wächst stetig. Für Websites heißt das: Sichtbarkeit entsteht zunehmend in der Antwort selbst, nicht erst nach dem Klick.',
+  },
+  {
+    id: 'zitierfaehigkeit',
+    term: 'Zitierfähigkeit',
+    def: 'Zitierfähigkeit beschreibt, wie gut sich eine Aussage direkt in eine KI-Antwort übernehmen lässt. Zitierfähige Sätze sind konkret, vollständig und stehen für sich allein — im Gegensatz zu Allgemeinplätzen, die jede Website schreiben könnte. Die Kernwährung von GEO: Wer zitierfähig schreibt, wird zitiert.',
+    link: { href: '/blog/content-eeat-fuer-geo', label: 'Artikel: Content & E-E-A-T für GEO' },
+  },
+];
+
+// Alphabetisch gruppieren
+const sorted = [...terms].sort((a, b) => a.term.localeCompare(b.term, 'de'));
+const groups: { letter: string; items: Term[] }[] = [];
+for (const t of sorted) {
+  const letter = t.term[0].toUpperCase();
+  const g = groups.find(g => g.letter === letter);
+  if (g) g.items.push(t);
+  else groups.push({ letter, items: [t] });
+}
+---
+<Base
+  title="GEO-Glossar: Die wichtigsten Begriffe zu SEO, GEO, AEO & KI-Suche"
+  description={`${terms.length} Fachbegriffe rund um Generative Engine Optimization, SEO, AEO und KI-Suchmaschinen — kompakt und verständlich erklärt. Von AEO bis Zero-Click.`}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      "name": "SimplyGEO Glossar: SEO, GEO, AEO & KI-Suche",
+      "description": "Die wichtigsten Fachbegriffe rund um Generative Engine Optimization, SEO, AEO und KI-Suchmaschinen — verständlich erklärt.",
+      "url": "https://simplygeo.de/glossar",
+      "inLanguage": "de-DE",
+      "hasDefinedTerm": terms.map(t => ({
+        "@type": "DefinedTerm",
+        "name": t.term,
+        "description": t.def,
+        "url": `https://simplygeo.de/glossar#${t.id}`
+      }))
+    })} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://simplygeo.de/" },
+        { "@type": "ListItem", "position": 2, "name": "Glossar", "item": "https://simplygeo.de/glossar" }
+      ]
+    })} />
+  </Fragment>
+
+  <Header />
+  <main id="main" class="glossar-main">
+    <div class="glossar-inner">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Start</a>
+        <span>›</span>
+        <span>Glossar</span>
+      </nav>
+
+      <span class="eyebrow">Nachschlagewerk</span>
+      <h1 class="glossar-title">Das GEO-Glossar</h1>
+      <p class="glossar-desc">
+        {terms.length} Begriffe rund um GEO, SEO, AEO und KI-Suche — kompakt erklärt, ohne Buzzword-Nebel.
+        Jede Definition steht für sich; wo es einen Vertiefungsartikel gibt, ist er verlinkt.
+      </p>
+
+      <!-- A–Z Navigation -->
+      <nav class="letter-nav" aria-label="Alphabetische Navigation">
+        {groups.map(g => (
+          <a href={`#letter-${g.letter}`} class="letter-chip">{g.letter}</a>
+        ))}
+      </nav>
+
+      <!-- Einträge -->
+      {groups.map(g => (
+        <section class="letter-group" id={`letter-${g.letter}`}>
+          <h2 class="letter-heading">{g.letter}</h2>
+          <div class="term-list">
+            {g.items.map(t => (
+              <article class="term-card" id={t.id}>
+                <h3 class="term-name">
+                  <a href={`#${t.id}`} class="term-anchor" aria-label={`Direktlink zu ${t.term}`}>#</a>
+                  {t.term}
+                </h3>
+                <p class="term-def">{t.def}</p>
+                {t.link && (
+                  <a href={t.link.href} class="term-link">{t.link.label} →</a>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <!-- Hinweis -->
+      <div class="glossar-note">
+        <p>Fehlt ein Begriff? Schreib mir auf <a href="https://www.linkedin.com/in/yassine-o-726988196/" target="_blank" rel="noopener noreferrer">LinkedIn</a> — das Glossar wächst mit.</p>
+      </div>
+
+    </div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+.glossar-main { position: relative; z-index: 1; padding: 40px 24px 60px; }
+.glossar-inner { max-width: 760px; margin: 0 auto; }
+
+.breadcrumb {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.72rem; color: var(--muted);
+  margin-bottom: 20px;
+}
+.breadcrumb a:hover { color: var(--accent-deep); }
+.breadcrumb span { color: var(--muted2); }
+
+.glossar-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: var(--navy); margin-bottom: 10px;
+}
+.glossar-desc {
+  font-size: 0.92rem; color: var(--muted);
+  line-height: 1.7; max-width: 620px; margin-bottom: 28px;
+}
+
+/* A–Z Navigation */
+.letter-nav {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  padding: 14px 16px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 36px;
+  position: sticky; top: 60px; z-index: 50;
+}
+.letter-chip {
+  display: flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem; font-weight: 700; color: var(--navy);
+  border: 1px solid var(--border2); border-radius: 8px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.letter-chip:hover {
+  background: var(--accent); color: var(--navy); border-color: var(--accent);
+}
+
+/* Buchstaben-Gruppen */
+.letter-group { margin-bottom: 36px; }
+.letter-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--accent-deep);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 6px; margin-bottom: 14px;
+}
+.term-list { display: flex; flex-direction: column; gap: 12px; }
+
+.term-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  transition: border-color 0.15s;
+  scroll-margin-top: 140px; /* Sticky-Header + A–Z-Leiste */
+}
+.letter-group { scroll-margin-top: 140px; }
+.term-card:target {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255,110,64,0.15);
+}
+.term-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.02rem; font-weight: 700;
+  color: var(--navy); margin-bottom: 8px;
+  display: flex; align-items: baseline; gap: 8px;
+}
+.term-anchor {
+  color: var(--border2); font-weight: 400;
+  transition: color 0.15s;
+  text-decoration: none;
+}
+.term-name:hover .term-anchor { color: var(--accent); }
+.term-def {
+  font-size: 0.88rem; color: #3a5068;
+  line-height: 1.7;
+}
+.term-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--accent-deep);
+  transition: color 0.15s;
+}
+.term-link:hover { color: var(--accent); }
+
+/* Hinweis */
+.glossar-note {
+  margin-top: 12px; padding: 18px 20px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+}
+.glossar-note p { font-size: 0.85rem; color: var(--muted); }
+.glossar-note a { color: var(--accent-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+</style>
