@@ -25,7 +25,8 @@ const isActive = (item: typeof nav[0]) =>
   </nav>
 
   <a href="/downloads/geo-checkliste.pdf" class="dl-btn" download>
-    ⬇ GEO-Checkliste
+    <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+    GEO-Checkliste
   </a>
 
   <!-- Mobile menu (CSS-only) -->
@@ -37,7 +38,10 @@ const isActive = (item: typeof nav[0]) =>
     {nav.map(n => (
       <a href={n.href} class={`mobile-link${isActive(n) ? ' active' : ''}`}>{n.label}</a>
     ))}
-    <a href="/downloads/geo-checkliste.pdf" class="mobile-link mobile-dl" download>⬇ GEO-Checkliste laden</a>
+    <a href="/downloads/geo-checkliste.pdf" class="mobile-link mobile-dl" download>
+      <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+      GEO-Checkliste laden
+    </a>
   </nav>
 </header>
 

@@ -50,7 +50,7 @@ const sorted = posts.sort((a,b) => new Date(b.frontmatter.pubDate).getTime() - n
               <span class="pc-date">
                 {new Intl.DateTimeFormat('de-DE',{year:'numeric',month:'long',day:'numeric'}).format(new Date(post.frontmatter.pubDate))}
               </span>
-              {post.frontmatter.readingTime && <span class="pc-time">⏱ {post.frontmatter.readingTime}</span>}
+              {post.frontmatter.readingTime && <span class="pc-time"><svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3 2"/></svg> {post.frontmatter.readingTime}</span>}
             </div>
           </div>
         </a>

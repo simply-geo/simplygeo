@@ -123,7 +123,7 @@ const showToc = headings.length >= 4;
           </span>
         )}
         {level && <span class="meta-chip">{level}</span>}
-        {readingTime && <span class="meta-chip">⏱ {readingTime}</span>}
+        {readingTime && <span class="meta-chip"><svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3 2"/></svg> {readingTime}</span>}
       </div>
 
       <!-- Title -->
@@ -198,7 +198,7 @@ const showToc = headings.length >= 4;
                 <div class="rc-body">
                   <span class="rc-cat" style={`color:${r.categoryColor || 'var(--accent)'}`}>{r.category}</span>
                   <span class="rc-title">{r.title}</span>
-                  {r.readingTime && <span class="rc-time">⏱ {r.readingTime}</span>}
+                  {r.readingTime && <span class="rc-time"><svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3 2"/></svg> {r.readingTime}</span>}
                 </div>
               </a>
             ))}

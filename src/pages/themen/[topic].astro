@@ -76,7 +76,7 @@ const topicPosts = allPosts
                   <div class="ac-meta">
                     <span class="ac-cat" style={`color:${color}`}>{post.frontmatter.category}</span>
                     {post.frontmatter.level && <span class="ac-level">{post.frontmatter.level}</span>}
-                    {post.frontmatter.readingTime && <span class="ac-time">⏱ {post.frontmatter.readingTime}</span>}
+                    {post.frontmatter.readingTime && <span class="ac-time"><svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3 2"/></svg> {post.frontmatter.readingTime}</span>}
                   </div>
                   <h3 class="ac-title">{post.frontmatter.title}</h3>
                   <p class="ac-desc">{post.frontmatter.description}</p>
