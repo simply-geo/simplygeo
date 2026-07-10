@@ -293,7 +293,7 @@ for (const t of sorted) {
 .breadcrumb span { color: var(--muted2); }
 
 .glossar-title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700; letter-spacing: -0.02em;
   color: var(--navy); margin-bottom: 10px;
@@ -316,9 +316,9 @@ for (const t of sorted) {
 .letter-chip {
   display: flex; align-items: center; justify-content: center;
   width: 30px; height: 30px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.8rem; font-weight: 700; color: var(--navy);
-  border: 1px solid var(--border2); border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem; font-weight: 500; color: var(--navy);
+  border: 1px solid var(--border2); border-radius: 5px;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .letter-chip:hover {
@@ -328,11 +328,11 @@ for (const t of sorted) {
 /* Buchstaben-Gruppen */
 .letter-group { margin-bottom: 36px; }
 .letter-heading {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem; font-weight: 700;
-  color: var(--accent-deep);
-  border-bottom: 2px solid var(--border);
-  padding-bottom: 6px; margin-bottom: 14px;
+  font-family: var(--font-display);
+  font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em;
+  color: var(--navy);
+  border-bottom: 1px solid var(--border2);
+  padding-bottom: 8px; margin-bottom: 16px;
 }
 .term-list { display: flex; flex-direction: column; gap: 12px; }
 
@@ -350,25 +350,27 @@ for (const t of sorted) {
   box-shadow: 0 0 0 3px rgba(255,110,64,0.15);
 }
 .term-name {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 1.02rem; font-weight: 700;
   color: var(--navy); margin-bottom: 8px;
   display: flex; align-items: baseline; gap: 8px;
 }
 .term-anchor {
-  color: var(--border2); font-weight: 400;
+  font-family: var(--font-mono);
+  color: var(--border2); font-weight: 500;
   transition: color 0.15s;
   text-decoration: none;
 }
 .term-name:hover .term-anchor { color: var(--accent); }
 .term-def {
-  font-size: 0.88rem; color: #3a5068;
+  font-size: 0.92rem; color: #34495d;
   line-height: 1.7;
 }
 .term-link {
   display: inline-block;
   margin-top: 10px;
-  font-size: 0.78rem; font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.74rem; font-weight: 500;
   color: var(--accent-deep);
   transition: color 0.15s;
 }
