@@ -12,9 +12,10 @@ const isActive = (item: typeof nav[0]) =>
 <a href="#main" class="skip-link">Zum Inhalt springen</a>
 <header class="header">
   <a href="/" class="logo" aria-label="SimplyGEO Startseite">
-    <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke-linecap="round">
-      <path d="M26 8 A6 6 0 0 0 20 4 H13.5 A6 6 0 0 0 13.5 16 H17" stroke="#ff6e40" stroke-width="5.5"/>
-      <path d="M6 24 A6 6 0 0 0 12 28 H18.5 A6 6 0 0 0 18.5 16 H15" stroke="#ffc13b" stroke-width="5.5"/>
+    <svg class="logo-mark" viewBox="9 8 30 40" aria-hidden="true" fill="none">
+      <path d="M35 13 H21 A7.5 7.5 0 0 0 21 28 H27 A7.5 7.5 0 0 1 27 43 H13" stroke="#f5f0e1" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+      <path d="M19 18.5 L24 24 L19 29.5" stroke="#b3bcc8" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/>
+      <path d="M23.5 18.5 L28.5 24 L23.5 29.5" stroke="#ff6e40" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/>
     </svg><span class="logo-text" aria-hidden="true">imply<span>GEO</span></span>
   </a>
 
@@ -61,7 +62,7 @@ const isActive = (item: typeof nav[0]) =>
   letter-spacing: -0.03em; white-space: nowrap;
   color: var(--on-navy-text);
 }
-.logo-mark { width: 23px; height: 23px; flex-shrink: 0; margin-right: -1px; }
+.logo-mark { height: 27px; width: auto; flex-shrink: 0; margin-right: 4px; }
 .logo-text span { color: var(--accent); }
 .nav { display: none; align-items: center; gap: 2px; }
 @media (min-width: 768px) { .nav { display: flex; } }

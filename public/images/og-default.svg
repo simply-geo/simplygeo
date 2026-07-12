@@ -40,9 +40,10 @@
   </g>
   <circle cx="990" cy="260" r="90" fill="none" stroke="#ff6e40" stroke-width="1" stroke-dasharray="6 5" opacity="0.18"/>
 
-  <g fill="none" stroke-linecap="round" transform="translate(88,202) scale(2.2)">
-    <path d="M26 8 A6 6 0 0 0 20 4 H13.5 A6 6 0 0 0 13.5 16 H17" stroke="#ff6e40" stroke-width="5.5"/>
-    <path d="M6 24 A6 6 0 0 0 12 28 H18.5 A6 6 0 0 0 18.5 16 H15" stroke="#ffc13b" stroke-width="5.5"/>
+  <g fill="none" transform="translate(57,161) scale(2.4)">
+    <path d="M35 13 H21 A7.5 7.5 0 0 0 21 28 H27 A7.5 7.5 0 0 1 27 43 H13" stroke="#f5f0e1" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+    <path d="M19 18.5 L24 24 L19 29.5" stroke="#b3bcc8" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/>
+    <path d="M23.5 18.5 L28.5 24 L23.5 29.5" stroke="#ff6e40" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/>
   </g>
   <text x="160" y="270" font-family="Space Grotesk, sans-serif" font-size="84" font-weight="700" fill="#f5f0e1">imply<tspan fill="#ff6e40">GEO</tspan></text>
   <text x="90" y="340" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="600" fill="#a9bccb">Sichtbar in der KI-Suche</text>
