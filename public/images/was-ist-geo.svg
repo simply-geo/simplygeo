@@ -11,7 +11,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="630" fill="#1e3d59"/>
+  <rect width="1200" height="630" fill="#1a365d"/>
   <rect width="1200" height="630" fill="url(#glow1)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
 

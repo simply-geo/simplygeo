@@ -5,7 +5,7 @@ pubDate: 2026-07-04
 author: "Yassine Oulada"
 authorRole: "GEO & SEO Spezialist"
 category: "AEO & Answer Engines"
-categoryColor: "#1e3d59"
+categoryColor: "#1a365d"
 level: "Einsteiger"
 readingTime: "7 Min"
 slug: "was-ist-aeo"

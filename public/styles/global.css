@@ -50,7 +50,7 @@
 */
 :root {
   /* Basispalette */
-  --navy: #1e3d59;
+  --navy: #1a365d;
   --navy-deep: #16304a;
   --navy-soft: #2e5170;
   --almond: #f5f0e1;
@@ -66,7 +66,7 @@
   --accent: #ff6e40;
   --accent-deep: #d24e22;
   --accent-dim: rgba(255,110,64,0.10);
-  --text: #1e3d59;
+  --text: #1a365d;
   --muted: #55697b;
   --muted2: #6a7f91;
 

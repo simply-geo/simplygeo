@@ -9,7 +9,7 @@
       <stop offset="100%" stop-color="#ff6e40" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="#1e3d59"/>
+  <rect width="1200" height="630" fill="#1a365d"/>
   <rect width="1200" height="630" fill="url(#glow1)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
   <!-- Grid -->
