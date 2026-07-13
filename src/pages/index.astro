@@ -96,34 +96,40 @@ const faqs = [
       <a href="/blog/was-ist-geo" class="hero-start">Neu hier? Starte mit dem Einstieg „Was ist GEO?" →</a>
     </div>
     <div class="hero-right">
-      <!-- Mock AI Citation Visual -->
-      <div class="mock-ai">
-        <div class="mock-ai-header">
-          <div class="mock-ai-dot"></div>
-          <span class="mock-ai-label">KI-Antwort · Perplexity AI</span>
+      <!-- Mock LLM Chat Window -->
+      <div class="mock-ai" aria-hidden="true">
+        <div class="mock-ai-chrome">
+          <span class="chrome-dot cd-red"></span>
+          <span class="chrome-dot cd-yellow"></span>
+          <span class="chrome-dot cd-green"></span>
+          <span class="mock-ai-label">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.1 6.1L20 10l-5.9 1.9L12 18l-2.1-6.1L4 10l5.9-1.9L12 2z"/></svg>
+            KI-Suche · Chat
+          </span>
         </div>
-        <div class="mock-ai-query">"Was ist Generative Engine Optimization?"</div>
-        <div class="mock-ai-answer">
-          <p>Generative Engine Optimization (GEO) ist die Praxis, Inhalte so zu optimieren, dass sie von KI-Suchsystemen als vertrauenswürdige Quellen zitiert werden. Im Unterschied zu klassischem SEO geht es nicht um Rankings, sondern um <strong>Zitierbarkeit in KI-Antworten</strong>.</p>
-        </div>
-        <div class="mock-ai-sources">
-          <div class="mock-ai-sources-label">Quellen</div>
-          <div class="mock-sources-list">
-            <div class="mock-source active">
-              <div class="ms-num">1</div>
-              <div class="ms-info">
-                <div class="ms-domain">simplygeo.de</div>
-                <div class="ms-title">Was ist GEO? Generative Engine Optimization einfach erklärt</div>
-              </div>
-            </div>
-            <div class="mock-source">
-              <div class="ms-num">2</div>
-              <div class="ms-info">
-                <div class="ms-domain">example-blog.de</div>
-                <div class="ms-title">GEO für Anfänger</div>
-              </div>
+        <div class="mock-ai-body">
+          <div class="mock-user">
+            <div class="mu-bubble">Was ist Generative Engine Optimization?</div>
+          </div>
+          <div class="mock-answer">
+            <span class="ma-spark">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.1 6.1L20 10l-5.9 1.9L12 18l-2.1-6.1L4 10l5.9-1.9L12 2zM19 16l1 2.6L22.6 19.6 20 20.6 19 23.2 18 20.6 15.4 19.6 18 18.6 19 16z"/></svg>
+            </span>
+            <div class="ma-text">
+              <p>Generative Engine Optimization (GEO) ist die Praxis, Inhalte so zu optimieren, dass sie von KI-Suchsystemen als vertrauenswürdige Quellen zitiert werden<span class="cite-chip">1</span>. Im Unterschied zu klassischem SEO geht es nicht um Rankings, sondern um <strong>Zitierbarkeit in KI-Antworten</strong>.</p>
             </div>
           </div>
+          <div class="mock-sources">
+            <span class="mock-sources-label">Quellen</span>
+            <span class="source-chip active"><span class="sc-num">1</span>simplygeo.de</span>
+            <span class="source-chip"><span class="sc-num">2</span>example-blog.de</span>
+          </div>
+        </div>
+        <div class="mock-ai-input">
+          <span class="mi-placeholder">Stell eine Folgefrage…</span>
+          <span class="mi-send">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+          </span>
         </div>
       </div>
     </div>
@@ -266,57 +272,97 @@ const faqs = [
 .hero .btn-secondary{ color:var(--on-navy-text); border-color:rgba(245,240,225,0.35); }
 .hero .btn-secondary:hover{ background:var(--almond); color:var(--navy); border-color:var(--almond); }
 
-/* Right side — Mock AI Visual (helle Paper-Karte auf Navy) */
+/* Right side — Mock LLM Chat Window (dunkles App-Fenster auf Navy) */
 .hero-right{ display:none; }
 @media(min-width:768px){ .hero-right{ display:flex; align-items:center; justify-content:center; padding:40px 40px 40px 0; } }
 
 .mock-ai{
+  --chat-bg:#14171d;
+  --chat-border:rgba(245,240,225,0.11);
+  --chat-panel:rgba(245,240,225,0.055);
+  --chat-text:#cfd6de;
   width:100%; max-width:400px;
-  background:var(--paper); border:1px solid rgba(0,0,0,0.06);
-  border-radius:var(--radius); overflow:hidden;
+  background:var(--chat-bg); border:1px solid var(--chat-border);
+  border-radius:12px; overflow:hidden;
   font-size:0.78rem;
-  box-shadow:0 18px 50px rgba(0,0,0,0.28);
+  box-shadow:0 24px 60px rgba(0,0,0,0.45);
 }
-.mock-ai-header{
-  display:flex; align-items:center; gap:8px;
-  padding:11px 14px; border-bottom:1px solid var(--border);
-  background:var(--surface2);
+/* Fenster-Chrome */
+.mock-ai-chrome{
+  display:flex; align-items:center; gap:7px;
+  padding:10px 14px; border-bottom:1px solid var(--chat-border);
 }
-.mock-ai-dot{ width:8px; height:8px; border-radius:50%; background:#3f9d6b; flex-shrink:0; }
-.mock-ai-label{ font-family:var(--font-mono); font-size:0.68rem; font-weight:500; color:var(--muted); }
-.mock-ai-query{
-  padding:13px 14px 11px;
-  font-family:var(--font-display);
-  font-size:0.9rem; font-weight:600; color:var(--navy);
-  border-bottom:1px solid var(--border);
+.chrome-dot{ width:9px; height:9px; border-radius:50%; flex-shrink:0; opacity:0.9; }
+.cd-red{ background:#ff5f57; } .cd-yellow{ background:#febc2e; } .cd-green{ background:#28c840; }
+.mock-ai-label{
+  display:inline-flex; align-items:center; gap:6px;
+  margin-left:8px;
+  font-family:var(--font-mono); font-size:0.66rem; font-weight:500; color:#8b95a1;
 }
-.mock-ai-answer{
-  padding:14px;
-  border-bottom:1px solid var(--border);
+.mock-ai-label svg{ width:11px; height:11px; color:var(--mango); }
+/* Chat-Verlauf */
+.mock-ai-body{ padding:16px 14px 14px; display:flex; flex-direction:column; gap:14px; }
+.mock-user{ display:flex; justify-content:flex-end; }
+.mu-bubble{
+  max-width:85%;
+  background:var(--chat-panel); border:1px solid var(--chat-border);
+  border-radius:12px 12px 3px 12px;
+  padding:8px 12px;
+  font-family:var(--font-display); font-size:0.84rem; font-weight:600; color:#e8e4d6;
 }
-.mock-ai-answer p{ font-size:0.79rem; color:#4a5d6e; line-height:1.65; margin:0; }
-.mock-ai-answer strong{ color:var(--navy); }
-.mock-ai-sources{ padding:12px 14px; }
-.mock-ai-sources-label{ font-family:var(--font-mono); font-size:0.62rem; font-weight:500; color:var(--muted2); margin-bottom:8px; }
-.mock-sources-list{ display:flex; flex-direction:column; gap:6px; }
-.mock-source{
-  display:flex; align-items:flex-start; gap:9px;
-  padding:8px 9px; border-radius:var(--radius-sm);
-  border:1px solid transparent;
+.mock-answer{ display:flex; gap:10px; align-items:flex-start; }
+.ma-spark{ flex-shrink:0; margin-top:1px; }
+.ma-spark svg{ width:16px; height:16px; color:var(--mango); }
+.ma-text p{ font-size:0.77rem; color:var(--chat-text); line-height:1.65; margin:0; }
+.ma-text strong{ color:#f5f0e1; }
+.ma-text p::after{
+  content:"▍"; color:var(--mango); margin-left:2px;
+  animation:mock-caret 1.1s steps(1) infinite;
 }
-.mock-source.active{
-  background:var(--accent-dim);
-  border-color:rgba(255,110,64,0.25);
+@keyframes mock-caret{ 50%{ opacity:0; } }
+@media (prefers-reduced-motion: reduce){ .ma-text p::after{ animation:none; } }
+/* Inline-Zitatmarke */
+.cite-chip{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:15px; height:15px; padding:0 3px; margin:0 1px 0 3px;
+  border-radius:4px; vertical-align:2px;
+  background:var(--accent); color:var(--navy);
+  font-family:var(--font-mono); font-size:0.58rem; font-weight:700;
 }
-.ms-num{
-  width:19px; height:19px; border-radius:4px; flex-shrink:0;
-  background:var(--surface2); display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-mono); font-size:0.64rem; font-weight:700; color:var(--muted);
+/* Quellen-Chips */
+.mock-sources{ display:flex; align-items:center; flex-wrap:wrap; gap:7px; padding-left:26px; }
+.mock-sources-label{ font-family:var(--font-mono); font-size:0.6rem; font-weight:500; color:#66707c; margin-right:2px; }
+.source-chip{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 9px 4px 5px; border-radius:6px;
+  border:1px solid var(--chat-border); background:var(--chat-panel);
+  font-family:var(--font-mono); font-size:0.64rem; font-weight:500; color:#9aa5b0;
 }
-.mock-source.active .ms-num{ background:var(--accent); color:var(--navy); }
-.ms-domain{ font-family:var(--font-mono); font-size:0.68rem; font-weight:500; color:var(--muted2); }
-.mock-source.active .ms-domain{ color:var(--accent-deep); }
-.ms-title{ font-size:0.68rem; color:var(--muted); line-height:1.3; margin-top:1px; }
+.source-chip .sc-num{
+  width:15px; height:15px; border-radius:4px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(245,240,225,0.1);
+  font-size:0.56rem; font-weight:700; color:#9aa5b0;
+}
+.source-chip.active{
+  border-color:rgba(255,110,64,0.5); background:rgba(255,110,64,0.12);
+  color:#ffb59d;
+}
+.source-chip.active .sc-num{ background:var(--accent); color:var(--navy); }
+/* Eingabezeile */
+.mock-ai-input{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  margin:0 14px 14px; padding:9px 6px 9px 13px;
+  border:1px solid var(--chat-border); border-radius:10px;
+  background:var(--chat-panel);
+}
+.mi-placeholder{ font-family:var(--font-mono); font-size:0.68rem; color:#66707c; }
+.mi-send{
+  width:26px; height:26px; border-radius:8px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--accent); color:var(--navy);
+}
+.mi-send svg{ width:13px; height:13px; }
 
 /* Section-Grundgerüst */
 .topics-section{ padding:68px 24px 40px; position:relative; z-index:1; max-width:1140px; margin:0 auto; }
