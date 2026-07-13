@@ -12,13 +12,13 @@ slug: "was-ist-geo"
 heroImage: "/images/was-ist-geo.svg"
 ---
 
-**Generative Engine Optimization (GEO)** ist die Praxis, Websites und Inhalte so zu optimieren, dass KI-gestützte Suchsysteme sie als vertrauenswürdige Quelle erkennen und zitieren. Das ist die Definition. Warum sie mich seit zwei Jahren beruflich nicht mehr loslässt, erkläre ich in diesem Artikel.
+**Generative Engine Optimization (GEO)** ist die Praxis, Websites und Inhalte so zu optimieren, dass KI-gestützte Suchsysteme sie als vertrauenswürdige Quelle erkennen und zitieren. Das ist die Definition. Warum sie mich seit ein paar Monaten nicht mehr loslässt, erkläre ich in diesem Artikel.
 
 ## Der Moment, in dem es klick gemacht hat
 
-Ich arbeite seit Jahren im SEO. Rankings, Klicks, Search Console: das Handwerk kenne ich. Irgendwann fiel mir in Kundenprojekten etwas auf, das sich mit klassischen Metriken nicht erklären ließ. Seiten mit stabilen Rankings verloren Klicks, obwohl sich an den Positionen nichts geändert hatte.
+Ich arbeite seit Jahren im Performance Marketing, SEO gehört zu meinem Handwerk. Rankings, Klicks, Search Console: vertrautes Terrain. Und dann tauchte in den Suchergebnissen etwas auf, das die vertrauten Metriken durcheinanderbringt: KI-generierte Antworten, die die Frage des Nutzers beantworten, bevor irgendjemand klickt.
 
-Die Erklärung stand oben in den Suchergebnissen: eine KI-generierte Antwort, die die Frage des Nutzers bereits beantwortete. Kein Klick mehr nötig. Und in dieser Antwort tauchten Quellen auf, die teilweise schlechter rankten als meine Kunden. Sie wurden trotzdem zitiert.
+Als ich anfing, mir das genauer anzusehen, kam der eigentliche Aha-Moment: In diesen Antworten werden Quellen zitiert, die teilweise deutlich schlechter ranken als ihre Konkurrenz. Ranking und Zitierung folgen offenbar unterschiedlichen Regeln.
 
 Da wurde mir klar: Es gibt ein zweites Spielfeld, und die wenigsten spielen bisher mit.
 
@@ -49,7 +49,7 @@ Alle vier funktionieren nach demselben Grundprinzip: Sie sammeln Quellen, gewich
 
 ## Worauf es wirklich ankommt
 
-Es kursieren viele GEO-Tipps, von denen die meisten Umverpackungen alter SEO-Weisheiten sind. Aus meiner Projektarbeit haben sich drei Dinge als tatsächlich wirksam herausgestellt.
+Es kursieren viele GEO-Tipps, von denen die meisten Umverpackungen alter SEO-Weisheiten sind. Aus allem, was ich bisher recherchiert und selbst geprüft habe, kristallisieren sich drei Dinge heraus, die tatsächlich wirken.
 
 ### Sichtbare, echte Autorschaft
 
@@ -57,7 +57,7 @@ KI-Systeme bevorzugen Quellen mit erkennbarer Expertise. Konkret heißt das: ech
 
 ### Die Antwort zuerst
 
-Der häufigste Fehler, den ich in Content-Audits sehe: Der wichtigste Satz eines Abschnitts steht am Ende, nach drei Sätzen Anlauf. KI-Systeme extrahieren bevorzugt die ersten ein, zwei Sätze. Steht dort nur Einleitung, wird die Seite übergangen. Deshalb beginnt auch dieser Artikel mit der Definition und nicht mit einer Anekdote über die Geschichte der Suchmaschinen.
+Der häufigste Fehler, der mir in Audits bisher begegnet ist: Der wichtigste Satz eines Abschnitts steht am Ende, nach drei Sätzen Anlauf. KI-Systeme extrahieren bevorzugt die ersten ein, zwei Sätze. Steht dort nur Einleitung, wird die Seite übergangen. Deshalb beginnt auch dieser Artikel mit der Definition und nicht mit einer Anekdote über die Geschichte der Suchmaschinen.
 
 ### Maschinenlesbare Signale
 

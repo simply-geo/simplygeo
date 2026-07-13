@@ -12,13 +12,13 @@ slug: "geo-audit-prozess"
 heroImage: "/images/geo-audit-prozess.svg"
 ---
 
-Das häufigste Ergebnis meiner GEO-Audits passt in einen Satz: Die Website blockiert die KI-Bots, von denen sie zitiert werden will.
+Schon in meinen ersten GEO-Audits tauchte ein Befund auf, der in einen Satz passt: Die Website blockiert die KI-Bots, von denen sie zitiert werden will.
 
-Klingt absurd, ist aber Alltag. Viele robots.txt-Dateien wurden vor Jahren aufgesetzt, oft mit restriktiven Vorlagen, und seitdem hat niemand mehr reingeschaut. GPTBot und PerplexityBot stehen dann auf der Sperrliste, während das Marketing-Team sich wundert, warum die Konkurrenz in ChatGPT auftaucht und man selbst nicht.
+Klingt absurd, ist aber erstaunlich verbreitet. Viele robots.txt-Dateien wurden vor Jahren aufgesetzt, oft mit restriktiven Vorlagen, und seitdem hat niemand mehr reingeschaut. GPTBot und PerplexityBot stehen dann auf der Sperrliste, während das Marketing-Team sich wundert, warum die Konkurrenz in ChatGPT auftaucht und man selbst nicht.
 
-Solche Dinge findet ein strukturierter Audit in der ersten Stunde. In diesem Artikel lege ich meinen kompletten Prozess offen: fünf Phasen, die aufeinander aufbauen, inklusive der Stellen, an denen es typischerweise hakt.
+Solche Dinge findet ein strukturierter Audit in der ersten Stunde. In diesem Artikel lege ich den Prozess offen, den ich mir dafür erarbeitet habe: fünf Phasen, die aufeinander aufbauen, inklusive der Stellen, an denen es typischerweise hakt.
 
-Eine Vorbemerkung zur Erwartungshaltung: Ein GEO-Audit ist unschärfer als ein SEO-Audit. Es gibt keine Search Console für KI-Antworten und keine offiziellen Ranking-Faktoren. Wer behauptet, KI-Sichtbarkeit exakt zu messen, übertreibt. Was man kann: systematisch prüfen, dokumentieren und vergleichen. Das reicht, um bessere Entscheidungen zu treffen als die Konkurrenz.
+Eine Vorbemerkung zur Erwartungshaltung: Ein GEO-Audit ist unschärfer als ein SEO-Audit. Es gibt (noch) keine Search Console für KI-Antworten, wobei ich mir ziemlich sicher bin, dass Google an genau so etwas arbeitet. Was es schon gibt: Tools, die mit hinterlegten Prompts arbeiten, sie aktiv in die jeweiligen LLMs eingeben und die Antworten analysieren und vergleichen. In gewisser Hinsicht lässt sich GEO also messen, aber eben nur begrenzt, und das meiste ist noch nicht in endgültige Zahlen zu fassen. Was man verlässlich kann: systematisch prüfen, dokumentieren und vergleichen. Das reicht, um bessere Entscheidungen zu treffen als die Konkurrenz.
 
 ## Phase 1: Technische Basis
 
@@ -34,7 +34,7 @@ Hier entscheidet sich, ob KI-Crawler die Website überhaupt erreichen. Drei Prü
 
 Jetzt wird es handwerklich. Ich lese die wichtigsten Seiten mit einer einzigen Testfrage: **Wenn ich nur den ersten Satz jedes Abschnitts lese, verstehe ich dann die Kernaussagen?**
 
-Bei den meisten Websites lautet die Antwort Nein. Die Information ist da, aber vergraben: unter Einleitungsfloskeln, unter "In diesem Abschnitt erfahren Sie", unter Marketing-Prosa. KI-Systeme graben nicht. Sie nehmen, was vorne steht.
+Mach diesen Test mal mit einer beliebigen Unternehmens-Website: Die Antwort lautet erstaunlich oft Nein. Die Information ist da, aber vergraben: unter Einleitungsfloskeln, unter "In diesem Abschnitt erfahren Sie", unter Marketing-Prosa. KI-Systeme graben nicht. Sie nehmen, was vorne steht.
 
 Worauf ich außerdem achte:
 
@@ -55,7 +55,7 @@ Der Check ist schnell, die Befunde sind meist eindeutig. Prioritätenliste für 
 | `HowTo` | Anleitungen | Schritt-Extraktion |
 | `BreadcrumbList` | Unterseiten | Seitenstruktur |
 
-Zwei Fehler sehe ich immer wieder. Erstens: Schema nur auf der Startseite, der Rest der Website ist nackt. Zweitens: Schema-Angaben, die nicht mit dem sichtbaren Seiteninhalt übereinstimmen. Letzteres ist nicht nur wirkungslos, sondern riskant, weil es als Manipulationsversuch gewertet werden kann. Validiert wird alles mit dem [Schema Markup Validator](https://validator.schema.org/).
+Zwei Fehler tauchen dabei besonders oft auf. Erstens: Schema nur auf der Startseite, der Rest der Website ist nackt. Zweitens: Schema-Angaben, die nicht mit dem sichtbaren Seiteninhalt übereinstimmen. Letzteres ist nicht nur wirkungslos, sondern riskant, weil es als Manipulationsversuch gewertet werden kann. Validiert wird alles mit dem [Schema Markup Validator](https://validator.schema.org/).
 
 Wer tiefer einsteigen will: Ich habe dem Thema einen [eigenen Artikel](/blog/schema-markup-fuer-geo) gewidmet.
 
@@ -81,15 +81,19 @@ Jedes Ergebnis wird mit Screenshot und Datum dokumentiert. Ohne diese Baseline l
 
 ## Mein Werkzeugkasten
 
-Unspektakulär, aber bewährt: Google Search Console und Semrush für die SEO-Seite, Screaming Frog fürs Crawling, PageSpeed Insights für die Vitals, Schema Markup Validator für strukturierte Daten. Und für den KI-Teil: die Systeme selbst, manuell, mit einem simplen Dokumentations-Sheet. Es gibt inzwischen Tools, die "AI Visibility Tracking" versprechen. Ich beobachte die Kategorie, aber bisher ersetzt keines davon den manuellen Test.
+Unspektakulär, aber funktional: Google Search Console und Sistrix für die SEO-Seite, Screaming Frog fürs Crawling, PageSpeed Insights für die Vitals, Schema Markup Validator für strukturierte Daten.
 
-## Ein Beispiel aus der Praxis
+Für den KI-Teil nutze ich hauptsächlich [Rankscale](https://rankscale.ai/): Das Tool hinterlegt Prompts, stellt sie automatisiert an ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot und über ein Dutzend weitere Systeme und wertet die Antworten aus. Drei Metriken sind dabei für den Audit besonders wertvoll. Der **Visibility Score** zeigt, wie oft eine Marke über alle getrackten Prompts und Modelle hinweg in KI-Antworten auftaucht. Die Unterscheidung zwischen **Mentions** (die Marke wird in der Antwort genannt) und **Citations** (die Website wird als Quelle verlinkt) trennt Bekanntheit von Zitierfähigkeit, genau die Unterscheidung, um die es bei GEO geht. Und der **AI Readiness Score** prüft die eigene Website auf Struktur, Klarheit und Autoritätssignale, also darauf, ob KI-Systeme die Inhalte überhaupt zuverlässig übernehmen können. Dazu kommt der Wettbewerbsvergleich: Wer wird bei denselben Prompts zitiert, und gewinnt oder verliert er gerade?
 
-Anonymisiert, aber echt: B2B-Software-Unternehmen, rund 80 Blogartikel, solider SEO-Traffic, null Präsenz in KI-Antworten.
+Für Stichproben und Detailfragen gehe ich trotzdem manuell in die Systeme. Aber die laufende Beobachtung, die sich per Hand kaum stemmen lässt, übernimmt das Tool.
 
-Der Audit fand die üblichen Verdächtigen: GPTBot blockiert, keine Autorenprofile, Schema Markup nur auf der Startseite. Die Maßnahmen der folgenden 90 Tage: robots.txt geöffnet, Autorenprofile für alle drei schreibenden Mitarbeiter aufgebaut, `BlogPosting`- und `Person`-Schema ausgerollt, 15 Artikel nach dem Antwort-zuerst-Prinzip umgeschrieben, 5 FAQ-Sektionen ergänzt.
+## Ehrlich: Wo sind die Fallstudien?
 
-Ergebnis nach 90 Tagen: 8 Erwähnungen in Perplexity bei Kernthemen (vorher: null), 3 Zitierungen in AI Overviews bei Long-Tail-Fragen, 2 Nennungen in ChatGPT bei Branded-Anfragen. Nebeneffekt: 18 % mehr organischer Traffic durch die überarbeiteten Artikel. GEO-Maßnahmen zahlen eben auch auf SEO ein.
+An dieser Stelle stünde in vielen Blogs jetzt eine anonymisierte Fallstudie mit beeindruckenden Prozentzahlen. Die findest du hier nicht, denn ich habe noch keine, die diesen Namen verdient. Ich stehe mit GEO-Audits am Anfang: Die ersten Analysen sind gemacht, die Langzeit-Messungen laufen noch.
+
+Was sich aus dokumentierten Erfahrungsberichten und der Funktionsweise der Systeme aber ableiten lässt: Wer die typischen Blocker behebt (gesperrte KI-Bots, fehlende Autorenprofile, Schema Markup nur auf der Startseite) und die wichtigsten Artikel nach dem Antwort-zuerst-Prinzip überarbeitet, kann nach etwa 90 Tagen mit ersten messbaren Erwähnungen in KI-Antworten rechnen. Garantien gibt es keine, dafür ist das Feld zu jung.
+
+Sobald ich eigene Vorher-Nachher-Daten habe, die belastbar sind, dokumentiere ich sie genau hier. Das ist der Deal auf dieser Website: keine ausgedachten Erfolgsgeschichten, dafür ein Prozess, den du komplett nachvollziehen kannst.
 
 ## Zum Selbermachen
 

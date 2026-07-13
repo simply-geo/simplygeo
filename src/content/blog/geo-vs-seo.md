@@ -14,13 +14,13 @@ heroImage: "/images/geo-vs-seo.svg"
 
 "Brauchen wir jetzt GEO statt SEO?"
 
-Diese Frage höre ich inzwischen in fast jedem Erstgespräch. Die kurze Antwort: Nein. Ihr braucht beides, und zwar in dieser Reihenfolge: SEO als Fundament, GEO als Erweiterung. Die lange Antwort ist interessanter, denn sie erklärt, warum so viele Unternehmen gerade die falschen Schlüsse ziehen.
+Diese Frage begegnet mir gerade überall, in Fachartikeln, auf LinkedIn und in Gesprächen mit Marketing-Leuten. Die kurze Antwort: Nein. Ihr braucht beides, und zwar in dieser Reihenfolge: SEO als Fundament, GEO als Erweiterung. Die lange Antwort ist interessanter, denn sie erklärt, warum so viele Unternehmen gerade die falschen Schlüsse ziehen.
 
-## Zwei Missverständnisse, die ich ständig ausräume
+## Zwei Missverständnisse, die mir immer wieder begegnen
 
 **Missverständnis 1: "SEO ist tot."** Das wird seit fünfzehn Jahren behauptet und stimmt auch diesmal nicht. Google verarbeitet weiterhin Milliarden Suchanfragen täglich, und der organische Traffic ist für die meisten Websites nach wie vor der wichtigste Kanal. Was stimmt: Der Anteil der Suchen, die ohne Klick enden, wächst. Das verändert SEO, es beerdigt es nicht.
 
-**Missverständnis 2: "GEO ist einfach SEO mit neuem Namen."** Auch falsch, und dieses Missverständnis ist gefährlicher. Wer GEO als Buzzword abtut, übersieht, dass KI-Systeme nach anderen Kriterien auswählen als der klassische Google-Algorithmus. Ich habe Seiten gesehen, die organisch auf Position 8 standen und trotzdem in Perplexity als Hauptquelle zitiert wurden. Und umgekehrt Seiten auf Position 1, die in keiner KI-Antwort vorkamen.
+**Missverständnis 2: "GEO ist einfach SEO mit neuem Namen."** Auch falsch, und dieses Missverständnis ist gefährlicher. Wer GEO als Buzzword abtut, übersieht, dass KI-Systeme nach anderen Kriterien auswählen als der klassische Google-Algorithmus. Es gibt dokumentierte Beispiele von Seiten, die organisch auf Position 8 standen und trotzdem in Perplexity als Hauptquelle zitiert wurden. Und umgekehrt Seiten auf Position 1, die in keiner KI-Antwort vorkamen.
 
 ## Was SEO leistet und was nicht
 
@@ -32,7 +32,7 @@ Was SEO nicht leistet: Es garantiert nicht, dass dein Content in einer KI-Antwor
 
 GEO zielt auf die Präsenz in generierten Antworten: ChatGPT Search, Perplexity, Google AI Overviews. Die Hebel sind Autorität (E-E-A-T), Direktheit des Contents, Schema Markup und natürliche Sprache statt Keyword-Optimierung.
 
-Was GEO nicht leistet: verlässliche Messbarkeit. Es gibt keine "GEO Search Console". Wer dir ein Tool verkauft, das deine "KI-Sichtbarkeit" auf zwei Nachkommastellen misst, verkauft dir vor allem Zuversicht. Die ehrliche Methode ist manuelles Testen mit dokumentierten Ergebnissen, so wie ich es im [GEO-Audit-Prozess](/blog/geo-audit-prozess) beschreibe.
+Was GEO nicht leistet: exakte Messbarkeit. Es gibt (noch) keine "GEO Search Console". Tools fürs AI Visibility Tracking, die mit hinterlegten Prompts arbeiten, machen KI-Sichtbarkeit inzwischen teilweise messbar, aber wer dir Zahlen auf zwei Nachkommastellen verspricht, übertreibt. Die verlässlichste Basis bleibt manuelles Testen mit dokumentierten Ergebnissen, ergänzt um Tool-Daten, so wie ich es im [GEO-Audit-Prozess](/blog/geo-audit-prozess) beschreibe.
 
 ## Der direkte Vergleich
 
@@ -42,7 +42,7 @@ Was GEO nicht leistet: verlässliche Messbarkeit. Es gibt keine "GEO Search Cons
 | **Hauptsignale** | Backlinks, Keywords, Technik | Autorität, Struktur, Klarheit |
 | **Inhaltsformat** | Für Menschen optimiert | Für Maschinen extrahierbar |
 | **Messung** | Rankings, organischer Traffic | Brand Mentions, AI Referrals |
-| **Tools** | GSC, Semrush, Ahrefs | Manuelle KI-Tests, Monitoring |
+| **Tools** | GSC, Sistrix, Ahrefs | Manuelle KI-Tests, AI Visibility Tracking |
 | **Reifegrad** | Ausgereift | Früh, Regeln im Fluss |
 | **Wettbewerb (DACH)** | Sehr hoch | Noch gering |
 

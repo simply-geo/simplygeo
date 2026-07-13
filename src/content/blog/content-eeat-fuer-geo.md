@@ -30,9 +30,11 @@ Das erste E, Experience, wurde 2022 ergänzt und ist für GEO das entscheidende.
 
 gegen:
 
-> "Das häufigste Ergebnis meiner GEO-Audits: Die Website blockiert genau die KI-Bots, von denen sie zitiert werden will."
+> "Schon in meinen ersten GEO-Audits tauchte derselbe Befund auf: Die Website blockiert genau die KI-Bots, von denen sie zitiert werden will."
 
 Der erste Satz ist eine Meinung ohne Absender. Der zweite trägt ein Erlebnis in sich, das ihn unverwechselbar macht. Genau diese Unverwechselbarkeit ist es, die zitiert wird.
+
+Eine Sache muss dabei glasklar sein: Das funktioniert nur mit echter Erfahrung. Erfundene Praxisberichte sind das Gegenteil von Trust. Wer erst zwei Audits gemacht hat, schreibt "in meinen ersten Audits" und nicht "in hunderten Projekten", denn genau diese Ehrlichkeit ist es, die langfristig Autorität aufbaut.
 
 Für Expertise, Autorität und Trust gilt dieselbe Logik in Varianten: Fachwissen zeigt sich in präzisen Details und benannten Grenzen ("das funktioniert, außer wenn..."). Autorität entsteht durch Bestätigung von außen, also Erwähnungen, Verlinkungen, konsistente Profile auf anderen Plattformen. Und Vertrauen beginnt bei Banalitäten: Impressum, erreichbarer Kontakt, belegte Behauptungen.
 
@@ -50,7 +52,7 @@ Selbsttest: Lies von deinem letzten Artikel nur den jeweils ersten Satz jedes Ab
 |---|---|
 | "GEO wird immer wichtiger" | "Über 30 % der Google-Suchen enthalten laut BrightEdge eine AI Overview" |
 | "Schema Markup hilft" | "FAQPage-Schema liefert fertige Frage-Antwort-Paare zur direkten Übernahme" |
-| "Autorschaft zählt" | "Artikel ohne Person-Schema werden in meinen Perplexity-Tests deutlich seltener zitiert" |
+| "Autorschaft zählt" | "Person-Schema mit sameAs-Link zu LinkedIn macht Autorschaft für KI-Systeme maschinenlesbar" |
 
 Die linke Spalte ist bequem zu schreiben und wertlos. Die rechte kostet Recherche oder Erfahrung, und genau deshalb funktioniert sie.
 

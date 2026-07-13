@@ -12,7 +12,7 @@ slug: "schema-markup-fuer-geo"
 heroImage: "/images/schema-markup.svg"
 ---
 
-In fast jedem Audit dasselbe Bild: eine gepflegte Website, ordentlicher Content, und im Quellcode herrscht Funkstille. Kein Article-Schema, kein Autor, nichts, was einer Maschine sagt, womit sie es zu tun hat.
+Ein Bild, das schon in meinen ersten Audits auffiel: eine gepflegte Website, ordentlicher Content, und im Quellcode herrscht Funkstille. Kein Article-Schema, kein Autor, nichts, was einer Maschine sagt, womit sie es zu tun hat.
 
 Dabei ist Schema Markup die vielleicht dankbarste GEO-Maßnahme überhaupt: einmal sauber aufgesetzt, wirkt es dauerhaft, kostet nichts und erfordert keine Redaktion. Ein Nachmittag Arbeit, wenn man weiß, was man tut. Dieser Artikel sorgt dafür, dass du es weißt.
 
@@ -84,11 +84,11 @@ Die restlichen drei in Kurzform: **HowTo** strukturiert Anleitungen in nummerier
 
 ## Implementierung: nimm JSON-LD, fertig
 
-Es gibt drei Formate für strukturierte Daten, und die Entscheidung ist einfach: **JSON-LD**. Es wird von Google explizit bevorzugt, lebt als eigener `<script type="application/ld+json">`-Block getrennt vom HTML und lässt sich dadurch pflegen, ohne das Layout anzufassen. Microdata und RDFa verweben sich mit dem HTML und werden bei jedem Redesign zur Stolperfalle. Ich habe keinen einzigen Fall erlebt, in dem sie die bessere Wahl gewesen wären.
+Es gibt drei Formate für strukturierte Daten, und die Entscheidung ist einfach: **JSON-LD**. Es wird von Google explizit bevorzugt, lebt als eigener `<script type="application/ld+json">`-Block getrennt vom HTML und lässt sich dadurch pflegen, ohne das Layout anzufassen. Microdata und RDFa verweben sich mit dem HTML und werden bei jedem Redesign zur Stolperfalle. Mir fällt kein Szenario ein, in dem sie heute noch die bessere Wahl wären.
 
-## Die fünf Fehler, die ich in Audits finde
+## Die fünf häufigsten Fehler
 
-Nach etlichen geprüften Websites hat sich eine stabile Top 5 herausgebildet:
+Aus Erfahrungsberichten, SEO-Studien und meinen ersten eigenen Audits ergibt sich eine ziemlich stabile Top 5:
 
 1. **Kein Person-Schema.** Der häufigste Fehler. Der Content hat einen Autor, der Code weiß nichts davon. E-E-A-T verpufft.
 2. **Falsches oder fehlendes Datum.** `datePublished` fehlt oder wird bei jeder Kleinständerung überschrieben. Beides schadet: Ohne Datum keine Aktualitätsbewertung, mit ständig "frischem" Datum kein Vertrauen.
@@ -102,6 +102,6 @@ Zwei Tools, beide kostenlos: Der [Schema Markup Validator](https://validator.sch
 
 ## Mein Rat
 
-Fang nicht mit allen sechs Typen gleichzeitig an. Die Reihenfolge, die sich bei mir bewährt hat: erst `Article` plus `Person` auf allen Beiträgen, das ist der größte Hebel. Dann `Organization` auf die Startseite. `FAQPage` und der Rest kommen, sobald die passenden Inhalte existieren.
+Fang nicht mit allen sechs Typen gleichzeitig an. Die Reihenfolge, nach der ich selbst vorgehe: erst `Article` plus `Person` auf allen Beiträgen, das ist der größte Hebel. Dann `Organization` auf die Startseite. `FAQPage` und der Rest kommen, sobald die passenden Inhalte existieren.
 
 Und wenn du wissen willst, wie Schema Markup in den größeren Prüfkontext passt: Im [GEO-Audit-Prozess](/blog/geo-audit-prozess) ist es Phase 3 von 5.

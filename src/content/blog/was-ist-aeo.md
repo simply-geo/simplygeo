@@ -35,7 +35,7 @@ Zu den Answer Engines zähle ich alles, was Antworten statt Linklisten liefert:
 
 Wer lernen will, wie man für Answer Engines schreibt, sollte mit Featured Snippets anfangen. Sie sind das älteste, am besten dokumentierte Format, und was für Snippets funktioniert, funktioniert fast immer auch für KI-Antworten.
 
-Aus meiner Erfahrung gewinnen Seiten Snippets mit vier Zutaten:
+Seiten gewinnen Snippets in aller Regel mit vier Zutaten, und das ist gut dokumentiert:
 
 1. Die W-Frage steht als Überschrift da (H2 oder H3), so wie Nutzer sie stellen würden
 2. Direkt darunter folgt die Antwort in 40 bis 60 Wörtern, vollständig und ohne Cliffhanger
@@ -57,7 +57,7 @@ Die Begriffe werden oft synonym verwendet, und ehrlich gesagt ist die Abgrenzung
 - **AEO** optimiert für direkte Antworten in bestehenden Systemen: Snippets, Sprachassistenten, Antwortboxen
 - **GEO** optimiert für Zitierbarkeit in generativen Systemen: ChatGPT, Perplexity, AI Overviews
 
-In der täglichen Arbeit verschwimmt das. Ich denke an AEO als den älteren Bruder von GEO: gleiche Familie, gleiche Werte, etwas andere Werkzeuge. Wer das eine gut macht, macht das andere fast automatisch mit. Die Grundlagen dazu stehen im Artikel [Was ist GEO?](/blog/was-ist-geo).
+In der Praxis verschwimmt das. Ich denke an AEO als den älteren Bruder von GEO: gleiche Familie, gleiche Werte, etwas andere Werkzeuge. Wer das eine gut macht, macht das andere fast automatisch mit. Die Grundlagen dazu stehen im Artikel [Was ist GEO?](/blog/was-ist-geo).
 
 ## Fünf Maßnahmen für diese Woche
 
