@@ -315,12 +315,6 @@ const faqs = [
 .ma-spark svg{ width:16px; height:16px; color:var(--mango); }
 .ma-text p{ font-size:0.77rem; color:var(--chat-text); line-height:1.65; margin:0; }
 .ma-text strong{ color:#f5f0e1; }
-.ma-text p::after{
-  content:"▍"; color:var(--mango); margin-left:2px;
-  animation:mock-caret 1.1s steps(1) infinite;
-}
-@keyframes mock-caret{ 50%{ opacity:0; } }
-@media (prefers-reduced-motion: reduce){ .ma-text p::after{ animation:none; } }
 /* Inline-Zitatmarke */
 .cite-chip{
   display:inline-flex; align-items:center; justify-content:center;
